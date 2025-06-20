@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>j6qc Wavy Text</title>
+  <title>j6qc Wave</title>
   <style>
     body {
       background-color: #000;
@@ -13,17 +13,21 @@
       margin: 0;
     }
 
-    .rainbow-text {
+    .wave-text {
+      display: flex;
       font-size: 5rem;
       font-weight: bold;
-      text-transform: uppercase;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+    }
+
+    .wave-letter {
       background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
       background-size: 1000% 1000%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: rainbow 10s linear infinite, wave 2s ease-in-out infinite;
-      text-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #0ff;
+      display: inline-block;
     }
 
     @keyframes rainbow {
@@ -34,12 +38,3 @@
     @keyframes wave {
       0%, 100% { transform: translateY(0); }
       25% { transform: translateY(-10px); }
-      50% { transform: translateY(0); }
-      75% { transform: translateY(10px); }
-    }
-  </style>
-</head>
-<body>
-  <div class="rainbow-text">j6qc</div>
-</body>
-</html>
