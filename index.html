@@ -22,11 +22,11 @@
       display: grid;
       grid-template-columns: repeat(2, 300px);
       gap: 40px;
-      position: relative; /* for positioning popup boxes */
+      position: relative;
     }
 
     .box {
-      background-color: black; /* fully black background */
+      background-color: black;
       border-radius: 20px;
       padding: 20px;
       display: flex;
@@ -39,7 +39,7 @@
     }
 
     .box:hover {
-      box-shadow: 0 0 15px 5px white; /* white glow on hover */
+      box-shadow: 0 0 15px 5px white;
     }
 
     .box h3 {
@@ -65,7 +65,6 @@
       transform: scale(1.05);
     }
 
-    /* Popup box styling */
     .popup-box {
       position: fixed;
       top: 50%;
@@ -108,69 +107,48 @@
 <body>
 
 <div class="container">
-  <!-- Box Template -->
   <div class="box">
     <h3>Discord</h3>
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" class="content-image" alt="Image 1" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/discord')" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" class="content-image" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" onclick="togglePopup('https://example.com/discord')" />
   </div>
 
   <div class="box">
     <h3>Soundcloud</h3>
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/soundcloud.png" class="content-image" alt="Image 2" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/soundcloud')" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/soundcloud.png" class="content-image" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" onclick="togglePopup('https://example.com/soundcloud')" />
   </div>
 
   <div class="box">
     <h3>Telegram</h3>
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/telegram.png" class="content-image" alt="Image 3" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/telegram')" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/telegram.png" class="content-image" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" onclick="togglePopup('https://example.com/telegram', 'Your custom Telegram message here')" />
   </div>
 
   <div class="box">
     <h3>Roblox</h3>
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" class="content-image" alt="Image 4" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/roblox')" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" class="content-image" />
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" onclick="togglePopup('https://example.com/roblox')" />
   </div>
 </div>
 
-<!-- Popup box element (will be reused for all buttons) -->
-<div id="popupBox" class="popup-box">
-  <a href="#" target="_blank" id="popupLink">Go to link</a>
-  <button id="backButton">Back</button>
+<div id="popup" class="popup-box">
+  <a id="popupLink" href="#" target="_blank"></a>
+  <button id="backButton" onclick="closePopup()">Back</button>
 </div>
 
 <script>
-  const popupBox = document.getElementById('popupBox');
-
-  function togglePopup(button, url) {
-    // If popup is visible and for the same button, hide it
-    if (popupBox.style.display === 'block' && popupBox.relatedButton === button) {
-      popupBox.style.display = 'none';
-      popupBox.relatedButton = null;
-      return;
-    }
-
-    popupBox.style.display = 'block';
-    popupBox.relatedButton = button;
-
-    const link = document.getElementById('popupLink');
-    link.href = url;
+  function togglePopup(link, customText) {
+    const popup = document.getElementById('popup');
+    const popupLink = document.getElementById('popupLink');
+    popupLink.href = link;
+    popupLink.textContent = customText || link;
+    popup.style.display = 'block';
   }
 
-  // Back button closes the popup
-  document.getElementById('backButton').addEventListener('click', () => {
-    popupBox.style.display = 'none';
-    popupBox.relatedButton = null;
-  });
-
-  // Click outside popup closes it
-  document.addEventListener('click', (e) => {
-    if (!popupBox.contains(e.target) && !popupBox.relatedButton?.contains(e.target)) {
-      popupBox.style.display = 'none';
-      popupBox.relatedButton = null;
-    }
-  });
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
 </script>
 
 </body>
