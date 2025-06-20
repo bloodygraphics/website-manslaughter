@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>j6qc Wave</title>
+  <style>
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 10rem;
+      font-family: sans-serif;
+      font-weight: bold;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 5s linear infinite, wave 2s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes wave {
+      0%,
+      100% {
+        transform: rotate(-5deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+    }
+
+    /* Button styling */
+    .top-right-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 18px;
+      font-size: 1rem;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .top-right-button:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <a href="page2.html" class="top-right-button">Go to Page 2</a>
+  <h1>j6qc</h1>
+</body>
+</html>
