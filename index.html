@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      color: white;
+      overflow: hidden;
+    }
+
+    video.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .card {
+      background: rgba(38, 38, 38, 0.75);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .icon {
+      margin-top: 10px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .popup-overlay.show {
+      display: flex;
+    }
+
+    .popup-overlay.visible {
+      opacity: 1;
+    }
+
+    .popup {
+      background: rgba(38, 38, 38, 0.75);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .popup h2 {
+      color: cyan;
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      font-style: italic;
+      color: white;
+    }
+
+    .popup-btn {
+      margin-top: 15px;
+      width: 80px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="https://your-username.github.io/your-repo/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Grid Container -->
+  <div class="container" id="main-container">
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar1.png" alt="avatar" />
+      <h2>Stalingrad</h2>
+      <p>Founder</p>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"
+        onclick="showPopup('Stalingrad', 'Silent but lethal.', 'https://t.me/yourlink', event)" />
+    </div>
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar2.png" alt="avatar" />
+      <h2>Anemic</h2>
+      <p>Co-Owner</p>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"
+        onclick="showPopup('Anemic', 'Covert but wise.', 'https://t.me/anotherlink', event)" />
+    </div>
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar3.png" alt="avatar" />
+      <h2>Kami</h2>
+      <p>Member</p>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"
+        onclick="showPopup('Kami', 'Always present.', 'https://t.me/kamilink', event)" />
+    </div>
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar4.png" alt="avatar" />
+      <h2>KhusrsK</h2>
+      <p>Member</p>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"
+        onclick="showPopup('KhusrsK', 'Silent steps.', 'https://t.me/khusrslink', event)" />
+    </div>
+  </div>
+
+  <!-- Pop-up Overlay -->
+  <div class="popup-overlay" id="popup-overlay" onclick="hidePopup()">
+    <div class="popup" id="popup" onclick="event.stopPropagation();">
+      <h2 id="popup-name">Name</h2>
+      <p id="popup-desc"><em>Description</em></p>
+      <a id="popup-link" href="#" target="_blank">
+        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function showPopup(name, desc, link, event) {
+      event.stopPropagation();
+      const mainContainer = document.getElementById("main-container");
+      const overlay = document.getElementById("popup-overlay");
+
+      document.getElementById("popup-name").textContent = name;
+      document.getElementById("popup-desc").textContent = desc;
+      document.getElementById("popup-link").href = link;
+
+      mainContainer.style.opacity = "0";
+      overlay.classList.add("show");
+
+      setTimeout(() => {
+        mainContainer.style.display = "none";
+        overlay.classList.add("visible");
+      }, 500);
+    }
+
+    function hidePopup() {
+      const mainContainer = document.getElementById("main-container");
+      const overlay = document.getElementById("popup-overlay");
+
+      overlay.classList.remove("visible");
+
+      setTimeout(() => {
+        overlay.classList.remove("show");
+        mainContainer.style.display = "grid";
+        setTimeout(() => {
+          mainContainer.style.opacity = "1";
+        }, 10);
+      }, 500);
+    }
+  </script>
+</body>
+</html>
