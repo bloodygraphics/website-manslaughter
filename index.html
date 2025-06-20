@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>suicide</title>
-  <!-- Added custom favicon hosted on GitHub -->
   <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" type="image/png" />
   <style>
     body {
@@ -27,8 +26,8 @@
       left: 50%;
       transform: translateX(-50%);
       color: white;
-      font-size: 18px; /* slightly bigger */
-      font-family: Arial, Helvetica, sans-serif; /* match footer email font */
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
       background-color: rgba(0, 0, 0, 0.6);
       padding: 5px 15px;
       border-radius: 10px;
@@ -38,7 +37,6 @@
       max-width: 90%;
     }
 
-    /* Overlay full screen "continue" black popup */
     #overlay {
       position: fixed;
       top: 0;
@@ -152,7 +150,7 @@
       color: white;
       font-size: 14px;
       line-height: 1.5;
-      font-family: Arial, Helvetica, sans-serif; /* match IP font */
+      font-family: Arial, Helvetica, sans-serif;
     }
   </style>
 </head>
@@ -160,9 +158,7 @@
 
 <div id="ip-display">Fetching IP...</div>
 
-<!-- Overlay with continue image as the play button -->
 <div id="overlay" title="Click to continue and play music">
-  <!-- Changed src to a valid online image URL -->
   <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" alt="Continue button" />
   <p style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px; margin-top: 15px;">click to enter...</p>
 </div>
@@ -229,12 +225,10 @@
       document.getElementById('ip-display').textContent = 'IP could not be loaded';
     });
 
-  // Setup audio for playback
   const audio = document.createElement('audio');
   audio.loop = true;
   audio.src = 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/background.mp3';
 
-  // Play music and hide overlay on click
   const overlay = document.getElementById('overlay');
   overlay.addEventListener('click', () => {
     audio.play().catch(e => {
