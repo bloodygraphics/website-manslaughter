@@ -7,7 +7,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-image: url('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/background1.png');
+      background-image: url('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/background2.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -27,7 +27,8 @@
     }
 
     .box {
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.5); /* 50% transparent */
+      backdrop-filter: blur(8px); /* blur background behind box */
       border-radius: 20px;
       padding: 20px;
       display: flex;
