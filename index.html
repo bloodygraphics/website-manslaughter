@@ -51,17 +51,24 @@
       height: 24px;
     }
 
-    .popup {
+    .popup-overlay {
       display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup {
       background: #111;
       padding: 40px;
       border-radius: 15px;
       text-align: center;
-      z-index: 100;
     }
 
     .popup h2 {
@@ -110,13 +117,15 @@
     </div>
   </div>
 
-  <!-- Pop-up -->
-  <div class="popup" id="popup">
-    <h2 id="popup-name">Name</h2>
-    <p id="popup-desc"><em>Description</em></p>
-    <a id="popup-link" href="#" target="_blank">
-      <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
-    </a>
+  <!-- Pop-up Overlay -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup" id="popup" onclick="event.stopPropagation();">
+      <h2 id="popup-name">Name</h2>
+      <p id="popup-desc"><em>Description</em></p>
+      <a id="popup-link" href="#" target="_blank">
+        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
+      </a>
+    </div>
   </div>
 
   <script>
@@ -125,8 +134,14 @@
       document.getElementById("popup-name").textContent = name;
       document.getElementById("popup-desc").textContent = desc;
       document.getElementById("popup-link").href = link;
-      document.getElementById("popup").style.display = "block";
+      document.getElementById("popup-overlay").style.display = "flex";
     }
+
+    // Close popup when clicking outside
+    document.getElementById("popup-overlay").addEventListener("click", function () {
+      document.getElementById("popup-overlay").style.display = "none";
+      document.getElementById("main-container").style.display = "grid";
+    });
   </script>
 </body>
 </html>
