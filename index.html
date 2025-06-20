@@ -22,6 +22,7 @@
       display: grid;
       grid-template-columns: repeat(2, 300px);
       gap: 40px;
+      position: relative; /* for positioning popup boxes */
     }
 
     .box {
@@ -34,6 +35,7 @@
       text-align: center;
       position: relative;
       transition: box-shadow 0.3s ease;
+      cursor: default;
     }
 
     .box:hover {
@@ -63,19 +65,25 @@
       transform: scale(1.05);
     }
 
-    .popup {
+    /* New popup box styling */
+    .popup-box {
       position: absolute;
-      bottom: 90px;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 20px;
-      border-radius: 10px;
+      background-color: black;
+      border-radius: 20px;
+      padding: 15px 25px;
+      box-shadow: 0 0 15px 5px white;
       color: white;
+      z-index: 10;
+      width: 260px;
       display: none;
+      text-align: center;
     }
 
-    .popup a {
+    .popup-box a {
       color: #00ccff;
       text-decoration: none;
+      font-weight: bold;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -86,37 +94,77 @@
   <div class="box">
     <h3>Discord</h3>
     <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" class="content-image" alt="Image 1" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="showPopup(this)" />
-    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/discord')" />
   </div>
 
   <div class="box">
     <h3>Soundcloud</h3>
     <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/soundcloud.png" class="content-image" alt="Image 2" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="showPopup(this)" />
-    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/soundcloud')" />
   </div>
 
   <div class="box">
     <h3>Telegram</h3>
     <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/telegram.png" class="content-image" alt="Image 3" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="showPopup(this)" />
-    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/telegram')" />
   </div>
 
   <div class="box">
     <h3>Roblox</h3>
     <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" class="content-image" alt="Image 4" />
-    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="showPopup(this)" />
-    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+    <img src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/panda1.png" class="button-image" alt="Button" onclick="togglePopup(this, 'https://example.com/roblox')" />
   </div>
 </div>
 
+<!-- Popup box element (will be reused for all buttons) -->
+<div id="popupBox" class="popup-box">
+  <a href="#" target="_blank" id="popupLink">Go to link</a>
+</div>
+
 <script>
-  function showPopup(button) {
-    const popup = button.nextElementSibling;
-    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+  const popupBox = document.getElementById('popupBox');
+
+  function togglePopup(button, url) {
+    // If popup is visible and for the same button, hide it
+    if (popupBox.style.display === 'block' && popupBox.relatedButton === button) {
+      popupBox.style.display = 'none';
+      popupBox.relatedButton = null;
+      return;
+    }
+
+    // Show popup and set link
+    popupBox.style.display = 'block';
+    popupBox.relatedButton = button;
+
+    const link = document.getElementById('popupLink');
+    link.href = url;
+
+    // Position popup box relative to clicked button's box
+    const box = button.closest('.box');
+    const container = document.querySelector('.container');
+    const containerRect = container.getBoundingClientRect();
+    const boxRect = box.getBoundingClientRect();
+
+    // Calculate popup position - below the box
+    let left = boxRect.left - containerRect.left;
+    let top = boxRect.bottom - containerRect.top + 10; // 10px gap below box
+
+    // Check if popup goes outside container right edge, adjust if needed
+    if (left + popupBox.offsetWidth > container.offsetWidth) {
+      left = container.offsetWidth - popupBox.offsetWidth;
+    }
+
+    popupBox.style.left = left + 'px';
+    popupBox.style.top = top + 'px';
   }
+
+  // Click outside popup closes it
+  document.addEventListener('click', (e) => {
+    if (!popupBox.contains(e.target) && !popupBox.relatedButton?.contains(e.target)) {
+      popupBox.style.display = 'none';
+      popupBox.relatedButton = null;
+    }
+  });
 </script>
 
 </body>
