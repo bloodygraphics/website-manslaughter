@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>j6qc</title>
+  <meta charset="UTF-8">
+  <title>j6qc Wavy Text</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000;
-      overflow: hidden;
+      height: 100vh;
+      margin: 0;
     }
 
     .rainbow-text {
-      font-size: 100px;
+      font-size: 5rem;
       font-weight: bold;
-      font-family: sans-serif;
-      display: flex;
+      text-transform: uppercase;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 10s linear infinite, wave 2s ease-in-out infinite;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #0ff;
     }
 
-    .rainbow-text span {
-      animation: wave 2s infinite;
-      animation-delay: calc(var(--i) * 0.1s);
-      color: hsl(calc(var(--i) * 90), 100%, 50%);
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     @keyframes wave {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
+      0%, 100% { transform: translateY(0); }
+      25% { transform: translateY(-10px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(10px); }
     }
   </style>
 </head>
 <body>
-  <div class="rainbow-text">
-    <span style="--i:0">j</span>
-    <span style="--i:1">6</span>
-    <span style="--i:2">q</span>
-    <span style="--i:3">c</span>
-  </div>
+  <div class="rainbow-text">j6qc</div>
 </body>
 </html>
