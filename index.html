@@ -3,197 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Team Cards</title>
-  <style>
-    body {
-      background-color: #0f0f0f;
-      font-family: 'Courier New', monospace;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 50px 20px;
-    }
-
-    .card {
-      background-color: #1c1c1c;
-      border-radius: 15px;
-      width: 200px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .name {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .role {
-      font-size: 14px;
-      color: #aaa;
-      margin-bottom: 10px;
-    }
-
-    .btn-icon {
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-icon img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .overlay, .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 999;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    .modal {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #1c1c1c;
-      border-radius: 12px;
-      padding: 30px;
-      width: 320px;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 1000;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .modal .name {
-      font-size: 20px;
-      color: cyan;
-    }
-
-    .modal .desc {
-      font-style: italic;
-    }
-
-    .modal a img {
-      width: 90px;
-      transition: transform 0.2s ease;
-    }
-
-    .modal a img:hover {
-      transform: scale(1.1);
-    }
-  </style>
+  <title>Team Layout</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <div class="container" id="cardContainer">
-    <!-- CARD 1 -->
-    <div class="card">
-      <img class="avatar" src="https://raw.githubusercontent.com/yourusername/yourrepo/main/stalingrad.png" alt="avatar">
-      <div class="name">Stalingrad</div>
-      <div class="role">Founder</div>
-      <button class="btn-icon" onclick="openModal('Stalingrad', 'Silent but lethal.', 'https://t.me/example')">
-        <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/icon.png" alt="icon">
-      </button>
+  <div class="container" id="main-container">
+    <div class="card" onclick="showPopup('Stalingrad', 'Silent but lethal.', 'https://your-link.com')">
+      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+      <h2>Stalingrad</h2>
+      <p>Founder</p>
+      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
     </div>
-
-    <!-- CARD 2 -->
-    <div class="card">
-      <img class="avatar" src="https://raw.githubusercontent.com/yourusername/yourrepo/main/anemic.png" alt="avatar">
-      <div class="name">Anemic</div>
-      <div class="role">Co-Owner</div>
-      <button class="btn-icon" onclick="openModal('Anemic', 'Master of silence.', 'https://t.me/example')">
-        <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/icon.png" alt="icon">
-      </button>
+    <div class="card" onclick="showPopup('Anemic', 'Covert but wise.', 'https://your-link.com')">
+      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+      <h2>Anemic</h2>
+      <p>Co-Owner</p>
+      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
     </div>
-
-    <!-- CARD 3 -->
-    <div class="card">
-      <img class="avatar" src="https://raw.githubusercontent.com/yourusername/yourrepo/main/kami.png" alt="avatar">
-      <div class="name">Kami</div>
-      <div class="role">Member</div>
-      <button class="btn-icon" onclick="openModal('Kami', 'Always watching.', 'https://t.me/example')">
-        <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/icon.png" alt="icon">
-      </button>
+    <div class="card" onclick="showPopup('Kami', 'Always present.', 'https://your-link.com')">
+      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+      <h2>Kami</h2>
+      <p>Member</p>
+      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
     </div>
-
-    <!-- CARD 4 -->
-    <div class="card">
-      <img class="avatar" src="https://raw.githubusercontent.com/yourusername/yourrepo/main/khusrsk.png" alt="avatar">
-      <div class="name">Khusrsk</div>
-      <div class="role">Member</div>
-      <button class="btn-icon" onclick="openModal('Khusrsk', 'Just vibing.', 'https://t.me/example')">
-        <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/icon.png" alt="icon">
-      </button>
+    <div class="card" onclick="showPopup('KhusrsK', 'Silent steps.', 'https://your-link.com')">
+      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+      <h2>KhusrsK</h2>
+      <p>Member</p>
+      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
     </div>
   </div>
 
-  <!-- MODAL AND OVERLAY -->
-  <div class="overlay" id="overlay" onclick="closeModal()"></div>
-  <div class="modal" id="modal">
-    <div class="name" id="modalName">Name</div>
-    <div class="desc" id="modalDesc">Description</div>
-    <a id="modalLink" href="#" target="_blank">
-      <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/button.png" alt="button">
+  <div class="popup" id="popup">
+    <h2 id="popup-name">Name</h2>
+    <p id="popup-desc"><em>Description</em></p>
+    <a id="popup-link" href="#" target="_blank">
+      <img src="https://your-github-button-icon.png" alt="button" class="popup-btn"/>
     </a>
   </div>
 
-  <script>
-    const overlay = document.getElementById('overlay');
-    const modal = document.getElementById('modal');
-    const cardContainer = document.getElementById('cardContainer');
-
-    function openModal(name, desc, link) {
-      document.getElementById('modalName').innerText = name;
-      document.getElementById('modalDesc').innerText = desc;
-      document.getElementById('modalLink').href = link;
-      overlay.style.display = 'block';
-      modal.style.display = 'flex';
-      cardContainer.style.display = 'none';
-    }
-
-    function closeModal() {
-      overlay.style.display = 'none';
-      modal.style.display = 'none';
-      cardContainer.style.display = 'flex';
-    }
-
-    // Close on Escape key
-    window.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
