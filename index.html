@@ -13,6 +13,7 @@
       background-repeat: no-repeat;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       font-family: sans-serif;
@@ -102,6 +103,15 @@
     #backButton:hover {
       text-decoration: underline;
     }
+
+    .footer-text {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -137,6 +147,12 @@
     <a id="popupLink" href="#" target="_blank"></a>
     <button id="backButton" onclick="closePopup()">Back</button>
   </div>
+</div>
+
+<div class="footer-text">
+  <p>Line 1 - bloodygraphics@draugr.de</p>
+  <p>Line 2 - manslaughter@draugr.de</p>
+  <p>Line 3 - doomshop@draugr.de</p>
 </div>
 
 <script>
