@@ -19,6 +19,19 @@
       font-family: sans-serif;
     }
 
+    #ip-display {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5px 15px;
+      border-radius: 10px;
+      z-index: 100;
+    }
+
     .container {
       display: grid;
       grid-template-columns: repeat(2, 300px);
@@ -116,6 +129,8 @@
 </head>
 <body>
 
+<div id="ip-display">Fetching IP...</div>
+
 <div class="container">
   <div class="box">
     <h3>Discord</h3>
@@ -167,6 +182,16 @@
   function closePopup() {
     document.getElementById('popup').style.display = 'none';
   }
+
+  // Fetch user's IP address
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('ip-display').textContent = 'Your IP: ' + data.ip;
+    })
+    .catch(() => {
+      document.getElementById('ip-display').textContent = 'IP could not be loaded';
+    });
 </script>
 
 </body>
