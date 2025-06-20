@@ -3,39 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Team Grid</title>
+  <title>Team Cards</title>
   <style>
     body {
       margin: 0;
-      background: #0d0d0d;
+      background-color: #0d0d0d;
+      font-family: monospace;
       color: white;
-      font-family: 'Courier New', monospace;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
 
     .container {
       display: grid;
       grid-template-columns: repeat(2, 200px);
-      grid-template-rows: repeat(2, 220px);
       gap: 40px;
-      justify-content: center;
-      align-items: center;
     }
 
     .card {
-      background: #1a1a1a;
+      background-color: #111;
       padding: 20px;
-      border-radius: 15px;
+      border-radius: 12px;
       text-align: center;
       transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .card:hover {
-      transform: scale(1.08);
+      transform: scale(1.05);
     }
 
     .avatar {
@@ -45,8 +43,24 @@
       object-fit: cover;
     }
 
-    .icon {
+    .name {
+      font-weight: bold;
       margin-top: 10px;
+    }
+
+    .role {
+      font-size: 12px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .icon-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .icon-button img {
       width: 24px;
       height: 24px;
     }
@@ -56,92 +70,98 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 100;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.85);
       justify-content: center;
       align-items: center;
+      z-index: 100;
     }
 
     .popup {
-      background: #111;
-      padding: 40px;
-      border-radius: 15px;
+      background-color: #111;
+      padding: 30px;
+      border-radius: 12px;
       text-align: center;
     }
 
     .popup h2 {
       color: cyan;
-      margin-bottom: 10px;
     }
 
     .popup p {
       font-style: italic;
-      color: white;
+      margin-bottom: 20px;
     }
 
-    .popup-btn {
-      margin-top: 15px;
+    .popup a img {
       width: 80px;
-      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- Grid Container -->
-  <div class="container" id="main-container">
-    <div class="card" onclick="showPopup('Stalingrad', 'Silent but lethal.', 'https://t.me/yourlink')">
-      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar1.png" alt="avatar" />
-      <h2>Stalingrad</h2>
-      <p>Founder</p>
-      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
+
+  <div class="container">
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-user/your-repo/main/avatar1.png" alt="avatar">
+      <div class="name">Stalingrad</div>
+      <div class="role">Founder</div>
+      <button class="icon-button" onclick="showPopup('Stalingrad', 'Silent but lethal.', 'https://t.me/yourlink')">
+        <img src="https://raw.githubusercontent.com/your-user/your-repo/main/icon.png" alt="icon">
+      </button>
     </div>
-    <div class="card" onclick="showPopup('Anemic', 'Covert but wise.', 'https://t.me/anotherlink')">
-      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar2.png" alt="avatar" />
-      <h2>Anemic</h2>
-      <p>Co-Owner</p>
-      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
+
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-user/your-repo/main/avatar2.png" alt="avatar">
+      <div class="name">Anemic</div>
+      <div class="role">Co-Owner</div>
+      <button class="icon-button" onclick="showPopup('Anemic', 'Eyes that see through all.', 'https://t.me/anotherlink')">
+        <img src="https://raw.githubusercontent.com/your-user/your-repo/main/icon.png" alt="icon">
+      </button>
     </div>
-    <div class="card" onclick="showPopup('Kami', 'Always present.', 'https://t.me/kamilink')">
-      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar3.png" alt="avatar" />
-      <h2>Kami</h2>
-      <p>Member</p>
-      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
+
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-user/your-repo/main/avatar3.png" alt="avatar">
+      <div class="name">Kami</div>
+      <div class="role">Member</div>
+      <button class="icon-button" onclick="showPopup('Kami', 'Always watching.', 'https://t.me/kamilink')">
+        <img src="https://raw.githubusercontent.com/your-user/your-repo/main/icon.png" alt="icon">
+      </button>
     </div>
-    <div class="card" onclick="showPopup('KhusrsK', 'Silent steps.', 'https://t.me/khusrslink')">
-      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar4.png" alt="avatar" />
-      <h2>KhusrsK</h2>
-      <p>Member</p>
-      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
+
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-user/your-repo/main/avatar4.png" alt="avatar">
+      <div class="name">Khusrsrk</div>
+      <div class="role">Member</div>
+      <button class="icon-button" onclick="showPopup('Khusrsrk', 'Draws in silence.', 'https://t.me/khusrsrk')">
+        <img src="https://raw.githubusercontent.com/your-user/your-repo/main/icon.png" alt="icon">
+      </button>
     </div>
   </div>
 
-  <!-- Pop-up Overlay -->
-  <div class="popup-overlay" id="popup-overlay">
-    <div class="popup" id="popup" onclick="event.stopPropagation();">
-      <h2 id="popup-name">Name</h2>
-      <p id="popup-desc"><em>Description</em></p>
-      <a id="popup-link" href="#" target="_blank">
-        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
+  <div class="popup-overlay" id="popupOverlay" onclick="closePopup(event)">
+    <div class="popup" id="popupBox" onclick="event.stopPropagation()">
+      <h2 id="popupName">Name</h2>
+      <p id="popupDesc">Description</p>
+      <a id="popupLink" href="#" target="_blank">
+        <img src="https://raw.githubusercontent.com/your-user/your-repo/main/button.png" alt="button">
       </a>
     </div>
   </div>
 
   <script>
     function showPopup(name, desc, link) {
-      document.getElementById("main-container").style.display = "none";
-      document.getElementById("popup-name").textContent = name;
-      document.getElementById("popup-desc").textContent = desc;
-      document.getElementById("popup-link").href = link;
-      document.getElementById("popup-overlay").style.display = "flex";
+      document.getElementById("popupName").textContent = name;
+      document.getElementById("popupDesc").textContent = desc;
+      document.getElementById("popupLink").href = link;
+      document.getElementById("popupOverlay").style.display = "flex";
     }
 
-    // Close popup when clicking outside
-    document.getElementById("popup-overlay").addEventListener("click", function () {
-      document.getElementById("popup-overlay").style.display = "none";
-      document.getElementById("main-container").style.display = "grid";
-    });
+    function closePopup(event) {
+      const popup = document.getElementById("popupOverlay");
+      popup.style.display = "none";
+    }
   </script>
+
 </body>
 </html>
