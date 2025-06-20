@@ -65,9 +65,12 @@
       transform: scale(1.05);
     }
 
-    /* New popup box styling */
+    /* Popup box styling */
     .popup-box {
-      position: absolute;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: black;
       border-radius: 20px;
       padding: 15px 25px;
@@ -84,6 +87,21 @@
       text-decoration: none;
       font-weight: bold;
       word-break: break-word;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    #backButton {
+      border: none;
+      background: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    #backButton:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -119,6 +137,7 @@
 <!-- Popup box element (will be reused for all buttons) -->
 <div id="popupBox" class="popup-box">
   <a href="#" target="_blank" id="popupLink">Go to link</a>
+  <button id="backButton">Back</button>
 </div>
 
 <script>
@@ -132,31 +151,18 @@
       return;
     }
 
-    // Show popup and set link
     popupBox.style.display = 'block';
     popupBox.relatedButton = button;
 
     const link = document.getElementById('popupLink');
     link.href = url;
-
-    // Position popup box relative to clicked button's box
-    const box = button.closest('.box');
-    const container = document.querySelector('.container');
-    const containerRect = container.getBoundingClientRect();
-    const boxRect = box.getBoundingClientRect();
-
-    // Calculate popup position - below the box
-    let left = boxRect.left - containerRect.left;
-    let top = boxRect.bottom - containerRect.top + 10; // 10px gap below box
-
-    // Check if popup goes outside container right edge, adjust if needed
-    if (left + popupBox.offsetWidth > container.offsetWidth) {
-      left = container.offsetWidth - popupBox.offsetWidth;
-    }
-
-    popupBox.style.left = left + 'px';
-    popupBox.style.top = top + 'px';
   }
+
+  // Back button closes the popup
+  document.getElementById('backButton').addEventListener('click', () => {
+    popupBox.style.display = 'none';
+    popupBox.relatedButton = null;
+  });
 
   // Click outside popup closes it
   document.addEventListener('click', (e) => {
