@@ -1,77 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>j6qc Wave</title>
-  <style>
-    body {
-      background: url('https://cdn.discordapp.com/attachments/1374156694598320229/1385446073585369179/New_Project_-_2025-06-18T055249.641.png?ex=685618b4&is=6854c734&hm=3e14f9e7eb1f0772fc9a377359f7e2b45a77c78e87e60d7a0adb4394a9e20fa6&') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      position: relative;
-      overflow: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>j6qc Roster</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    h1 {
-      font-size: 10rem;
-      font-family: sans-serif;
-      font-weight: bold;
-      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
-      background-size: 400% 400%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbow 5s linear infinite, wave 2s ease-in-out infinite;
-      display: inline-block;
-    }
+  body {
+    margin: 0;
+    background: #000;
+    color: #ddd;
+    font-family: 'Press Start 2P', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+  }
 
-    @keyframes rainbow {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 100% 50%;
-      }
-    }
+  h1 {
+    margin-bottom: 40px;
+    color: #eee;
+  }
 
-    @keyframes wave {
-      0%,
-      100% {
-        transform: rotate(-5deg);
-      }
-      50% {
-        transform: rotate(5deg);
-      }
-    }
+  .roster-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+  }
 
-    /* Button styling */
-    .top-right-button {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 10px 18px;
-      font-size: 1rem;
-      background-color: #fff;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
-    }
+  .member-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    padding: 20px 10px 30px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+    position: relative;
+  }
 
-    .top-right-button:hover {
-      background-color: #eee;
-    }
-  </style>
+  .member-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
+  }
+
+  .member-box:hover .avatar {
+    filter: grayscale(0%);
+  }
+
+  .name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .role {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-bottom: 15px;
+  }
+
+  .teddy-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    cursor: pointer;
+    filter: invert(1) brightness(1.2);
+  }
+
+  /* Popup styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .popup-overlay.active {
+    display: flex;
+  }
+
+  .popup-content {
+    background: #111;
+    padding: 25px 35px;
+    border-radius: 12px;
+    max-width: 300px;
+    text-align: center;
+    color: #eee;
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 0 0 20px #00ffffaa;
+  }
+
+  .popup-content a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .popup-close {
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+
+</style>
 </head>
 <body>
-  <a href="page2.html" class="top-right-button">Go to Page 2</a>
-  <h1>j6qc</h1>
+
+<h1>j6qc Roster</h1>
+
+<div class="roster-container" id="roster">
+  <!-- Members inserted here by JS -->
+</div>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-content" id="popupContent">
+    <div id="popupText"></div>
+    <a href="#" target="_blank" id="popupLink">Visit Link</a>
+    <div class="popup-close" id="popupClose">Close ✕</div>
+  </div>
+</div>
+
+<script>
+  // Example roster data, update as you want
+  const roster = [
+    {
+      name: 'Horror',
+      role: 'Founder',
+      avatar: '/mnt/data/d9f34280-55e8-40a6-a8ba-5d3e2023adbb.png', // Replace with your URL or local
+      linkLabel: 'Roblox Profile',
+      linkUrl: 'https://www.roblox.com/users/123456/profile',
+    },
+    {
+      name: 'Stalingrad',
+      role: 'Founder',
+      avatar: 'https://i.pravatar.cc/100?img=12',
+      linkLabel: 'SoundCloud',
+      linkUrl: 'https://soundcloud.com/username',
+    },
+    {
+      name: 'Anemic',
+      role: 'Co-Owner',
+      avatar: 'https://i.pravatar.cc/100?img=5',
+      linkLabel: 'YouTube Channel',
+      linkUrl: 'https://youtube.com/channel/abc',
+    },
+    {
+      name: 'Dead',
+      role: 'Co-Owner',
+      avatar: 'https://i.pravatar.cc/100?img=7',
+      linkLabel: 'Twitter',
+      linkUrl: 'https://twitter.com/username',
+    },
+    {
+      name: 'Connor',
+      role: 'Member',
+      avatar: 'https://i.pravatar.cc/100?img=15',
+      linkLabel: 'Instagram',
+      linkUrl: 'https://instagram.com/username',
+    },
+    {
+      name: 'Kami',
+      role: 'Member',
+      avatar: 'https://i.pravatar.cc/100?img=16',
+      linkLabel: 'Twitch',
+      linkUrl: 'https://twitch.tv/username',
+    },
+    {
+      name: 'Khusrsk',
+      role: 'Member',
+      avatar: 'https://i.pravatar.cc/100?img=20',
+      linkLabel: 'Facebook',
+      linkUrl: 'https://facebook.com/username',
+    },
+    {
+      name: 'Haunt',
+      role: 'Member',
+      avatar: 'https://i.pravatar.cc/100?img=21',
+      linkLabel: 'Discord',
+      linkUrl: 'https://discord.gg/abc123',
+    }
+  ];
+
+  const rosterContainer = document.getElementById('roster');
+  const popup = document.getElementById('popup');
+  const popupText = document.getElementById('popupText');
+  const popupLink = document.getElementById('popupLink');
+  const popupClose = document.getElementById('popupClose');
+
+  // Teddy icon SVG base64
+  const teddyIcon = 'data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMyIDBjLTE3LjcgMC0zMiAxNC4zLTMyIDMyczE0LjMgMzIgMzIgMzIgMzItMTQuMyAzMi0zMi0xNC4zLTMyLTMyLTMyem0tMi4yIDM4LjNjLTIuMi0yLjItNi4yLTIuMi04LjQgMEwyMyAxNy41Yy0yLjIgMi4yLTIuMiA2LjIgMCA4LjRsMS40IDEuNGMtMi44LjYtNS4xIDIuMy01LjUgNS4yLS42IDQuMSAzLjcgNy43IDcuOCA3LjcgMS42IDAgMy4xLS42IDQuMi0xLjggMS4xIDEuMiAyLjYgMS44IDQuMiAxLjggNC4xIDAgOC40LTMuNiA3LjgtNy43LS40LTIuOS0yLjctNC42LTUuNS01LjJsMS40LTEuNGMyLjItMi4yIDIuMi02LjIgMC04LjQtMi4yLTIuMi02LjItMi4yLTguNCAweiIvPjwvc3ZnPg==';
+
+  function createMemberBox(member, index) {
+    const box = document.createElement('div');
+    box.className = 'member-box';
+
+    const avatar = document.createElement('img');
+    avatar.className = 'avatar';
+    avatar.src = member.avatar;
+    avatar.alt = `${member.name} avatar`;
+
+    const name = document.createElement('div');
+    name.className = 'name';
+    name.textContent = member.name;
+
+    const role = document.createElement('div');
+    role.className = 'role';
+    role.textContent = member.role;
+
+    const teddy = document.createElement('img');
+    teddy.className = 'teddy-button';
+    teddy.src = teddyIcon;
+    teddy.alt = 'Link Button';
+    teddy.title = 'Click for link';
+
+    teddy.addEventListener('click', () => {
+      popupText.textContent = `${member.name}'s ${member.linkLabel}`;
+      popupLink.href = member.linkUrl;
+      popupLink.textContent = member.linkLabel;
+      popup.classList.add('active');
+    });
+
+    box.appendChild(avatar);
+    box.appendChild(name);
+    box.appendChild(role);
+    box.appendChild(teddy);
+
+    return box;
+  }
+
+  // Populate roster
+  roster.forEach((member, i) => {
+    rosterContainer.appendChild(createMemberBox(member, i));
+  });
+
+  // Popup close
+  popupClose.addEventListener('click', () => {
+    popup.classList.remove('active');
+  });
+
+  // Close popup if click outside content
+  popup.addEventListener('click', (e) => {
+    if(e.target === popup) {
+      popup.classList.remove('active');
+    }
+  });
+</script>
+
 </body>
 </html>
