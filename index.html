@@ -25,31 +25,37 @@
       left: 50%;
       transform: translateX(-50%);
       color: white;
-      font-size: 16px;
+      font-size: 18px; /* slightly bigger */
+      font-family: Arial, Helvetica, sans-serif; /* match footer email font */
       background-color: rgba(0, 0, 0, 0.6);
       padding: 5px 15px;
       border-radius: 10px;
       z-index: 100;
+      text-align: center;
+      width: fit-content;
+      max-width: 90%;
     }
 
-    #playButton {
-      position: absolute;
-      top: 45px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 101;
-      padding: 8px 20px;
-      font-size: 16px;
+    /* Overlay full screen "continue" black popup */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       cursor: pointer;
-      border: none;
-      border-radius: 8px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      transition: background-color 0.3s;
     }
 
-    #playButton:hover {
-      background-color: rgba(0, 0, 0, 0.9);
+    #overlay img {
+      width: 150px;
+      height: auto;
+      user-select: none;
     }
 
     .container {
@@ -144,13 +150,19 @@
       color: white;
       font-size: 14px;
       line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif; /* match IP font */
     }
   </style>
 </head>
 <body>
 
 <div id="ip-display">Fetching IP...</div>
-<button id="playButton">Play Music</button>
+
+<!-- Overlay with continue image as the play button -->
+<div id="overlay" title="Click to continue and play music">
+  <img src="/mnt/data/2dbbbd29-3cba-46cc-aa10-02667f8c6fd6.png" alt="Continue button" />
+  <p style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px; margin-top: 15px;">click to enter...</p>
+</div>
 
 <div class="container">
   <div class="box">
@@ -214,18 +226,18 @@
       document.getElementById('ip-display').textContent = 'IP could not be loaded';
     });
 
-  // Play music button functionality
+  // Setup audio for playback
   const audio = document.createElement('audio');
   audio.loop = true;
   audio.src = 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/background.mp3';
 
-  const playButton = document.getElementById('playButton');
-  playButton.addEventListener('click', () => {
+  // Play music and hide overlay on click
+  const overlay = document.getElementById('overlay');
+  overlay.addEventListener('click', () => {
     audio.play().catch(e => {
-      // Handle error (e.g. user gesture required)
       console.log('Playback failed:', e);
     });
-    playButton.style.display = 'none';
+    overlay.style.display = 'none';
   });
 </script>
 
