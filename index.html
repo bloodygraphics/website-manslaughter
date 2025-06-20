@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GitHub Background</title>
+  <title>suicide</title>
   <style>
     body {
       margin: 0;
@@ -12,9 +12,108 @@
       background-position: center;
       background-repeat: no-repeat;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
+      gap: 40px;
+    }
+
+    .box {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .box h3 {
+      margin: 0 0 10px;
+      color: white;
+    }
+
+    .box img.content-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .box img.button-image {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .box img.button-image:hover {
+      transform: scale(1.05);
+    }
+
+    .popup {
+      position: absolute;
+      bottom: 90px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: white;
+      display: none;
+    }
+
+    .popup a {
+      color: #00ccff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
+<div class="container">
+  <!-- Box Template -->
+  <div class="box">
+    <h3>Title 1</h3>
+    <img src="https://via.placeholder.com/100" class="content-image" alt="Image 1">
+    <img src="https://via.placeholder.com/60" class="button-image" alt="Button" onclick="showPopup(this)">
+    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+  </div>
+
+  <div class="box">
+    <h3>Title 2</h3>
+    <img src="https://via.placeholder.com/100" class="content-image" alt="Image 2">
+    <img src="https://via.placeholder.com/60" class="button-image" alt="Button" onclick="showPopup(this)">
+    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+  </div>
+
+  <div class="box">
+    <h3>Title 3</h3>
+    <img src="https://via.placeholder.com/100" class="content-image" alt="Image 3">
+    <img src="https://via.placeholder.com/60" class="button-image" alt="Button" onclick="showPopup(this)">
+    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+  </div>
+
+  <div class="box">
+    <h3>Title 4</h3>
+    <img src="https://via.placeholder.com/100" class="content-image" alt="Image 4">
+    <img src="https://via.placeholder.com/60" class="button-image" alt="Button" onclick="showPopup(this)">
+    <div class="popup"><a href="https://example.com" target="_blank">Go to link</a></div>
+  </div>
+</div>
+
+<script>
+  function showPopup(button) {
+    const popup = button.nextElementSibling;
+    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
+
 </body>
 </html>
