@@ -3,45 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Team Layout</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Team Grid</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: white;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      grid-template-rows: repeat(2, 220px);
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .icon {
+      margin-top: 10px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .popup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #111;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      z-index: 100;
+    }
+
+    .popup h2 {
+      color: cyan;
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      font-style: italic;
+      color: white;
+    }
+
+    .popup-btn {
+      margin-top: 15px;
+      width: 80px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+  <!-- Grid Container -->
   <div class="container" id="main-container">
-    <div class="card" onclick="showPopup('Stalingrad', 'Silent but lethal.', 'https://your-link.com')">
-      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+    <div class="card" onclick="showPopup('Stalingrad', 'Silent but lethal.', 'https://t.me/yourlink')">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar1.png" alt="avatar" />
       <h2>Stalingrad</h2>
       <p>Founder</p>
-      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
     </div>
-    <div class="card" onclick="showPopup('Anemic', 'Covert but wise.', 'https://your-link.com')">
-      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+    <div class="card" onclick="showPopup('Anemic', 'Covert but wise.', 'https://t.me/anotherlink')">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar2.png" alt="avatar" />
       <h2>Anemic</h2>
       <p>Co-Owner</p>
-      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
     </div>
-    <div class="card" onclick="showPopup('Kami', 'Always present.', 'https://your-link.com')">
-      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+    <div class="card" onclick="showPopup('Kami', 'Always present.', 'https://t.me/kamilink')">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar3.png" alt="avatar" />
       <h2>Kami</h2>
       <p>Member</p>
-      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
     </div>
-    <div class="card" onclick="showPopup('KhusrsK', 'Silent steps.', 'https://your-link.com')">
-      <img class="avatar" src="https://your-github-avatar-link.png" alt="avatar" />
+    <div class="card" onclick="showPopup('KhusrsK', 'Silent steps.', 'https://t.me/khusrslink')">
+      <img class="avatar" src="https://raw.githubusercontent.com/your-username/your-repo/main/avatar4.png" alt="avatar" />
       <h2>KhusrsK</h2>
       <p>Member</p>
-      <img class="icon" src="https://your-github-button-icon.png" alt="icon"/>
+      <img class="icon" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="icon"/>
     </div>
   </div>
 
+  <!-- Pop-up -->
   <div class="popup" id="popup">
     <h2 id="popup-name">Name</h2>
     <p id="popup-desc"><em>Description</em></p>
     <a id="popup-link" href="#" target="_blank">
-      <img src="https://your-github-button-icon.png" alt="button" class="popup-btn"/>
+      <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
     </a>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function showPopup(name, desc, link) {
+      document.getElementById("main-container").style.display = "none";
+      document.getElementById("popup-name").textContent = name;
+      document.getElementById("popup-desc").textContent = desc;
+      document.getElementById("popup-link").href = link;
+      document.getElementById("popup").style.display = "block";
+    }
+  </script>
 </body>
 </html>
