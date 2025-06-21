@@ -73,7 +73,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: transparent; /* Removed black overlay */
       z-index: 100;
       justify-content: center;
       align-items: center;
@@ -108,16 +108,26 @@
     }
 
     .popup-btn {
+      display: inline-block;
       margin-top: 15px;
-      width: 80px;
-      cursor: pointer;
+      padding: 10px 20px;
+      background-color: cyan;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .popup-btn:hover {
+      background-color: #00ffffcc;
     }
   </style>
 </head>
 <body>
 
   <!-- Video Background -->
-  <video class="background-video" autoplay muted loop>
+  <video class="background-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background1.mov" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -159,9 +169,7 @@
     <div class="popup" id="popup" onclick="event.stopPropagation();">
       <h2 id="popup-name">Name</h2>
       <p id="popup-desc"><em>Description</em></p>
-      <a id="popup-link" href="#" target="_blank">
-        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
-      </a>
+      <a id="popup-link" href="#" target="_blank" class="popup-btn">Visit</a>
     </div>
   </div>
 
