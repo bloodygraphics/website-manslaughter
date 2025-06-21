@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page 2</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      overflow: hidden;
+    }
+
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <audio id="background-audio" loop autoplay>
+    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
+  </audio>
+
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
+  </video>
+</body>
+</html>
