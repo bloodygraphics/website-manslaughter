@@ -115,25 +115,24 @@
     }
 
     .popup {
-      background: rgba(38, 38, 38, 0.9);
-      color: white;
-      padding: 20px;
-      border-radius: 12px;
-      width: 400px;
+      background: #111;
+      color: #ccc;
+      border-radius: 10px;
+      padding: 10px 20px;
+      width: 900px;
       height: 500px;
       max-height: 80vh;
-      font-size: 14px;
-      line-height: 1.5;
-      white-space: pre-wrap;
-      position: relative;
-      user-select: text;
       overflow: auto;
+      white-space: pre;
+      font-size: 13px;
+      line-height: 1.4;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      border: 1px solid #333;
+      user-select: text;
     }
 
     #popup-content {
       user-select: text;
-      overflow: auto;
-      white-space: pre;
     }
 
     .copy-button {
@@ -167,31 +166,17 @@
     .entry-list::-webkit-scrollbar,
     .popup::-webkit-scrollbar {
       width: 6px;
-      height: 6px;
-    }
-
-    .entry-list::-webkit-scrollbar-track,
-    .popup::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
     }
 
     .entry-list::-webkit-scrollbar-thumb,
     .popup::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.3);
       border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .entry-list::-webkit-scrollbar-thumb:hover,
-    .popup::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .entry-list,
     .popup {
       scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.05);
+      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
     }
   </style>
 </head>
@@ -215,24 +200,19 @@
     </div>
 
     <div class="entry-list active" id="list-764">
-      <div class="entry-button" onclick="openPopup('Cane764', 'Images:\nHttps://files.catbox.moe/lt3x9i.ogg [Voice]\nHttps://files.catbox.moe/k7i8yu.ogg [Voice]\nHttps://files.catbox.moe/tes1aq.jpg [Content]\nHttps://files.catbox.moe/vx3cq9.jpg [Content]\nHttps://files.catbox.moe/gwifiz.png [Chatlog]\nHttps://files.catbox.moe/y2q810.jpg [Face]\nHttps://files.catbox.moe/bc0h7z.jpg [Face]\nHttps://files.catbox.moe/25ekc8.png [Possible Pedophile]\n\nNotes:\nHas been in com since 2023 [still in com as of, Dec 1st 2024]\nHad a child with a 14 year old while being 17 years old, unknown if they stayed together. [Still weird]\nUnknown if this is his arm or not -> https://files.catbox.moe/tes1aq.jpg \nMade someone tattoo his alias onto them [UNCONFIRMED].\nSeduced for an IP address that led up to his document.\nCurrently inside of a band, they preform with-in [IN] Lafayette')">Cane764</div>
-      <div class="entry-button" onclick="openPopup('Confused764', 'Sample text for Confused764.')">Confused764</div>
-      <div class="entry-button" onclick="openPopup('DasEnde764', 'Sample text for DasEnde764.')">DasEnde764</div>
-      <div class="entry-button" onclick="openPopup('Heal764', 'Sample text for Heal764.')">Heal764</div>
-      <div class="entry-button" onclick="openPopup('Inactive764', 'Sample text for Inactive764.')">Inactive764</div>
-      <div class="entry-button" onclick="openPopup('Extra764', 'Extra sample.')">Extra764</div>
+      <div class="entry-button" onclick="openPopup('Cane764', 'Some detailed info here.')">Cane764</div>
     </div>
 
     <div class="entry-list" id="list-knr">
-      <div class="entry-button" onclick="openPopup('KNR001', 'Text for KNR001.')">KNR001</div>
+      <div class="entry-button" onclick="openPopup('KNR001', 'KNR text here.')">KNR001</div>
     </div>
 
     <div class="entry-list" id="list-slittown">
-      <div class="entry-button" onclick="openPopup('SlitGuy', 'Entry for SlitGuy.')">SlitGuy</div>
+      <div class="entry-button" onclick="openPopup('SlitGuy', 'SlitGuy entry content.')">SlitGuy</div>
     </div>
 
     <div class="entry-list" id="list-other">
-      <div class="entry-button" onclick="openPopup('OtherEntry1', 'Random entry in Other.')">OtherEntry1</div>
+      <div class="entry-button" onclick="openPopup('OtherEntry1', 'Other content.')">OtherEntry1</div>
     </div>
   </div>
 
