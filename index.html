@@ -159,7 +159,6 @@
       text-align: center;
     }
 
-    /* Intro Overlay */
     .intro-overlay {
       position: fixed;
       top: 0;
@@ -185,35 +184,31 @@
       font-size: 12px;
       text-align: center;
       line-height: 1.6;
+      user-select: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- Intro Overlay with Music Trigger -->
   <div class="intro-overlay" id="intro-overlay" onclick="startSite()">
     <div class="intro-footer">
-      <div>custom line 1</div>
-      <div>custom line 2</div>
-      <div>custom line 3</div>
+      <div id="line1">✁✃✁✁✃✁✃✁✁✃✁✃✁</div>
+      <div id="line2">Click to enter...</div>
+      <div id="line3">✃✁✃✁✁✃✁✃✁✁✃✁✃</div>
     </div>
   </div>
 
-  <!-- Audio Element (Autoplay triggered by click) -->
   <audio id="background-audio" loop>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Video Background -->
   <video class="background-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- IP Address Display (Top Center, 20px from top) -->
   <div class="ip-display" id="ip-address">Fetching IP...</div>
 
-  <!-- Grid Container -->
   <div class="container" id="main-container">
     <div class="card">
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />
@@ -245,7 +240,6 @@
     </div>
   </div>
 
-  <!-- Pop-up Overlay -->
   <div class="popup-overlay" id="popup-overlay" onclick="hidePopup()">
     <div class="popup" id="popup" onclick="event.stopPropagation();">
       <h2 id="popup-name">Name</h2>
@@ -254,7 +248,6 @@
     </div>
   </div>
 
-  <!-- Footer (Bottom Centered, 3 Columns) -->
   <div class="footer">
     <span>manslaughter@draugr.de</span>
     <span>bloodygraphics@draugr.de</span>
@@ -305,7 +298,6 @@
       });
     }
 
-    // Fetch IP address
     fetch('https://api.ipify.org?format=json')
       .then(response => response.json())
       .then(data => {
