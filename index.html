@@ -6,6 +6,7 @@
   <title>suicide</title>
   <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" type="image/x-icon" />
   <style>
+    /* [unchanged styles] */
     body {
       margin: 0;
       background: #0d0d0d;
@@ -202,13 +203,14 @@
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
   </audio>
 
-  <video class="background-video" autoplay muted loop playsinline>
+  <video class="background-video" autoplay muted loop playsinline id="bg-video">
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background1.mp4" type="video/mp4">
   </video>
 
   <div class="ip-display" id="ip-address">Fetching IP...</div>
 
   <div class="container" id="main-container">
+    <!-- [cards unchanged] -->
     <div class="card">
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />
       <h2>Discord</h2>
@@ -290,10 +292,13 @@
     function startSite() {
       const overlay = document.getElementById("intro-overlay");
       const audio = document.getElementById("background-audio");
+      const video = document.getElementById("bg-video");
 
       overlay.classList.add("hidden");
-      audio.play().catch(() => {
-      });
+
+      audio.play().catch(() => {});
+      video.muted = true;
+      video.play().catch(() => {});
     }
 
     fetch('https://api.ipify.org?format=json')
