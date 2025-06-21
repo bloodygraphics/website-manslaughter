@@ -42,6 +42,13 @@
       overflow-y: auto;
       width: 320px;
       text-align: center;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .archive-box.hidden {
+      opacity: 0;
+      pointer-events: none;
     }
 
     .archive-title {
@@ -96,6 +103,13 @@
       justify-content: center;
       align-items: center;
       z-index: 10;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .popup-overlay.active {
+      display: flex;
+      opacity: 1;
     }
 
     .popup {
@@ -110,19 +124,12 @@
       line-height: 1.5;
     }
 
-    .close-btn {
-      background: white;
-      color: black;
-      font-weight: bold;
-      border-radius: 8px;
-      padding: 5px 12px;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background 0.3s;
+    .entry-list {
+      display: none;
     }
 
-    .close-btn:hover {
-      background: #ccc;
+    .entry-list.active {
+      display: block;
     }
   </style>
 </head>
@@ -136,39 +143,70 @@
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
   </video>
 
-  <div class="archive-box">
+  <div class="archive-box" id="archive-box">
     <div class="archive-title">Scare Archives</div>
     <div class="filter-buttons">
-      <div class="filter-button">764</div>
-      <div class="filter-button">KNR</div>
-      <div class="filter-button">SlitTown</div>
-      <div class="filter-button">Other</div>
+      <div class="filter-button" onclick="showCategory('list-764')">764</div>
+      <div class="filter-button" onclick="showCategory('list-knr')">KNR</div>
+      <div class="filter-button" onclick="showCategory('list-slittown')">SlitTown</div>
+      <div class="filter-button" onclick="showCategory('list-other')">Other</div>
     </div>
-    <div class="entry-button" onclick="openPopup('Cane764', 'Sample text for Cane764.')">Cane764</div>
-    <div class="entry-button" onclick="openPopup('Confused764', 'Sample text for Confused764.')">Confused764</div>
-    <div class="entry-button" onclick="openPopup('DasEnde764', 'Sample text for DasEnde764.')">DasEnde764</div>
-    <div class="entry-button" onclick="openPopup('Heal764', 'Sample text for Heal764.')">Heal764</div>
-    <div class="entry-button" onclick="openPopup('Inactive764', 'Sample text for Inactive764.')">Inactive764</div>
-    <!-- Add more entries as needed -->
+
+    <!-- Category 764 -->
+    <div class="entry-list active" id="list-764">
+      <div class="entry-button" onclick="openPopup('Cane764', 'Sample text for Cane764.')">Cane764</div>
+      <div class="entry-button" onclick="openPopup('Confused764', 'Sample text for Confused764.')">Confused764</div>
+      <div class="entry-button" onclick="openPopup('DasEnde764', 'Sample text for DasEnde764.')">DasEnde764</div>
+      <div class="entry-button" onclick="openPopup('Heal764', 'Sample text for Heal764.')">Heal764</div>
+      <div class="entry-button" onclick="openPopup('Inactive764', 'Sample text for Inactive764.')">Inactive764</div>
+    </div>
+
+    <!-- Category KNR -->
+    <div class="entry-list" id="list-knr">
+      <div class="entry-button" onclick="openPopup('KNR001', 'Text for KNR001.')">KNR001</div>
+    </div>
+
+    <!-- Category SlitTown -->
+    <div class="entry-list" id="list-slittown">
+      <div class="entry-button" onclick="openPopup('SlitGuy', 'Entry for SlitGuy.')">SlitGuy</div>
+    </div>
+
+    <!-- Category Other -->
+    <div class="entry-list" id="list-other">
+      <div class="entry-button" onclick="openPopup('OtherEntry1', 'Random entry in Other.')">OtherEntry1</div>
+    </div>
   </div>
 
   <div class="popup-overlay" id="popup-overlay" onclick="closePopup()">
     <div class="popup" onclick="event.stopPropagation();">
       <div id="popup-content"></div>
-      <div class="close-btn" onclick="closePopup()">Close</div>
     </div>
   </div>
 
   <script>
     function openPopup(title, content) {
-      const overlay = document.getElementById('popup-overlay');
-      const popupContent = document.getElementById('popup-content');
-      popupContent.innerHTML = `<strong>${title}</strong><br><br>${content}`;
-      overlay.style.display = 'flex';
+      const popup = document.getElementById('popup-overlay');
+      const archive = document.getElementById('archive-box');
+      const contentBox = document.getElementById('popup-content');
+
+      contentBox.innerHTML = `<strong>${title}</strong><br><br>${content}`;
+      popup.classList.add('active');
+      archive.classList.add('hidden');
     }
 
     function closePopup() {
-      document.getElementById('popup-overlay').style.display = 'none';
+      const popup = document.getElementById('popup-overlay');
+      const archive = document.getElementById('archive-box');
+
+      popup.classList.remove('active');
+      setTimeout(() => {
+        archive.classList.remove('hidden');
+      }, 200);
+    }
+
+    function showCategory(id) {
+      document.querySelectorAll('.entry-list').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
     }
   </script>
 
