@@ -12,6 +12,7 @@
       color: white;
       font-family: 'Courier New', monospace;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -27,6 +28,16 @@
       height: 100vh;
       object-fit: cover;
       z-index: -1;
+    }
+
+    .ip-display {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+      background: rgba(38, 38, 38, 0.6);
+      padding: 8px 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
     }
 
     .container {
@@ -134,6 +145,9 @@
     Your browser does not support the video tag.
   </video>
 
+  <!-- IP Address Display -->
+  <div class="ip-display" id="ip-address">Fetching IP...</div>
+
   <!-- Grid Container -->
   <div class="container" id="main-container">
     <div class="card">
@@ -208,6 +222,16 @@
         }, 10);
       }, 500);
     }
+
+    // Fetch IP address
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('ip-address').textContent = `Your IP: ${data.ip}`;
+      })
+      .catch(() => {
+        document.getElementById('ip-address').textContent = 'IP unavailable';
+      });
   </script>
 </body>
 </html>
