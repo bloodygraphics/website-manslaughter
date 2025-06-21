@@ -43,7 +43,7 @@
       width: 320px;
       text-align: center;
       opacity: 1;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.5s ease;
       pointer-events: all;
     }
 
@@ -93,6 +93,7 @@
     }
 
     .popup-overlay {
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -100,18 +101,19 @@
       height: 100vh;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(4px);
-      display: flex;
       justify-content: center;
       align-items: center;
       z-index: 10;
       opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.5s ease;
     }
 
-    .popup-overlay.active {
+    .popup-overlay.show {
+      display: flex;
+    }
+
+    .popup-overlay.visible {
       opacity: 1;
-      pointer-events: all;
     }
 
     .popup {
@@ -139,7 +141,6 @@
       overflow-y: auto;
     }
 
-    /* Custom Scrollbar Styling */
     .scrollable::-webkit-scrollbar {
       width: 6px;
     }
@@ -217,38 +218,42 @@
   </div>
 
   <script>
-    function openPopup(title, content) {
-      const popup = document.getElementById('popup-overlay');
-      const archive = document.getElementById('archive-box');
-      const contentBox = document.getElementById('popup-content');
+    function showCategory(id) {
+      const lists = document.querySelectorAll(".entry-list");
+      lists.forEach(list => list.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
 
-      contentBox.innerHTML = `<strong>${title}</strong><br><br>${content}`;
-      popup.classList.add('active');
-      archive.classList.add('hidden');
+    function openPopup(title, content) {
+      const archiveBox = document.getElementById("archive-box");
+      const overlay = document.getElementById("popup-overlay");
+      const popupContent = document.getElementById("popup-content");
+
+      popupContent.innerHTML = `<strong>${title}</strong><br/><br/>${content}`;
+
+      archiveBox.style.opacity = "0";
+      overlay.classList.add("show");
+
+      setTimeout(() => {
+        archiveBox.style.display = "none";
+        overlay.classList.add("visible");
+      }, 500);
     }
 
     function closePopup() {
-      const popup = document.getElementById('popup-overlay');
-      const archive = document.getElementById('archive-box');
+      const archiveBox = document.getElementById("archive-box");
+      const overlay = document.getElementById("popup-overlay");
 
-      popup.classList.remove('active');
+      overlay.classList.remove("visible");
+
       setTimeout(() => {
-        archive.classList.remove('hidden');
-      }, 400); // Match fade-out time
+        overlay.classList.remove("show");
+        archiveBox.style.display = "block";
+        setTimeout(() => {
+          archiveBox.style.opacity = "1";
+        }, 10);
+      }, 500);
     }
-
-    function showCategory(id) {
-      document.querySelectorAll('.entry-list').forEach(el => el.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-
-    // Add scrollable class if more than 5 entry-buttons
-    document.querySelectorAll('.entry-list').forEach(list => {
-      if (list.querySelectorAll('.entry-button').length > 5) {
-        list.classList.add('scrollable');
-      }
-    });
   </script>
-
 </body>
 </html>
