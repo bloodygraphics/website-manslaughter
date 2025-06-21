@@ -14,6 +14,18 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
     }
 
     .container {
@@ -27,7 +39,8 @@
     }
 
     .card {
-      background: #1a1a1a;
+      background: rgba(38, 38, 38, 0.6);
+      backdrop-filter: blur(10px);
       padding: 20px;
       border-radius: 15px;
       text-align: center;
@@ -77,7 +90,8 @@
     }
 
     .popup {
-      background: #111;
+      background: rgba(38, 38, 38, 0.6);
+      backdrop-filter: blur(10px);
       padding: 40px;
       border-radius: 15px;
       text-align: center;
@@ -101,6 +115,12 @@
   </style>
 </head>
 <body>
+
+  <!-- Video Background -->
+  <video class="background-video" autoplay muted loop>
+    <source src="https://raw.githubusercontent.com/your-username/your-repo/main/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <!-- Grid Container -->
   <div class="container" id="main-container">
@@ -147,7 +167,7 @@
 
   <script>
     function showPopup(name, desc, link, event) {
-      event.stopPropagation(); // prevent card click
+      event.stopPropagation();
       const mainContainer = document.getElementById("main-container");
       const overlay = document.getElementById("popup-overlay");
 
