@@ -122,16 +122,18 @@
       width: 400px;
       height: 500px;
       max-height: 80vh;
-      overflow-y: auto;
       font-size: 14px;
       line-height: 1.5;
       white-space: pre-wrap;
       position: relative;
-      user-select: text; /* Ensure selectable */
+      user-select: text;
+      overflow: auto;
     }
 
     #popup-content {
-      user-select: text; /* Ensure selectable */
+      user-select: text;
+      overflow: auto;
+      white-space: pre;
     }
 
     .copy-button {
@@ -162,26 +164,32 @@
       display: block;
     }
 
-    .entry-list::-webkit-scrollbar {
+    .entry-list::-webkit-scrollbar,
+    .popup::-webkit-scrollbar {
       width: 6px;
+      height: 6px;
     }
 
-    .entry-list::-webkit-scrollbar-track {
+    .entry-list::-webkit-scrollbar-track,
+    .popup::-webkit-scrollbar-track {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 10px;
     }
 
-    .entry-list::-webkit-scrollbar-thumb {
+    .entry-list::-webkit-scrollbar-thumb,
+    .popup::-webkit-scrollbar-thumb {
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .entry-list::-webkit-scrollbar-thumb:hover {
+    .entry-list::-webkit-scrollbar-thumb:hover,
+    .popup::-webkit-scrollbar-thumb:hover {
       background-color: rgba(255, 255, 255, 0.5);
     }
 
-    .entry-list {
+    .entry-list,
+    .popup {
       scrollbar-width: thin;
       scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.05);
     }
