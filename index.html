@@ -5,25 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team Grid</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Courier New', monospace;
+      background: #0d0d0d;
       color: white;
-      overflow: hidden;
-    }
-
-    video.background-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
-      object-fit: cover;
-      z-index: -1;
     }
 
     .container {
@@ -32,19 +22,17 @@
       gap: 40px;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       opacity: 1;
       transition: opacity 0.5s ease;
     }
 
     .card {
-      background: rgba(38, 38, 38, 0.75);
+      background: #1a1a1a;
       padding: 20px;
       border-radius: 15px;
       text-align: center;
       transition: transform 0.3s ease;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      position: relative;
     }
 
     .card:hover {
@@ -80,17 +68,19 @@
       transition: opacity 0.5s ease;
     }
 
+    .popup-overlay.show {
+      display: flex;
+    }
+
     .popup-overlay.visible {
       opacity: 1;
     }
 
     .popup {
-      background: rgba(38, 38, 38, 0.75);
+      background: #111;
       padding: 40px;
       border-radius: 15px;
       text-align: center;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
 
     .popup h2 {
@@ -111,12 +101,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Background Video -->
-  <video class="background-video" autoplay muted loop playsinline>
-    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/test.mov" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
   <!-- Grid Container -->
   <div class="container" id="main-container">
@@ -152,41 +136,48 @@
 
   <!-- Pop-up Overlay -->
   <div class="popup-overlay" id="popup-overlay" onclick="hidePopup()">
-    <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popup-title">Title</h2>
-      <p id="popup-description">Description</p>
-      <a id="popup-link" target="_blank">
-        <img class="popup-btn" src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="Go" />
+    <div class="popup" id="popup" onclick="event.stopPropagation();">
+      <h2 id="popup-name">Name</h2>
+      <p id="popup-desc"><em>Description</em></p>
+      <a id="popup-link" href="#" target="_blank">
+        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/button-icon.png" alt="button" class="popup-btn"/>
       </a>
     </div>
   </div>
 
-  <!-- Working JS Popup Logic -->
   <script>
-    function showPopup(title, description, link, event) {
+    function showPopup(name, desc, link, event) {
+      event.stopPropagation(); // prevent card click
+      const mainContainer = document.getElementById("main-container");
       const overlay = document.getElementById("popup-overlay");
-      const titleEl = document.getElementById("popup-title");
-      const descEl = document.getElementById("popup-description");
-      const linkEl = document.getElementById("popup-link");
 
-      titleEl.innerText = title;
-      descEl.innerText = description;
-      linkEl.href = link;
+      document.getElementById("popup-name").textContent = name;
+      document.getElementById("popup-desc").textContent = desc;
+      document.getElementById("popup-link").href = link;
 
-      overlay.style.display = 'flex';  // Show the overlay
-      requestAnimationFrame(() => {
-        overlay.classList.add("visible");  // Start the fade-in
-      });
+      mainContainer.style.opacity = "0";
+      overlay.classList.add("show");
+
+      setTimeout(() => {
+        mainContainer.style.display = "none";
+        overlay.classList.add("visible");
+      }, 500);
     }
 
     function hidePopup() {
+      const mainContainer = document.getElementById("main-container");
       const overlay = document.getElementById("popup-overlay");
+
       overlay.classList.remove("visible");
+
       setTimeout(() => {
-        overlay.style.display = 'none'; // Fully hide after fade-out
-      }, 500); // Must match CSS transition time
+        overlay.classList.remove("show");
+        mainContainer.style.display = "grid";
+        setTimeout(() => {
+          mainContainer.style.opacity = "1";
+        }, 10);
+      }, 500);
     }
   </script>
-
 </body>
 </html>
