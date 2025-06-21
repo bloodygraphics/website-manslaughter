@@ -119,17 +119,19 @@
       color: white;
       padding: 20px;
       border-radius: 12px;
-      width: 300px;
-      max-height: 70vh;
+      width: 400px;
+      height: 500px;
+      max-height: 80vh;
       overflow-y: auto;
       font-size: 14px;
       line-height: 1.5;
+      white-space: pre-wrap;
     }
 
     .entry-list {
       display: none;
       max-height: 275px;
-      min-height: 275px; /* <--- This line ensures consistent height */
+      min-height: 275px;
       overflow-y: auto;
     }
 
@@ -181,9 +183,8 @@
       <div class="filter-button" onclick="showCategory('list-other')">Other</div>
     </div>
 
-    <!-- Category 764 -->
     <div class="entry-list active" id="list-764">
-      <div class="entry-button" onclick="openPopup('Cane764', 'Sample text for Cane764.')">Cane764</div>
+      <div class="entry-button" onclick="openPopup('Cane764', 'Sample text for Cane764.\nWith a newline.')">Cane764</div>
       <div class="entry-button" onclick="openPopup('Confused764', 'Sample text for Confused764.')">Confused764</div>
       <div class="entry-button" onclick="openPopup('DasEnde764', 'Sample text for DasEnde764.')">DasEnde764</div>
       <div class="entry-button" onclick="openPopup('Heal764', 'Sample text for Heal764.')">Heal764</div>
@@ -191,17 +192,14 @@
       <div class="entry-button" onclick="openPopup('Extra764', 'Extra sample.')">Extra764</div>
     </div>
 
-    <!-- Category KNR -->
     <div class="entry-list" id="list-knr">
       <div class="entry-button" onclick="openPopup('KNR001', 'Text for KNR001.')">KNR001</div>
     </div>
 
-    <!-- Category SlitTown -->
     <div class="entry-list" id="list-slittown">
       <div class="entry-button" onclick="openPopup('SlitGuy', 'Entry for SlitGuy.')">SlitGuy</div>
     </div>
 
-    <!-- Category Other -->
     <div class="entry-list" id="list-other">
       <div class="entry-button" onclick="openPopup('OtherEntry1', 'Random entry in Other.')">OtherEntry1</div>
     </div>
@@ -209,7 +207,7 @@
 
   <div class="popup-overlay" id="popup-overlay" onclick="closePopup()">
     <div class="popup" onclick="event.stopPropagation();">
-      <div id="popup-content"></div>
+      <pre id="popup-content"></pre>
     </div>
   </div>
 
@@ -225,7 +223,7 @@
       const overlay = document.getElementById("popup-overlay");
       const popupContent = document.getElementById("popup-content");
 
-      popupContent.innerHTML = `<strong>${title}</strong><br/><br/>${content}`;
+      popupContent.textContent = `${title}\n\n${content}`;
 
       archiveBox.style.opacity = "0";
       overlay.classList.add("show");
