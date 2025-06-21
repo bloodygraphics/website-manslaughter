@@ -73,7 +73,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: transparent;
+      background-color: transparent; /* Removed black overlay */
       z-index: 100;
       justify-content: center;
       align-items: center;
@@ -111,22 +111,16 @@
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background-color: rgba(38, 38, 38, 0.6);
-      border: 1px solid red;
-      box-shadow: 0 0 10px red;
-      color: red;
+      background-color: cyan;
+      color: #000;
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
-      transition: box-shadow 0.3s;
+      transition: background-color 0.3s;
     }
 
     .popup-btn:hover {
-      box-shadow: 0 0 15px #ff0000cc;
-    }
-
-    .popup-btn:focus {
-      outline: none;
+      background-color: #00ffffcc;
     }
   </style>
 </head>
@@ -175,7 +169,7 @@
     <div class="popup" id="popup" onclick="event.stopPropagation();">
       <h2 id="popup-name">Name</h2>
       <p id="popup-desc"><em>Description</em></p>
-      <a id="popup-link" href="#" target="_blank" class="popup-btn" contenteditable="true">Visit</a>
+      <a id="popup-link" href="#" target="_blank" class="popup-btn">Visit</a>
     </div>
   </div>
 
