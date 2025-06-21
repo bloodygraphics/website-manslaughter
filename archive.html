@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page 2</title>
+  <title>Archive</title>
   <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" type="image/x-icon" />
   <style>
+    * {
+      user-select: none;
+    }
+
     body {
       margin: 0;
       background: #0d0d0d;
+      font-family: 'Courier New', monospace;
+      color: white;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
     }
 
     video.background-video {
@@ -21,9 +32,102 @@
       object-fit: cover;
       z-index: -1;
     }
+
+    .archive-box {
+      background: rgba(38, 38, 38, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-height: 80vh;
+      overflow-y: auto;
+      width: 320px;
+      text-align: center;
+    }
+
+    .archive-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filter-button {
+      padding: 5px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .filter-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .entry-button {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .entry-button:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .popup {
+      background: rgba(38, 38, 38, 0.9);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      width: 300px;
+      max-height: 70vh;
+      overflow-y: auto;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .close-btn {
+      background: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 5px 12px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #ccc;
+    }
   </style>
 </head>
 <body>
+
   <audio id="background-audio" loop autoplay>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
   </audio>
@@ -31,5 +135,42 @@
   <video class="background-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
   </video>
+
+  <div class="archive-box">
+    <div class="archive-title">Scare Archives</div>
+    <div class="filter-buttons">
+      <div class="filter-button">764</div>
+      <div class="filter-button">KNR</div>
+      <div class="filter-button">SlitTown</div>
+      <div class="filter-button">Other</div>
+    </div>
+    <div class="entry-button" onclick="openPopup('Cane764', 'Sample text for Cane764.')">Cane764</div>
+    <div class="entry-button" onclick="openPopup('Confused764', 'Sample text for Confused764.')">Confused764</div>
+    <div class="entry-button" onclick="openPopup('DasEnde764', 'Sample text for DasEnde764.')">DasEnde764</div>
+    <div class="entry-button" onclick="openPopup('Heal764', 'Sample text for Heal764.')">Heal764</div>
+    <div class="entry-button" onclick="openPopup('Inactive764', 'Sample text for Inactive764.')">Inactive764</div>
+    <!-- Add more entries as needed -->
+  </div>
+
+  <div class="popup-overlay" id="popup-overlay" onclick="closePopup()">
+    <div class="popup" onclick="event.stopPropagation();">
+      <div id="popup-content"></div>
+      <div class="close-btn" onclick="closePopup()">Close</div>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(title, content) {
+      const overlay = document.getElementById('popup-overlay');
+      const popupContent = document.getElementById('popup-content');
+      popupContent.innerHTML = `<strong>${title}</strong><br><br>${content}`;
+      overlay.style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup-overlay').style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
