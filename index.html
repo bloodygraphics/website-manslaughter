@@ -135,6 +135,26 @@
     .popup-btn:hover {
       background-color: #e0e0e0;
     }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      background: rgba(38, 38, 38, 0.6);
+      padding: 8px 32px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .footer span {
+      min-width: 100px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -145,7 +165,7 @@
     Your browser does not support the video tag.
   </video>
 
-  <!-- IP Address Display -->
+  <!-- IP Address Display (Top Center) -->
   <div class="ip-display" id="ip-address">Fetching IP...</div>
 
   <!-- Grid Container -->
@@ -187,6 +207,13 @@
       <p id="popup-desc"><em>Description</em></p>
       <a id="popup-link" href="#" target="_blank" class="popup-btn">Visit</a>
     </div>
+  </div>
+
+  <!-- Footer (Bottom Centered, 3 Columns) -->
+  <div class="footer">
+    <span>footer left</span>
+    <span>footer center</span>
+    <span>footer right</span>
   </div>
 
   <script>
