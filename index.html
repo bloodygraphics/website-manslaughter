@@ -186,6 +186,25 @@
       line-height: 1.6;
       user-select: none;
     }
+
+    .top-right-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(38, 38, 38, 0.6);
+      color: white;
+      font-size: 20px;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .top-right-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -206,10 +225,11 @@
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
   </video>
 
+  <a href="page2.html" class="top-right-box">→</a>
+
   <div class="ip-display" id="ip-address">Fetching IP...</div>
 
   <div class="container" id="main-container">
-    <!-- [cards unchanged] -->
     <div class="card">
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />
       <h2>Discord</h2>
