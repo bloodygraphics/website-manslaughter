@@ -44,6 +44,7 @@
       text-align: center;
       opacity: 1;
       transition: opacity 0.4s ease;
+      pointer-events: all;
     }
 
     .archive-box.hidden {
@@ -233,7 +234,7 @@
       popup.classList.remove('active');
       setTimeout(() => {
         archive.classList.remove('hidden');
-      }, 400);
+      }, 400); // Match fade-out time
     }
 
     function showCategory(id) {
