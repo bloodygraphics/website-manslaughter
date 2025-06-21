@@ -38,8 +38,6 @@
       backdrop-filter: blur(10px);
       border-radius: 20px;
       padding: 30px 40px;
-      max-height: 80vh;
-      overflow-y: auto;
       width: 320px;
       text-align: center;
       opacity: 1;
@@ -130,37 +128,34 @@
 
     .entry-list {
       display: none;
+      max-height: 275px; /* fits ~5 buttons */
+      overflow-y: auto;
     }
 
     .entry-list.active {
       display: block;
     }
 
-    .scrollable {
-      max-height: 200px;
-      overflow-y: auto;
-    }
-
-    .scrollable::-webkit-scrollbar {
+    .entry-list::-webkit-scrollbar {
       width: 6px;
     }
 
-    .scrollable::-webkit-scrollbar-track {
+    .entry-list::-webkit-scrollbar-track {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 10px;
     }
 
-    .scrollable::-webkit-scrollbar-thumb {
+    .entry-list::-webkit-scrollbar-thumb {
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .scrollable::-webkit-scrollbar-thumb:hover {
+    .entry-list::-webkit-scrollbar-thumb:hover {
       background-color: rgba(255, 255, 255, 0.5);
     }
 
-    .scrollable {
+    .entry-list {
       scrollbar-width: thin;
       scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.05);
     }
