@@ -99,17 +99,18 @@
       height: 100vh;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(4px);
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
       z-index: 10;
       opacity: 0;
+      pointer-events: none;
       transition: opacity 0.4s ease;
     }
 
     .popup-overlay.active {
-      display: flex;
       opacity: 1;
+      pointer-events: all;
     }
 
     .popup {
@@ -135,6 +136,31 @@
     .scrollable {
       max-height: 200px;
       overflow-y: auto;
+    }
+
+    /* Custom Scrollbar Styling */
+    .scrollable::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollable::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .scrollable::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .scrollable::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .scrollable {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.05);
     }
   </style>
 </head>
@@ -207,7 +233,7 @@
       popup.classList.remove('active');
       setTimeout(() => {
         archive.classList.remove('hidden');
-      }, 200);
+      }, 400);
     }
 
     function showCategory(id) {
@@ -215,7 +241,7 @@
       document.getElementById(id).classList.add('active');
     }
 
-    // Add scrollable class if there are more than 5 entry-buttons
+    // Add scrollable class if more than 5 entry-buttons
     document.querySelectorAll('.entry-list').forEach(list => {
       if (list.querySelectorAll('.entry-button').length > 5) {
         list.classList.add('scrollable');
