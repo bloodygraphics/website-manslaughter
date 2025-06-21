@@ -126,7 +126,29 @@
       font-size: 14px;
       line-height: 1.5;
       white-space: pre-wrap;
-      user-select: text; /* ✅ Make popup text selectable */
+      position: relative;
+      user-select: text; /* Ensure selectable */
+    }
+
+    #popup-content {
+      user-select: text; /* Ensure selectable */
+    }
+
+    .copy-button {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      user-select: none;
+    }
+
+    .copy-button:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .entry-list {
@@ -209,6 +231,7 @@
   <div class="popup-overlay" id="popup-overlay" onclick="closePopup()">
     <div class="popup" onclick="event.stopPropagation();">
       <pre id="popup-content"></pre>
+      <div class="copy-button" onclick="copyPopupText()">Copy All</div>
     </div>
   </div>
 
@@ -248,6 +271,13 @@
           archiveBox.style.opacity = "1";
         }, 10);
       }, 500);
+    }
+
+    function copyPopupText() {
+      const text = document.getElementById("popup-content").textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        console.log("Copied to clipboard.");
+      });
     }
   </script>
 </body>
