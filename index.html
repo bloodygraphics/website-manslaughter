@@ -73,7 +73,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: transparent; /* Removed black overlay */
+      background-color: transparent;
       z-index: 100;
       justify-content: center;
       align-items: center;
@@ -98,7 +98,7 @@
     }
 
     .popup h2 {
-      color: cyan;
+      color: white;
       margin-bottom: 10px;
     }
 
@@ -111,16 +111,17 @@
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background-color: cyan;
-      color: #000;
+      background-color: white;
+      color: black;
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
-      transition: background-color 0.3s;
+      box-shadow: 0 0 10px red;
+      transition: box-shadow 0.3s;
     }
 
     .popup-btn:hover {
-      background-color: #00ffffcc;
+      box-shadow: 0 0 15px red;
     }
   </style>
 </head>
