@@ -158,9 +158,51 @@
       min-width: 100px;
       text-align: center;
     }
+
+    /* Intro Overlay */
+    .intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease;
+    }
+
+    .intro-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .intro-footer {
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Intro Overlay with Music Trigger -->
+  <div class="intro-overlay" id="intro-overlay" onclick="startSite()">
+    <div class="intro-footer">
+      <div>custom line 1</div>
+      <div>custom line 2</div>
+      <div>custom line 3</div>
+    </div>
+  </div>
+
+  <!-- Audio Element (Autoplay triggered by click) -->
+  <audio id="background-audio" loop>
+    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- Video Background -->
   <video class="background-video" autoplay muted loop playsinline>
@@ -251,6 +293,16 @@
           mainContainer.style.opacity = "1";
         }, 10);
       }, 500);
+    }
+
+    function startSite() {
+      const overlay = document.getElementById("intro-overlay");
+      const audio = document.getElementById("background-audio");
+
+      overlay.classList.add("hidden");
+      audio.play().catch(() => {
+        // user interaction required on some browsers
+      });
     }
 
     // Fetch IP address
