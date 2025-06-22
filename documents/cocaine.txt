@@ -1,0 +1,65 @@
+Cocaine
+
+# Step 1: Gather Precursors and Equipment
+> Precursors:
+  - Tropinone (key intermediate, can be synthesized or purchased)
+  - Methylamine (for reductive amination)
+  - Benzoyl chloride (for benzoylation)
+  - Sodium amalgam or lithium aluminum hydride (reducing agents)
+  - Methanol (for esterification)
+  - Hydrochloric acid (for salting out)
+  - Organic solvents (e.g., diethyl ether, chloroform)
+> Equipment:
+  - Glassware (round-bottom flasks, condensers, separatory funnel)
+  - Magnetic stirrer with hot plate
+  - Fume hood (mandatory for ventilation)
+  - Vacuum distillation setup
+  - Filtration setup (Buchner funnel, filter paper)
+  - Rotary evaporator (for solvent removal)
+
+# Step 2: Synthesize Tropinone
+> Process:
+  - Combine succindialdehyde (10g), methylamine (5g), and acetonedicarboxylic acid (12g) in aqueous solution.
+  - Adjust pH to 6-7 with sodium bicarbonate, stir at 40°C for 8 hours (Robinson tropinone synthesis).
+  - Extract tropinone with chloroform, purify via vacuum distillation.
+  - Yield: ~60-70% after purification.
+
+# Step 3: Reductive Amination to Tropine
+> Reaction Setup:
+  - Dissolve tropinone (10g) in methanol (50mL).
+  - Add sodium amalgam (15g) or lithium aluminum hydride (2g) under nitrogen atmosphere.
+  - Stir at room temperature for 6 hours.
+> Chemistry:
+  - Reduction of tropinone ketone forms tropine alcohol.
+  - Reaction: C8H13NO + H2 -> C8H15NO
+> Post-Reaction:
+  - Quench excess reducing agent with water (for Na amalgam) or dilute HCl (for LiAlH4).
+  - Extract tropine with chloroform, dry over sodium sulfate, evaporate solvent.
+  - Yield: ~80% after purification.
+
+# Step 4: Esterification and Benzoylation to Cocaine
+> Process:
+  - Dissolve tropine (10g) in methanol (50mL), add methanol (5g) and sulfuric acid (catalyst).
+  - Reflux for 4 hours to form methyl ecgonine.
+  - Add benzoyl chloride (8g) in chloroform with triethylamine (5g) as base, stir at 0°C for 2 hours.
+> Chemistry:
+  - Esterification forms methyl ecgonine, followed by benzoylation to yield cocaine.
+  - Reaction: C8H15NO + CH3OH -> C9H17NO2; C9H17NO2 + C7H5ClO -> C17H21NO4
+> Post-Reaction:
+  - Wash with water to remove triethylamine hydrochloride.
+  - Extract cocaine freebase with chloroform.
+  - Convert to cocaine HCl by adding HCl in ether, filter crystals.
+  - Yield: ~65-75% after crystallization.
+
+# Step 5: Purification and Notes
+> Purification:
+  - Recrystallize cocaine HCl in ethanol/ether for high purity.
+  - Use column chromatography if impurities (e.g., unreacted tropine) persist.
+> Notes:
+  - Cocaine HCl is the common powder form; freebase is less stable.
+  - Common impurities: ecgonine, benzoylecgonine.
+  - Scale reactions carefully to avoid reagent waste.
+> Safety:
+  - Benzoyl chloride is corrosive; handle in fume hood.
+  - Reducing agents are reactive; use dry conditions.
+  - Solvents are flammable; avoid open flames.
