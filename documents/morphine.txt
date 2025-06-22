@@ -1,0 +1,65 @@
+Morphine
+
+# Step 1: Gather Materials and Equipment
+> Materials:
+  - Raw opium (dried poppy latex, containing 10-20% morphine)
+  - Thebaine (optional, for semi-synthetic route)
+  - Calcium hydroxide (slaked lime)
+  - Ammonium chloride (for precipitation)
+  - Hydrochloric acid (for salting out)
+  - Organic solvents (e.g., ethanol, chloroform)
+> Equipment:
+  - Glassware (beakers, separatory funnel, flasks)
+  - Hot plate with magnetic stirrer
+  - Fume hood (mandatory for ventilation)
+  - Filtration setup (Buchner funnel, filter paper)
+  - Rotary evaporator (for solvent removal)
+  - pH meter or test strips
+
+# Step 2: Extract Morphine from Opium
+> Process:
+  - Dissolve 100g of dried opium in 500mL of warm water (50°C).
+  - Add 20g of calcium hydroxide, stir for 1 hour to form calcium morphenate.
+  - Filter to remove insoluble plant material and other alkaloids.
+  - Add ammonium chloride (10g) to the filtrate, adjust pH to 8-9, precipitating morphine base.
+  - Filter and wash precipitate with cold water, dry thoroughly.
+  - Yield: ~10-15g of crude morphine base (10-15% of opium mass).
+
+# Step 3: Purify Morphine Base
+> Process:
+  - Dissolve crude morphine base in 100mL of dilute hydrochloric acid (pH 3-4).
+  - Extract impurities with chloroform (discarding organic layer).
+  - Basify aqueous layer with sodium hydroxide (pH 9-10) to re-precipitate morphine base.
+  - Filter, wash with cold water, and dry.
+  - Yield: ~80-90% of purified morphine base.
+
+# Step 4: Convert to Morphine Hydrochloride
+> Process:
+  - Dissolve purified morphine base in 50mL of ethanol.
+  - Add hydrochloric acid (diluted) dropwise until pH reaches 4-5.
+  - Evaporate ethanol to precipitate morphine hydrochloride.
+  - Recrystallize in ethanol/water for high purity.
+  - Yield: ~85% of morphine HCl from base.
+
+# Step 5: Alternative Semi-Synthetic Route from Thebaine
+> Process:
+  - Dissolve 10g of thebaine in 50mL of methanol with 5mL of formic acid.
+  - Add 10mL of 30% hydrogen peroxide, stir at 40°C for 4 hours to form 14-hydroxycodeinone.
+  - Hydrogenate with 0.5g palladium on carbon under 40 psi H2 for 6 hours to form oxycodone.
+  - Demethylate oxycodone with boron tribromide (5g) in chloroform at 0°C for 2 hours.
+  - Neutralize and extract morphine base with chloroform.
+  - Convert to morphine HCl as in Step 4.
+  - Yield: ~50-60% overall from thebaine.
+
+# Step 6: Purification and Notes
+> Purification:
+  - Recrystallize morphine HCl in ethanol/water to remove impurities.
+  - Use column chromatography with chloroform/methanol if necessary.
+> Notes:
+  - Morphine HCl is the common medicinal form; base is less stable.
+  - Common impurities: codeine, papaverine (from opium route); oxycodone (from thebaine route).
+  - Opium extraction is simpler but less controlled than semi-synthesis.
+> Safety:
+  - Opium and morphine are caustic; avoid skin contact.
+  - Boron tribromide (semi-synthetic route) is highly reactive; handle in fume hood.
+  - Solvents are flammable; avoid open flames.
