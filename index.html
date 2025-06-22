@@ -7,6 +7,7 @@
   <title>suicide</title>
   <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" type="image/x-icon" />
   <style>
+    /* [styles unchanged] */
     body {
       margin: 0;
       background: #0d0d0d;
@@ -232,6 +233,7 @@
   <div class="ip-display" id="ip-address">Fetching IP...</div>
 
   <div class="container" id="main-container">
+    <!-- [Cards unchanged] -->
     <div class="card">
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />
       <h2>Discord</h2>
@@ -277,6 +279,7 @@
       event.stopPropagation();
       const mainContainer = document.getElementById("main-container");
       const overlay = document.getElementById("popup-overlay");
+      const audio = document.getElementById("background-audio");
 
       document.getElementById("popup-name").textContent = name;
       document.getElementById("popup-desc").textContent = desc;
@@ -284,6 +287,9 @@
 
       mainContainer.style.opacity = "0";
       overlay.classList.add("show");
+
+      // Ensure music continues playing
+      audio.play().catch(() => {});
 
       setTimeout(() => {
         mainContainer.style.display = "none";
@@ -329,4 +335,5 @@
       });
   </script>
 </body>
+
 </html>
