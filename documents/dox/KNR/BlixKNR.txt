@@ -1,1 +1,990 @@
-
+                               Make sure to check out our lovely sponsor, IntelFetch for making the OSINT easier : https://t.me/intelfetch/
+                         ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+                         ║    This paste contains archives/contents and discussion of self harm, extortion and blackmail, you have been warned.    ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║   +            .      .            .  .              +             .            .               .                   +   ║
+                         ║       .            .         +              .    .     .     .                    .     .       .           .           ║
+                         ║ .            +  ..      .             .d8888b   .d8888b  8888b.  888d888 .d88b.       .   +            .        .       ║
+                         ║    .      .                      +    88K      d88P"        "88b 888P"  d8P  Y8b    .          .       +  .        .    ║
+                         ║   .              .        .           "Y8888b. 888      .d888888 888    88888888 .       .    +      .         +  .     ║
+                         ║        +                    .              X88 Y88b.    888  888 888    Y8b.          .         +         .  .          ║
+                         ║     .         .                 +     888888P'  "Y8888P "Y888888 888     "Y88888           .           .    ..  .    .  ║
+                         ║                         +                    .                      .            .            .    .       .            ║
+                         ║           .                             +            Dead <> Grade         .           .                        .       ║
+                         ║    .              +           +                  https://t.me/scaresh       .            .    +      .     .       .    ║
+                         ║       .            .         +              htps://t.me/deadandgradeschannel             .     .       .           .    ║
+                         ║                .          .          .         .    +     .    +   .                   .         .              .       ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x00 - Table of Contents]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║      .           .   .             .           .         .---.              .                      .             .      ║
+                         ║                               .                         / ,-- \                     .                    .              ║
+                         ║    .       .                             .      .--.   ( (x_x) )   .--.       .          .                      .       ║
+                         ║                           .                   ,'    \  (.-`-'(_)  /    `.                       .                       ║
+                         ║      +                             +         /       `-/ \ `.  \-'       \                 +             +              ║
+                         ║                +                +           : (_,' .  / (.\_ ") \  . `._) :       +                           +         ║
+                         ║   +                     +                   |   `-'(_,\ \     / /._)`-'   |            +             +          +       ║
+                         ║        +                        +           |       .  `.\,O,'.'  .   :   |     *                 *                   * ║
+                         ║          *     *             *      *       |   . : !   /\_  /\   ! . !   |                *        *        *          ║
+                         ║                                   *         | ! |-'-|  : ""T"" :  |-'-| | |    *                                        ║
+                         ║   *                   *                     | |-'   `-'|   H   |`-'   `-| |         scare.sh >_0               *        ║
+                         ║         _    .  ,   .           .           `-'        |   H .:|        `-'   .  ,   .           .                      ║
+                         ║     *  / \_ *  / \_      _  *        *   /\'__         | . H !||    *   / \_ *  / \_         *        *   /\'__         ║
+                         ║       /    \  /    \,   ((        .    _/  /  \  *'.   | : H :!|       /    \  /    \,             .    _/  /  \  *'.   ║
+                         ║  .   /\/\  /\/ :' __ \_  `          _^/  ^/    `--.   /| ! H !||  .   /\/\  /\/ :' __ \_  /\_        _^/  ^/    `--.    ║
+                         ║     /    \/  \  _/  \-'\      *    /.' ^_   \_   .'\ / | | H |||\    /    \/  \  _/  \-'\/   \,   *  /.' ^_   \_   .'\  ║
+                         ║   /\  .-   `. \/     \ /==~=-=~=-=-;.  _/ \ -. `_/   \ | | H ||| \ /\  .-   `. \/     \ /      \_   ;.  _/ \ -. `_/   \ ║
+                         ║  /  `-.__ ^   / .-'.--\ =-=~_=-=~=^/  _ `--./ .-'  `- \| | H |||  \  `-.__ ^   / .-'.--\         \__/  _ `--./ .-'  `- \║
+                         ║_/________`.__/ /_______`.~-^=-=~=^=.-'______'-._ `.____/_,'V.L|.\  \______`.__/ /______ `.____________'______'-._ `.____║
+                         ║___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_╔═══════════════════════════════════╗_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║      -= Table of Contents =-      ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║                                   ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║  0x00 - Section: BlixKNR          ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   0x01 - Introduction             ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   0x02 - Aliases                  ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   0x03 - Personal Information     ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   0x04 - Email(s) & Breaches      ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   0x05 - Device Information       ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   0x06 - Social Media             ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   0x07 - IP Information           ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   0x08 - Education Information    ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|__|___|___|___|___|___|__|___║                                   ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║__|__|___|___|___|___|___|__|___|___|__|_║  1x00 - Section: Family           ║_|__|___|___|___|___|___|___|___|___|___|__║
+                         ║__|___|___|___|___|___|___|___|___|___|__║   1x00 - Mother                   ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   1x01 - Personal Information     ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   1x02 - Phone Records            ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   1x03 - Email Addresses          ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   1x04 - Social Media             ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   1x05 - Court Records            ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   1x06 - Credit Report            ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║                                   ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║__|___|___|___|___|___|___|___|___|___|__║   2x00 - Father                   ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   2x01 - Personal Information     ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   2x02 - Phone Records            ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   2x03 - Email Addresses          ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   2x04 - Social Media             ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   2x05 - Court Records            ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║   2x06 - Car Information          ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_║   2x07 - Credit Report            ║_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___║                                   ║___|___|___|___|___|___|___|___|___|___|___║
+                         ║___|___|___|___|___|___|___|___|___|___|_╚═══════════════════════════════════╝_|___|___|___|___|___|___|___|___|___|___|_║
+                         ║_|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x01 - INTRODUCTION]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║                                                      -= Keywords =-                                                     ║
+                         ║                                                         ‾‾‾‾‾‾‾‾                                                        ║
+                         ║                                         'Content' = Self Harm / Vandilism media                                         ║
+                         ║                                            'Swat' = Abuse of law enforcement contact                                    ║
+                         ║                                           'Egirl' = Online / Social girlfriend                                          ║
+                         ║                                            'Larp' = Lie / Pretend                                                       ║
+                         ║   Greetings Hacker.                                                                                                     ║
+                         ║                                                                                                                         ║
+                         ║  	Today, we bring to light the story of Blix, previously known by the online alias BlixKNR, an individual who gained ║
+                         ║  notoriety for his highly peculiar and often disturbing activities within the public Discord server of the group        ║
+                         ║  KNR. Blix, along with his close companion and best friend BladeKNR, became a target for their manipulative and         ║
+                         ║  harmful behaviors that preyed upon vulnerable minors, mainly females on Discord                                        ║
+                         ║                                                                                                                         ║
+                         ║  	Blix and BladeKNR, both central figures in KNR’s underground activities, were known for their coordinated efforts  ║
+                         ║  to exploit the trust of young women, often targeting individuals who were seeking a sense of belonging or conne-       ║
+                         ║  -tion. They used deceptive tactics, convincing several girls to engage in self-harm behavior, This group, at the       ║
+                         ║  time, operated under a veneer of camaraderie and online friendship, but it was, in reality, a toxic and harmful        ║
+                         ║  environment that encouraged these very behaviors.                                                                      ║
+                         ║                                                                                                                         ║
+                         ║  	As Blix and BladeKNR’s influence grew, so did the darker aspects of there operations. The disturbing activities    ║
+                         ║  of Blix and his associates led to the manipulation and emotional distress of multiple individuals. It is believed      ║
+                         ║  that these acts were not isolated incidents but part of a larger pattern of exploitation, designed to control and      ║
+                         ║  manipulate vulnerable minors for the benefit of the KNR group.                                                         ║
+                         ║                                                                                                                         ║
+                         ║  	However, the group's reign came to an end when Scare, a prominent figure within the online anti-extortion          ║
+                         ║  community, launched Operation KNR. This operation, which gained widespread attention, was designed to expose the       ║
+                         ║  harmful activities of KNR and dismantle its operations once and for all. Through careful investigation, strategic      ║
+                         ║  interventions, and the support of various online platforms, Scare succeeded in taking down KNR and bringing an end     ║
+                         ║  to its toxic influence. [https://doxbin.com/upload/KNRFULL/]                                                           ║
+                         ║                                                                                                                         ║
+                         ║  	As of now, Blix and BladeKNR have been removed from most major platforms, and KNR itself is no longer a functioning║
+                         ║  group. The lasting impact of their actions, however, continues to be felt within the affected communities. The         ║
+                         ║  legacy of the KNR group serves as a stark reminder of the dangers lurking in online spaces, where individuals like     ║ 
+                         ║  Blix can prey on the vulnerable and cause real harm.                                                                   ║
+                         ║                                                                                                                         ║
+                         ║  	The story of Blix and KNR is a cautionary tale about the darker side of online communities and the importance of   ║
+                         ║  vigilance and accountability in ensuring that such exploitation does not go unchecked. While KNR may be gone, the      ║
+                         ║  lessons learned from its rise and fall continue to resonate within the broader digital landscape.                      ║
+                         ║                                                                                                                         ║
+                         ║  	During the height of KNR’s controversial activities, Blix resorted to extreme measures to prevent any exposure     ║
+                         ║  of the group's harmful practices. In a desperate attempt to silence those who were considering leaking information     ║
+                         ║  about the group's operations, Blix made several alarming threats to kill himself. These threats were not just          ║
+                         ║  isolated incidents but part of a calculated strategy to manipulate others into staying silent and maintaining the      ║
+                         ║  secrecy surrounding KNR's toxic culture.                                                                               ║ 
+                         ║                                                                                                                         ║
+                         ║  	Blix’s use of self-harm threats served as a form of emotional blackmail                                            ║
+                         ║  attempting to guilt individuals into compliance by exploiting their empathy and fear. This manipulation tactic was     ║
+                         ║  particularly effective in keeping some members of the group from speaking out, as they were emotionally coerced        ║
+                         ║  into keeping the disturbing events under wraps, fearing that exposing the truth would push Blix over the edge.         ║
+                         ║  Fortunately, despite his efforts to control the narrative through fear, the truth about KNR eventually came to         ║
+                         ║  light during Operation KNR, and Blix's attempts at intimidation were ultimately unsuccessful in stifling the           ║
+                         ║  investigation or the exposure of the group's dark activities...                                                        ║
+                         ║                                                                                                                         ║
+                         ║  ~~~~ Anyways, enjoy the paste nerd >.<                                                                                 ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x02 - ALIASES]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║      Alias(s): RustJunkie                  Group(s): KNR                      Psuedonyms: Michael Groff                 ║
+                         ║                BlixKNR                               TG                                   Mike                          ║
+                         ║                Blix                                  VileBin                                                            ║  
+                         ║                Blix.rust                                                                                                ║
+                         ║                Blx                                                                                                      ║ 
+                         ║                blix.parasite                                                                                            ║
+                         ║                yoblixxy1232                                                                                             ║
+                         ║                yoblixxy                                                                                                 ║
+                         ║                blixxy                                                                                                   ║
+                         ║                yoblix                                                                                                   ║
+                         ║                xxddyxx11                                                                                                ║
+                         ║                lsdot                                                                                                    ║
+                         ║                lsdot.                                                                                                   ║
+                         ║                60df                                                                                                     ║
+                         ║                doxbinwx                                                                                                 ║
+                         ║                coinbaseop                                                                                               ║
+                         ║                gen4                                                                                                     ║
+                         ║                gen4 is dma                                                                                              ║
+                         ║                xmrfien                                                                                                  ║
+                         ║                ghostmaskgamer26                                                                                         ║
+                         ║                Larpcom                                                                                                  ║
+                         ║                YoLuzidlol                                                                                               ║
+                         ║                YoLuzid                                                                                                  ║
+                         ║                YoLuz                                                                                                    ║
+                         ║                Luzid                                                                                                    ║
+                         ║                LuzidLOL                                                                                                 ║
+                         ║                NutKiller                                                                                                ║
+                         ║                LGB EpicZ                                                                                                ║
+                         ║                Ttvchrisyttv                                                                                             ║
+                         ║                exorouter                                                                                                ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x03 - PERSONAL INFORMATION]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  » Full Name:               - Michael Groff                                                                             ║
+                         ║  » Age:                     - 16 Years Old                                                                              ║
+                         ║  » Date Of Birth:           - 05/12/2008 -- MM/DD/YYYY                                                                  ║
+                         ║                                                                                                                         ║
+                         ║  » Home Address:            - 6355 Earl St, Owings MD 20736 [Current]                                                   ║
+                         ║  » Zip Code:                - 20736 [Owings MD]                                                                         ║
+                         ║                                                                                                                         ║
+                         ║  » Ethnicity:               - White                                                                                     ║
+                         ║  » Gender:                  - Male                                                                                      ║
+                         ║  » Sexuality:               - Straight                                                                                  ║
+                         ║                                                                                                                         ║
+                         ║  » IP Address:              - 73.39.184.49                                                                              ║
+                         ║                               │ IP Info                                                                                 ║
+                         ║                               └──│ VPN: False                                                                           ║
+                         ║                                  │ Location: Bowie, Maryland, United States                                             ║
+                         ║                                                                                                                         ║
+                         ║  » Mobile Number:           - +1 (301) 706-8257                                                                         ║
+                         ║                               │ Cell Info                                                                               ║
+                         ║                               └──│ CNAM: Cindy Groff                                                                    ║
+                         ║                                  │ Service Provider: Verizon Wireless                                                   ║
+                         ║                                  │ Type: Wireless                                                                       ║
+                         ║                                  │ Registered: Cashapp, Life360, Microsoft, Twitter, Venmo                              ║
+                         ║                                                                                                                         ║
+                         ║  » Past Number:             - +1 (443) 624-4247                                                                         ║
+                         ║                               │ Cell Info                                                                               ║
+                         ║                               └──│ CNAM: -                                                                              ║
+                         ║                                  │ Service Provider: Verizon Wireless                                                   ║
+                         ║                                  │ Type: Wireless                                                                       ║
+                         ║                                  │ Location: PRINCE FREDERICK, MD                                                       ║
+                         ║                                                                                                                         ║
+                         ║  » Debit Card Owned:        - 4031-6303-8707-0757                                                                       ║
+                         ║                               │ Card Info                                                                               ║
+                         ║                               └──│ Expirey: 10/20                                                                       ║
+                         ║                                  │ CVV: 541                                                                             ║
+                         ║                                  │ Type: Visa Debit                                                                     ║
+                         ║                                  │ Card Level: Prepaid Classic                                                          ║
+                         ║                                  │ Bank: Sutton Bank                                                                    ║
+                         ║                                  │ Image of Card: https://files.catbox.moe/8bvct7.jpg                                   ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x04 - EMAIL(s)]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  E-Mail Addresses :                                                             +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                   .  +  .     .   .      .   .     .║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  yoblix12345@gmail.com                                                          +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                        / Activision Paypal  Amazon           .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Callofduty Nvidia  Adobe          +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : yoblix                       []   EA Skype   Twitter Disneyplus     .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : (•••) •••-••57                 \  Medal      Facebook Microsoft  .      +     +    .      .     .       . ║
+                         ║  »   Status : Jacked                          \ ESPN       Github Instagram         .   .  .   .    +      .      .     ║
+                         ║  »  Last IP : 73.39.184.49                                                            +     +    .      .     .       . ║
+                         ║  » OI Report: https://files.catbox.moe/gsewre.json                              +    .      +    .      .     .       . ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║  ghostmaskgamer26@gmail.com                                                     +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                   / Skype       Instagram               .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Activision  Microsoft             +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : ghostmaskgamer26             []   Khanacademy Spotify               .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : iPhone                         \  Apple       Yahoo              .      +     +    .      .     .       . ║
+                         ║  »   Status : Jacked                          \ Callofduty  Discord                 .   .  .   .    +      .      .     ║
+                         ║  » OI Report: https://files.catbox.moe/j3wn2w.json                                    +     +    .      .     .       . ║
+                         ║  »  Last IP : 73.39.184.49                                                            +     +    .      .     .       . ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║  perov_r098a@rambler.ru                                                         +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                       /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : Perov R                      []   Microsoft                         .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \                                 .      +     +    .      .     .       . ║
+                         ║  »   Status : Inactive                        \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  yoblix123456@gmail.com                                                         +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                       / Instagram                           .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Disneyplus                        +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : yoblix123456                 []   Spotify                           .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Discord Imgur                  .      +     +    .      .     .       . ║
+                         ║  »   Status : Deleted                         \ Twitter Amazon                      .   .  .   .    +      .      .     ║
+                         ║  »  Last IP : 73.39.184.49                                                            +     +    .      .     .       . ║
+                         ║  » OI Report: https://files.catbox.moe/gsewre.json                              +    .      +    .      .     .       . ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║  doxxerr@cyberfear.com                                                          +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                        /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : doxxerr                      []                                     .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \                                 .      +     +    .      .     .       . ║
+                         ║  »   Status : Jacked/Com Related              \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║  60df@fbi.one                                                                   +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾                                 /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : XXXXXX                       []   Discord                           .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \                                 .      +     +    .      .     .       . ║
+                         ║  »   Status : Jacked/Com Related              \                                     .   .  .   .    +      .      .     ║
+                         ║  »  Last IP : 73.39.184.49                                                            +     +    .      .     .       . ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  kortnijaferi@hotmail.com                                                       +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                     /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : XXXXXX                       []                                     .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \                                 .      +     +    .      .     .       . ║
+                         ║  »   Status : Unknown                         \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  ahdof2008@gmail.com                                                            +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                          /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : XXXXXX                       []   Imgur                             .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \                                 .      +     +    .      .     .       . ║
+                         ║  »   Status : Unknown                         \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  mhpgamingismygame@yahoo.com                                                    +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                  / Discord                             .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Vimeo                             +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : mhpgamingismygame            []   Github    Amazon                  .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Microsoft Disneyplug           .      +     +    .      .     .       . ║
+                         ║  »   Status : Unknown                         \ Spotify                             .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  azorn83@gmail.com                                                              +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                            / Linkedin  Facebook   Samsung        .   .  .   .    +      .      .     ║
+                         ║  »     GUID : 116377818671427970837          /  Instagram Netflix    Eventbrite   +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : azorn                        []   Github    Amazon     Imgur        .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : (•••) •••-••63                 \  Microsoft Disneyplug Adobe     .      +     +    .      .     .       . ║
+                         ║  »   Status : Highly Active                   \ Spotify   Apple      Pinterest      .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  rzorn08@icloud.com                                                             +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                           / Facebook  Duolingo                  .   .  .   .    +      .      .     ║
+                         ║  »     GUID : 111199216287770378773          /  Instagram Netflix                 +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : A                            []   Github    Amazon     Imgur        .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : (•••) •••-••63                 \  Microsoft Disneyplug Adobe     .      +     +    .      .     .       . ║
+                         ║  »   Status : Deleted                         \ Spotify   Discord                   .   .  .   .    +      .      .     ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║
+                         ║                                                                                                                         ║
+                         ║ Here is a partial of his Stealer Log:                                                                                   ║
+                         ║                                                                                                                         ║
+                         ║ » Passwords.txt ---> https://files.catbox.moe/scp0ax.txt                                                                ║
+                         ║ » Autofills.txt ---> https://files.catbox.moe/lo7nzf.txt                                                                ║
+                         ║ » HudsonRock ---> https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-username?username=yoblix123         ║
+                         ║                                                                                                                         ║
+                         ║ Below, I will list the publicly attainable databreaches on his Discord ID, and username on Vilebin                      ║
+                         ║                                                                                                                         ║
+                         ║  » Data Breaches                                                                                                        ║
+                         ║    │‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                        ║
+                         ║    │Username: Blx                                                                                                       ║
+                         ║    │‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                       ║
+                         ║    │─ Database: VBIN_DOTNET_1KSCRAPE2024.txt                                                                            ║
+                         ║    │─ Data: {"blx","email":"doxbinwxa@fbi.gov","ips":"146.70.168.62,68.83.212","rank":"manager"}                        ║
+                         ║    │                                                                                                                    ║
+                         ║    │UserID: 1049162191347122216                                                                                         ║
+                         ║    │‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                         ║
+                         ║    │─ Database: DISCORD_RESTORECORD_SCRAPE_2023.txt                                                                     ║
+                         ║    │─ Data: {"id":"1049162191347122216","ip":"73.86.96.93","user":"lsdot.#0","date":"2023-09-16T04:51:40.920Z"}         ║
+                         ║    X                                                                                                                    ║
+                         ║                                                                                                                         ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║
+                         ║                                                                                                                         ║
+                         ║   Now, for the most part, when it comes to passwords BlixKNR uses the same password for legit every sigle account he    ║
+                         ║   owns. But there are some other passwords that he uses, passwords that the browser fills in for him.                   ║
+                         ║                                                                                                                         ║
+                         ║   Here is a list of all recorded passwords used by Blix.                                                                ║
+                         ║                                                                                                                         ║
+                         ║   » Passwords:  Pa$$ero32 --- [Most common]                                                                             ║
+                         ║                 Laizani13                                                                                               ║
+                         ║                 2TwZAcxs6GFp32W                                                                                         ║
+                         ║                 29ay4vZV4dgNggk                                                                                         ║
+                         ║                 Pa$$ero455                                                                                              ║
+                         ║                 123456aA#3                                                                                              ║
+                         ║                 F7vbX4efvfDwAVT                                                                                         ║
+                         ║                 BL2LyZ223BVLU2S                                                                                         ║
+                         ║                 ru5pk9pHF8vaAqz                                                                                         ║
+                         ║                 Pa$$ero65                                                                                               ║
+                         ║                 Pa$$ero90                                                                                               ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x05 - DEVICE INFORMATION]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║       │                                                                              +    .      +    .      .     .    ║
+                         ║       ├── DEVICE                                                                      .     .  .    .    .  +   .   +   ║
+                         ║       │   └─── PC                                                                    +    .      +    .      .     .    ║
+                         ║       │       │                                                                            .  +  .     .   .      .   . ║
+                         ║       │       │── HOSTNAME                                                           +    .      +    .      .     .    ║
+                         ║       │       │   └── DESKTOP-Q72PNV3                                                 .     .  .    .    .  +   .   +   ║
+                         ║       │       │                                                                      +    .      +    .      .     .    ║
+                         ║       │       │── USERNAME                                                            .     .  .    .    .  +   .   +   ║
+                         ║       │       │   └── yobli                                                          +    .      +    .      .     .    ║
+                         ║       │       │                                                                          .   .  .   .    +      .      .║
+                         ║       │       └─── SPECS                                                               +  .   .   +   .     .       +   ║
+                         ║       │            │                                                                     .   .  .   .    +      .       ║
+                         ║       │            │── OPERATING SYSTEM                                                +  .   .   +   .     .       +   ║
+                         ║       │            │  └── Windows 10 Home x64                                          .       .    .    .  +   .   +   ║
+                         ║       │            │                                                                 +    .      +    .      .     .    ║
+                         ║       │            │── HWID                                                            .       .    .    .  +   .   +   ║
+                         ║       │            │   └── 0FA9900882131EEE43FF6D07B90E03DE                            +  .   .   +   .     .       +   ║
+                         ║       │            │                                                                   .       .    .    .  +   .   +   ║
+                         ║       │            │── MAC ADDRESS                                                   +    .      +    .      .     .    ║
+                         ║       │            │   └── 39:e6:9b:6f:be:fa                                           .       .    .    .  +   .   +   ║
+                         ║       │            │                                                                 +    .      +    .      .     .    ║
+                         ║       │            │── CPU                                                            .     .  .    .    .  +   .   +   ║
+                         ║       │            │   └── Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz, 8 Cores            .      .    .    .  +   .   +   ║
+                         ║       │            │                                                                   +  .   .   +   .     .       +   ║
+                         ║       │            └── RAM                                                           +    .      +    .      .     .    ║
+                         ║       │                └── Total of RAM, 16302.27 MB or 17094164480 bytes             .     .  .    .    .  +   .   +   ║
+                         ║       │                                                                                   .   .   +   .     .       +   ║
+                         ║-------┴-----------------------------------------------------------------------------------------------------------------║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x06 - SOCIAL MEDIA]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  Steam                                                  Discord                                                         ║
+                         ║  ‾‾‾‾‾                                                  ‾‾‾‾‾‾‾                                                         ║
+                         ║  »  blix#slammed (76561199527576722)                    »  @60df (1297055964184317953) [JACKED]                         ║
+                         ║     md5 (76561199382093889)                             »  @deleteduser52353453 (1049162191347122216) [73.86.96.93]     ║
+                         ║                                                                                                                         ║
+                         ║  Telegram                                               Doxbin                                                          ║
+                         ║  ‾‾‾‾‾‾‾‾                                               ‾‾‾‾‾‾                                                          ║
+                         ║  »  @xmrfien [Inactive]                                 »  https://doxbin.com/user/blix                                 ║
+                         ║  »  @shabibmahib [Deleted]                                                                                              ║
+                         ║                                                                                                                         ║
+                         ║  VileBin                                                RiotGames                                                       ║
+                         ║  ‾‾‾‾‾‾‾                                                ‾‾‾‾‾‾‾‾‾                                                       ║
+                         ║  »  https://vbin.net/user/Blx                           »  @yoblix123bbc                                                ║
+                         ║                                                                                                                         ║
+                         ║  Siege Account                                          YouTube                                                         ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾                                          ‾‾‾‾‾‾‾                                                         ║
+                         ║  »  @YoBlixxy                                           »  https://www.youtube.com/@Hunter-yw4uk                        ║
+                         ║                                                                                                                         ║
+                         ║  Github                                                                                                                 ║
+                         ║  ‾‾‾‾‾‾                                                 Roblox                                                          ║
+                         ║  »  https://github.com/yoblixxy                         ‾‾‾‾‾‾                                                          ║
+                         ║  »  https://github.com/msftrap                          »  https://www.roblox.com/users/5310059002/profile              ║
+                         ║                                                                                                                         ║
+                         ║  Facebook                                               Intuit                                                          ║
+                         ║  ‾‾‾‾‾‾‾‾                                               ‾‾‾‾‾‾                                                          ║
+                         ║  »  Wadwadad []                                         »  @mjcg5965                                                    ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x07 - IP INFORMATION]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  » IPs                                                                                                                  ║
+                         ║    ‾‾‾                                                                                                                  ║
+                         ║     IP: 68.83.212.86                                                                                                    ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                    ║
+                         ║    │─ VPN: False                                                                                                        ║
+                         ║    │─ Proxies: False                                                                                                    ║
+                         ║    │─ Hosting: False                                                                                                    ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Country: United States of America                                                                                 ║
+                         ║    │─ State: Maryland                                                                                                   ║
+                         ║    │─ City: Greenbelt                                                                                                   ║
+                         ║    │─ Postal: 20768                                                                                                     ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Internet Protocol: IPv4                                                                                           ║
+                         ║    │─ ISP: Comcast Cable Communications LLC                                                                             ║
+                         ║    └── Long, Lat: 39.004550, -76.875530 (39°0'16"N   76°52'32"W)                                                        ║
+                         ║                                                                                                                         ║
+                         ║     IP: 73.86.96.93                                                                                                     ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                     ║
+                         ║    │─ VPN: False                                                                                                        ║
+                         ║    │─ Proxies: False                                                                                                    ║
+                         ║    │─ Hosting: False                                                                                                    ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Country: United States of America                                                                                 ║
+                         ║    │─ State: Virginia                                                                                                   ║
+                         ║    │─ City: Manassas                                                                                                    ║
+                         ║    │─ Postal: 20108                                                                                                     ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Internet Protocol: IPv4                                                                                           ║
+                         ║    │─ ISP: Comcast Cable Communications LLC                                                                             ║
+                         ║    └── Long, Lat: 38.751000, -77.475170 (38°45'4"N   77°28'31"W)                                                        ║
+                         ║                                                                                                                         ║
+                         ║     IP: 99.243.174.166                                                                                                  ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                  ║
+                         ║    │─ VPN: False                                                                                                        ║
+                         ║    │─ Proxies: False                                                                                                    ║
+                         ║    │─ Hosting: False                                                                                                    ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Country: Canada                                                                                                   ║
+                         ║    │─ State: Ontario                                                                                                    ║
+                         ║    │─ City: London                                                                                                      ║
+                         ║    │─ Postal: N5V 0A2                                                                                                   ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Internet Protocol: IPv4                                                                                           ║
+                         ║    │─ ISP: Rogers Cable Communications Inc.                                                                             ║
+                         ║    └── Long, Lat: 42.984120, -81.233460 (42°59'3"N   81°14'0"W)                                                         ║
+                         ║                                                                                                                         ║
+                         ║     IP: 103.28.35.38                                                                                                    ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                    ║
+                         ║    │─ VPN: False                                                                                                        ║
+                         ║    │─ Proxies: False                                                                                                    ║
+                         ║    │─ Hosting: False                                                                                                    ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Country: Viet Nam                                                                                                 ║
+                         ║    │─ State: Da Nang                                                                                                    ║
+                         ║    │─ City: Da Nang                                                                                                     ║
+                         ║    │─ Postal: 20108                                                                                                     ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Internet Protocol: IPv4                                                                                           ║
+                         ║    │─ ISP: Viet Digital Technology Liability Company                                                                    ║
+                         ║    └── Long, Lat: 16.067780, 108.220980 (16°4'4"N   108°13'16"E)                                                        ║
+                         ║                                                                                                                         ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║
+                         ║                                                                                                                         ║
+                         ║  » IP Addresses [Facebook Data Request]                                                                                 ║
+                         ║    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                 ║
+                         ║    ─ 2001:0ee0:4bcb:a7b0:5968:7fb6:c10a:7ebe                                                                            ║
+                         ║    ─ 213.6.116.102                                                                                                      ║
+                         ║    ─ 170.83.203.140                                                                                                     ║
+                         ║    ─ 169.224.34.66                                                                                                      ║
+                         ║    ─ 124.6.179.13                                                                                                       ║
+                         ║    ─ 136.158.32.158                                                                                                     ║
+                         ║    ─ 213.172.147.163                                                                                                    ║
+                         ║    ─ 114.10.45.20                                                                                                       ║
+                         ║    ─ 139.135.42.155                                                                                                     ║
+                         ║    ─ 190.105.123.104                                                                                                    ║
+                         ║    ─ 187.45.55.50                                                                                                       ║
+                         ║    ─ 27.124.95.230                                                                                                      ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[0x08 - MISC INFORMATION]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  » Education                                                                                                            ║
+                         ║    ‾‾‾‾‾‾‾‾‾                                                                                                            ║
+                         ║     School: Eleanor Roosevelt High School                                                                               ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                               ║
+                         ║    │─ Type: Public                                                                                                      ║
+                         ║    │─ Campus: 7601 Hanover Parkway Greenbelt, MD 20770, USA                                                             ║
+                         ║    │─ Number: +1 301-513-5400                                                                                           ║
+                         ║    │─ Website: https://www.pgcps.org/eleanorroosevelt/                                                                  ║
+                         ║    │─ District: PGCPS ( Prince George's County Public Schools )                                                         ║
+                         ║    │─ Graduation: 2027                                                                                                  ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Principal: Portia Barnes                                                                                          ║
+                         ║    └── Email: portia.barnes@pgcps.org                                                                                   ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[1x01 - PERSONAL INFORMATION - MOTHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  » TLO Report:              - https://files.catbox.moe/0011ww.pdf                                                       ║
+                         ║  » Credit Report:           - https://files.catbox.moe/wnbo5s.pdf                                                       ║
+                         ║                                                                                                                         ║
+                         ║  » Full Name:               - Cynthia Groff                                                                             ║
+                         ║  » Age:                     - 60                                                                                        ║
+                         ║  » Date Of Birth:           - 09/12/1965                                                                                ║
+                         ║                                                                                                                         ║
+                         ║  » Home Address:            - 6355 Earl St, Owings MD 20736 [Current]                                                   ║
+                         ║                               │ Address Info                                                                            ║
+                         ║                               └──│─ Tax Bill Details:                                                                   ║
+                         ║                                  │  └──│ Tax Bill      : $3,705.42                                                      ║
+                         ║                                  │     │ Tax Roll Date : 01-Jul-2023                                                    ║
+                         ║                                  │     │ Last Checked  : September-2023                                                 ║
+                         ║                                  │     │ Median Bill   : $4,485.00                                                      ║
+                         ║                                  └─│ Zip Code: 20736                                                                    ║
+                         ║                                                                                                                         ║
+                         ║  » Ethnicity:               - White                                                                                     ║
+                         ║  » Gender:                  - Female                                                                                    ║
+                         ║                                                                                                                         ║
+                         ║  » SSN:                     - 218-90-1414 [ISSUED IN MARYLAND]                                                          ║
+                         ║                               │ SSN Info                                                                                ║
+                         ║                               └──│ Issued In: MARYLAND                                                                  ║
+                         ║                                  │ Date of Insurance: 1978-1979                                                         ║
+                         ║                                                                                                                         ║
+                         ║  » DLN:                     - G610132067709                                                                             ║
+                         ║                               │ DLN Info                                                                                ║
+                         ║                               └──│ Issued In: MARYLAND                                                                  ║
+                         ║                                  │ Name: Cynthia Groff                                                                  ║
+                         ║                                  │ Address: 6355 Earl St, Owings MD 20736                                               ║
+                         ║                                  │ Zip: 20736                                                                           ║
+                         ║                                  │ DOB: 09/12/1965                                                                      ║
+                         ║                                                                                                                         ║
+                         ║  » Mobile Number:           - +1 (301) 706-8257 [Shares this phone with her son.]                                       ║
+                         ║                               │ Cell Info                                                                               ║
+                         ║                               └──│ CNAM: Cindy Groff                                                                    ║
+                         ║                                  │ Service Provider: Verizon Wireless                                                   ║
+                         ║                                  │ Type: Wireless                                                                       ║
+                         ║                                  │ Registered: Cashapp, Life360, Microsoft, Twitter, Venmo                              ║
+                         ║                                                                                                                         ║
+                         ║  » Occupation:              - Administration Department Secretary @ Fairview Health Services                            ║
+                         ║                               └──│ Number: +1 (612) 672-7272                                                            ║
+                         ║                                  │ Address: 2450 Riverside Avenue Minneapolis, MN 55454                                 ║
+                         ║                                                                                                                         ║
+                         ║  » Automobiles:             - PONTIAC G5                                                                                ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: 2007                                                                           ║
+                         ║                                  │ VIN #: 1G2AL15F577394096                                                             ║
+                         ║                                                                                                                         ║
+                         ║                             - BUICK ENCLAVE                                                                             ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: 2019                                                                           ║
+                         ║                                  │ VIN #: 5GAERBKW0KJ173203                                                             ║
+                         ║                                                                                                                         ║
+                         ║                             - PONT [Unknown Type]                                                                       ║
+                         ║                               └──│ Registeration Location: Not on file.                                                 ║
+                         ║                                  │ Year: 2007                                                                           ║
+                         ║                                  │ VIN #: 1G2AL15F577394096                                                             ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[1x02 - PHONE RECORDS - MOTHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  Phone Records :                                                                                                        ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                        ║
+                         ║   ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗    ║
+                         ║   |     Carrier           | CarrierType |  City             | County     | Listing Name  | Phone #    | Phone Type |    ║
+                         ║   |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|    ║
+                         ║   | VFRIZON WIRFIFSS - MD | WIRELESS    | WASHINGTON ZONF 3 | MONTCOMFRY | CYNTHIA GROFF | 3017068257 | Mobile     |    ║
+                         ║   | VERIZON WIRELESS - MD | WIRELESS    | WASHINGTON ZONE 3 | MONTGOMERY | CYNTHIA GROFF | 3017065078 | Mobile     |    ║
+                         ║   | COMCASE IP PHONE LLC  | VOIP        | NORTH BEACH       | CALVERT    | CYNTHIA GROFF | 4107805301 | Landline   |    ║
+                         ║   | VERIZON MARYLAND INC  | LANDLINE    | NORTH BEACH       | CALVERT    | CYNTHIA GROFF | 4439644372 | VoIP       |    ║
+                         ║   | VERIZON MARYLAND INC  | LANDLINE    | NORTH BEACH       | CALVERT    | CYNTHIA GROFF | 4102577863 | Landline   |    ║
+                         ║   | VERIZON MARYLAND INC  | LANDLINE    | NORTH BEACH       | CALVERT    | CYNTHIA GROFF | 4107577863 | Landline   |    ║
+                         ║   | VERIZON MARYLAND INC  | LANDLINE    | NORTH BEACH       | CALVERT    | CYNTHIA GROFF | 4102867261 | Landline   |    ║
+                         ║   | COMCAST IP PHONE LLC  | VOIP        | NORTH BEACH       | CALVERT    | CYNTHIA GROFF | 4053510000 | VoIP       |    ║
+                         ║   ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝    ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[1x03 - EMAIL ADDRESSES - MOTHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  E-Mail Addresses :                                                             +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                   .  +  .     .   .      .   .     .║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  c_groff@live.com                                                               +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                             / Instagram                           .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Pinterest  Xvideos                +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : Cynthia Groff                []   Twitter    Pornhub                .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : (•••) •••-••57                 \  Adobe                          .      +     +    .      .     .       . ║
+                         ║  »   Status : Deleted                         \ Dinseyplus                          .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  cgroff@live.com                                                                +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                              /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : cgroff                       []   Microsoft                         .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \                                 .      +     +    .      .     .       . ║
+                         ║  »   Status : Inactive                        \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  cindygroff@longandfoster.com                                                   +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                 / Apple     DisneyPlus                .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  LinkedIn  Netflix                 +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : cindy groff                  []   Microsoft                         .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Spotify                        .      +     +    .      .     .       . ║
+                         ║  »   Status : Active                          \ Amazon                              .   .  .   .    +      .      .     ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║
+                         ║                                                                                                                         ║
+                         ║  I will now be listing off email address(es) related to his Mother that she does not use, but owns.                     ║
+                         ║                                                                                                                         ║
+                         ║  » Emails:  mjcagroff@live.com                                                                                          ║
+                         ║             ostatestuff2020@gmail.com                                                                                   ║
+                         ║             cynthiagroff@comcast.net                                                                                    ║
+                         ║             cindygroff@mris.com                                                                                         ║
+                         ║             passcro65@gmail.com                                                                                         ║
+                         ║             wingedpanther2@yahoo.com                                                                                    ║
+                         ║             punamiller@comcast.net                                                                                      ║
+                         ║             cin65@olg.com                                                                                               ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[1x04 - SOCIAL MEDIA - MOTHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  Social Media :                                                                                                         ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                         ║
+                         ║                                                                                                                         ║
+                         ║  Cashapp                                                DropBox                                                         ║
+                         ║  ‾‾‾‾‾‾‾                                                ‾‾‾‾‾‾‾                                                         ║
+                         ║  »  $cynthiagrofff                                      »  dbid:AABeSBtTQF0U5Qzmb_eB0rFGikvVS6Cnw0I [Cindy Groff]       ║
+                         ║                                                                                                                         ║
+                         ║  Gravator                                               Pandora                                                         ║
+                         ║  ‾‾‾‾‾‾‾‾                                               ‾‾‾‾‾‾‾                                                         ║
+                         ║  »  https://gravatar.com/passero65                      »  @passero65                                                   ║
+                         ║  »  https://gravatar.com/unchana                                                                                        ║
+                         ║                                                                                                                         ║
+                         ║  Godreads                                               Skype                                                           ║
+                         ║  ‾‾‾‾‾‾‾‾                                               ‾‾‾‾‾                                                           ║
+                         ║  »  https://www.goodreads.com/user/show/90469179        »  live:.cid.fa8956d07ce00d38                                   ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[1x05 - COURT RECORDS - MOTHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║    │                                                                                                                    ║
+                         ║    │ Court Records :                                                                                                    ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                    ║
+                         ║    │─ Case #: 03-03-0000242-2014                                                                                        ║
+                         ║    │  └── ─ Case Type: Contract                                                                                         ║
+                         ║    │      ─ Filing Date: 08/13/2014                                                                                     ║
+                         ║    │      ─ Location: Kent                                                                                              ║
+                         ║    │      ─ Title: CHESTER RIVER HOSPITAL CENTER vs LESTER, CYNTHIA ANN                                                 ║
+                         ║    │      ─ JudyRecord: https://www.judyrecords.com/record/v4nke2o5c5742                                                ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Case #: D-041-CR-19-002168                                                                                        ║
+                         ║    │  └── ─ Case Type: Criminal - SOC - Application                                                                     ║
+                         ║    │      ─ Filing Date: 12/08/2019                                                                                     ║
+                         ║    │      ─ Location: Calvert                                                                                           ║
+                         ║    │      ─ Title: State of Maryland vs. STEVEN GREGORY PASSERO                                                         ║
+                         ║    │      ─ JudyRecord: https://www.judyrecords.com/record/npwmnmuo72a5c                                                ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Case #: GT15001659-00	                                                                                           ║
+                         ║    │  └── ─ Case Type: Infraction                                                                                       ║
+                         ║    │      ─ Charge: FAIL OBEY HGWY SIGN                                                                                 ║
+                         ║    │      ─ Filing Date: 01/30/2015	                                                                                   ║
+                         ║    │      ─ Location: SUSSEX                                                                                            ║
+                         ║    │      ─ Costs: $30.00 ($96.00)	                                                                                   ║
+                         ║    │      ─ JudyRecord: https://www.judyrecords.com/record/unkli54me95b                                                 ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Case #: CAL99-10265                                                                                               ║
+                         ║    │  └── ─ Case Type: Contract                                                                                         ║
+                         ║    │      ─ Filing Date: 05/05/1999                                                                                     ║
+                         ║    │      ─ Location: 20736                                                                                             ║
+                         ║    │      ─ Title: GROFF VS ROBLERO                                                                                     ║
+                         ║    │      ─ JudyRecord: https://www.judyrecords.com/record/vgmeu0f8vd9cd                                                ║
+                         ║    │                                                                                                                    ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[1x06 - CREDIT REPORT - MOTHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════+═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║     ├                                                                                                                   ║  
+                         ║     ├── Names                                                                                                           ║  
+                         ║     │   └─── CYNTHIA GROFF                                                                                              ║                   
+                         ║     │                                                                                                                   ║  
+                         ║     │                                                                                                                   ║  
+                         ║     ├── Current Address                                                                                                 ║  
+                         ║     │   └─── 6355 EARL ST, OWNINGS MD, 20736                                                                            ║  
+                         ║     │                                                                                                                   ║  
+                         ║     │                                                                                                                   ║  
+                         ║     │                                                                                                                   ║
+                         ║     │                                                                                                                   ║
+                         ║     ├─── Year of birth                                                                                                  ║      
+                         ║     │    └─── 1965                                                                                                      ║      
+                         ║     │                                                                                                                   ║ 
+                         ║     ├── SSN                                                                                                             ║  
+                         ║     │   └─── 218-90-1414                                                                                                ║   
+                         ║-----┴-------------------------------------------------------------------------------------------------------------------║  
+                         ║                                                                                                                         ║
+                         ║      Open accounts                                                                                                      ║
+                         ║      ‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                      ║
+                         ║       CAPITAL ONE                                                                                                       ║
+                         ║       CARE CREDIT                                                                                                       ║
+                         ║                                                                                                                         ║
+                         ║       Account Info                                                                                                      ║
+                         ║       ‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                      ║
+                         ║           Credit Account:             CAPITAL ONE AUTO FINAN                                                            ║ 
+                         ║           Type:                       Installment                                                                       ║ 
+                         ║           Account Number:             XXXXXXXXXXXXX1001                                                                 ║ 
+                         ║           Owner:                      Borrower                                                                          ║ 
+                         ║           Account Type                Credit Card                                                                       ║ 
+                         ║           Balance:                    $14,212.00                                                                        ║ 
+                         ║           Months reviewed:            70                                                                                ║ 
+                         ║           Account Opened:             02-2019 Times 30 days late: 18                                                    ║ 
+                         ║           Current Status:             CURRENT Times 60 days late: 21                                                    ║ 
+                         ║           Comment: Times              90+ days late: 0                                                                  ║ 
+                         ║           Max Delinquent date:        08-2022                                                                           ║ 
+                         ║           Responsibility              Individual                                                                        ║
+                         ║           Account late on:            09-2023, 02-2023, 12-2022, 11-2022                                                ║
+                         ║           Account late on:            12-2023, 11-2023, 10-2023, 08-2023, 07-2023, 06-2023, 05-2023, 04-2023            ║
+                         ║           Explanation:                -                                                                                 ║
+                         ║                                                                                                                         ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║  
+                         ║        Payment History                                                                                                  ║
+                         ║        ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                  ║
+                         ║              Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec                           ║                         
+                         ║        2022    -      X     -      -       -      X      -      -      X      -      -     X                            ║ 
+                         ║        2023    -      -     -      X       X      x      X      X      X      X      X     X                            ║     
+                         ║                                                                                                                         ║ 
+                         ║        (X) Terms met            (-) Unavailable Data                                                                    ║
+                         ║                                                                                                                         ║ 
+                         ║        Contact Info                                                                                                     ║
+                         ║        ‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                     ║
+                         ║           Address                    3901 DALLAS PKWY                                                                   ║
+                         ║                                      PLANO, TX 75093                                                                    ║
+                         ║                                                                                                                         ║
+                         ║           Phone Num                  800-946-0332                                                                       ║
+                         ║                                                                                                                         ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║ 
+                         ║                                                                                                                         ║
+                         ║       Account Info                                                                                                      ║
+                         ║       ‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                      ║
+                         ║           Credit Account:             SYNCB/CARE CREDIT                                                                 ║
+                         ║           Type:                       Revolving                                                                         ║
+                         ║           Account Number:             XXXXXXXX7064                                                                      ║
+                         ║           Owner:                      Borrower                                                                          ║
+                         ║           Balance:                    $0 (as of 07-2020)                                                                ║
+                         ║           Months reviewed:            25                                                                                ║
+                         ║           Account Opened:             12-2016 Times 30 days late: 3                                                     ║
+                         ║           Current Status:             CURRENT Times 60 days late: 1                                                     ║
+                         ║           Comment: Times              90+ days late: 0                                                                  ║
+                         ║           Note:                       ACCOUNT CLOSED AT CREDIT GRANTER'S REQUEST                                        ║
+                         ║           Max Delinquent date:        -                                                                                 ║
+                         ║                                                                                                                         ║
+                         ║        Payment History                                                                                                  ║
+                         ║        ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                  ║
+                         ║              Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec                           ║                         
+                         ║        XXXX    -      -     -      -       -      -      -      -      -      -      -      -                           ║ 
+                         ║        XXXX    -      -     -      -       -      -      -      -      -      -      -      -                           ║     
+                         ║                                                                                                                         ║ 
+                         ║        (X) Terms met            (-) Unavailable Data                                                                    ║
+                         ║                                                                                                                         ║ 
+                         ║        Contact Info                                                                                                     ║
+                         ║        ‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                     ║
+                         ║           Address                    950 FORRER BLVD                                                                    ║
+                         ║                                      KETTERING, OH 45420                                                                ║
+                         ║                                                                                                                         ║
+                         ║           Phone Num                  866-396-8254                                                                       ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[2x01 - PERSONAL INFORMATION - FATHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  » TLO Report:              - https://files.catbox.moe/xlq8qr.pdf                                                       ║
+                         ║                                                                                                                         ║
+                         ║  » Full Name:               - Mark John Groff                                                                           ║
+                         ║  » Age:                     - 65                                                                                        ║
+                         ║  » Date Of Birth:           - 08/17/1959                                                                                ║
+                         ║                                                                                                                         ║
+                         ║  » Home Address:            - 6355 Earl St, Owings MD 20736 [Current]                                                   ║
+                         ║                               │ Address Info                                                                            ║
+                         ║                               └──│ Zip Code: 20736                                                                      ║
+                         ║                                                                                                                         ║
+                         ║  » Ethnicity:               - White                                                                                     ║
+                         ║  » Gender:                  - Male                                                                                      ║
+                         ║                                                                                                                         ║
+                         ║  » SSN:                     - 218-80-0576 [ISSUED IN MARYLAND]                                                          ║
+                         ║                               │ SSN Info                                                                                ║
+                         ║                               └──│ Issued In: MARYLAND                                                                  ║
+                         ║                                  │ Date of Insurance: 1975                                                              ║
+                         ║                                                                                                                         ║
+                         ║  » DLN:                     - G610585429643                                                                             ║
+                         ║                               │ DLN Info                                                                                ║
+                         ║                               └──│ DOB: 08/17/1959                                                                      ║
+                         ║                                  │ Address: 6355 EARL ST                                                                ║
+                         ║                                  │ City: OWINGS                                                                         ║
+                         ║                                  │ Current Age: 65                                                                      ║
+                         ║                                  │ FirstName: MARK                                                                      ║
+                         ║                                  │ LastName: GROFF                                                                      ║
+                         ║                                  │ State: MD                                                                            ║
+                         ║                                  │ Zip: 20736                                                                           ║
+                         ║                                                                                                                         ║
+                         ║  » Mobile Number:           - +1 (301) 706-5078                                                                         ║
+                         ║                               │ Cell Info                                                                               ║
+                         ║                               └──│ CNAM: MARK GROFF                                                                     ║
+                         ║                                  │ Service Provider: VERIZON WIRELESS                                                   ║
+                         ║                                  │ Type: WIRELESS                                                                       ║
+                         ║                                                                                                                         ║
+                         ║  » Education:               - University of Maryland                                                                    ║
+                         ║                               └──│ Dates: 2014 - 2023                                                                   ║
+                         ║                                  │ Address: 621 W Lombard St, Baltimore, MD 21201                                       ║
+                         ║                                  │ Phone: +1 410 706 3100                                                               ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[2x02 - PHONE RECORDS - FATHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  Phone Records :                                                                                                        ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                        ║
+                         ║   ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗    ║
+                         ║   |     Carrier           | CarrierType |  City             | County     | Listing Name  | Phone #    | Phone Type |    ║
+                         ║   |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|    ║
+                         ║   | VERIZON WIRELESS      |  WIRELESS   | WASHINGTON ZONE 3 | MONTGOMERY |  MARK GROFF   | 3017068257 |  Mobile    |    ║
+                         ║   | COMCAST IP PHONE LLC  |  VOIP       | NORTH BEACH       | CALVERT    |  MARK GROFF   | 4439644372 |  VoIP      |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | NORTH BEACH       | CALVERT    |  MARK GROFF   | 4102577863 |  LandLine  |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | NORTH BEACH       | CALVERT    |  MARK GROFF   | 4102867261 |  LandLine  |    ║
+                         ║   | COMCAST IP PHONE LLC  |  VOIP       | NORTH BEACH       | CALVERT    |  MARK GROFF   | 4435503867 |  VoIP      |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | WASHINGTON        | ZONE 4     |  MARK GROFF   | 3015773122 |  LandLine  |    ║
+                         ║   | VERIZON WASHINGTON    |  LANDLINE   | WASHINGTON        | ZONE 1     |  MARK GROFF   | 2023834823 |  LandLine  |    ║
+                         ║   | VERIZON WIRELESS      |  WIRELESS   | WASHINGTON        | MONTGOMERY |  MARK GROFF   | 3017065078 |  Mobile    |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | NORTH BEACH       | CALVERT    |  MARK GROFF   | 4102865301 |  LandLine  |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | SOLOMONS          | CALVERT    |  MARK GROFF   | 4103260858 |  LandLine  |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | PRINCE FREDERICK  | CALVERT    |  MARK GROFF   | 4104149241 |  LandLine  |    ║
+                         ║   | VERIZON MARYLAND INC  |  LANDLINE   | STEVENSVILLE      |            |  MARK GROFF   | 4106439477 |  VoIP      |    ║
+                         ║   | COMCAST IP PHONE LLC  |  VOIP       | NORTH BEACH       | CALVERT    |  MARK GROFF   | 4436465663 |  VoIP      |    ║
+                         ║   ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝    ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[2x03 - EMAIL ADDRESSES - FATHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  E-Mail Addresses :                                                             +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                   .  +  .     .   .      .   .     .║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  passero65@gmail.com                                                            +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                          / Gravatar  Pinterest                 .   .  .   .    +      .      .     ║
+                         ║  »     GUID : 100040119039741583053          /  Apple     Spotify    Venmo        +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : passero65                    []   Twitter   Woodpress  Snapchat     .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : all••••••••••@gmail.com        \  Adobe     Disneyplus Bitmoji   .      +     +    .      .     .       . ║
+                         ║  »   Status : Active                          \ Microsoft Samsung    Quora          .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  mjcagroff@live.com                                                             +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                          /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Spotify     Amazon                +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : mjcagroff                    []   Apple       Linkedin              .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Disneyplus  Microsoft          .      +     +    .      .     .       . ║
+                         ║  »   Status : Active                          \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  mark232@msn.com                                                                +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                              /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : Mark                         []   Microsoft                         .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Amazon                         .      +     +    .      .     .       . ║
+                         ║  »   Status : Inactive                        \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  mgroff@zoominternet.net                                                        +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                      /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : Mark Groff                   []   HubSpot                           .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Wattpad                        .      +     +    .      .     .       . ║
+                         ║  »   Status : Inactive                        \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  cin65@olg.com                                                                  +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾                                /                                     .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /                                    +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : M G                          []   Myspace                           .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Yahoo                          .      +     +    .      .     .       . ║
+                         ║  »   Status : Inactive                        \                                     .   .  .   .    +      .      .     ║
+                         ║                                                                                  .     .  .    .    .  +   .   +   .    ║
+                         ║  estatestuff2020@gmail.com                                                      +    .      +    .      .     .       . ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                    / Apple                               .   .  .   .    +      .      .     ║
+                         ║  »     GUID : XXXXXX                         /  Facebook                          +  .   .   +   .     .       +     .  ║
+                         ║  »     Name : Mark Groff                   []   Microsoft                         .       .    .    .  +   .   +   .    ║
+                         ║  » Recovery : XXXXXX                         \  Instagram                      .      +     +    .      .     .       . ║
+                         ║  »   Status : Deleted                         \ Pinterest                           .   .  .   .    +      .      .     ║
+                         ║                                                                                   +  .   .   +   .     .       +     .  ║
+                         ║-------------------------------------------------------------------------------------------------------------------------║
+                         ║                                                                                                                         ║
+                         ║  I will now be listing off email address(es) related to his Father that she does not use, but owns.                     ║
+                         ║                                                                                                                         ║
+                         ║  » Emails:  punamiller@comcast.net                                                                                      ║
+                         ║             markgroff@aol.com                                                                                           ║
+                         ║             mgroff@zoominternet.net                                                                                     ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[2x04 - SOCIAL MEDIA - FATHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  Social Media :                                                                                                         ║
+                         ║  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                         ║
+                         ║                                                                                                                         ║
+                         ║  DropBox                                                         Pandora                                                ║
+                         ║  ‾‾‾‾‾‾‾                                                         ‾‾‾‾‾‾‾                                                ║
+                         ║  »  dbid:AABeSBtTQF0U5Qzmb_eB0rFGikvVS6Cnw0I [Cindy Groff]       »  @passero65                                          ║
+                         ║                                                                                                                         ║
+                         ║  Gravator                                                                                                               ║
+                         ║  ‾‾‾‾‾‾‾‾                                                                                                               ║
+                         ║  »  https://gravatar.com/passero65                                                                                      ║
+                         ║                                                                                                                         ║
+                         ║  Skype                                                                                                                  ║
+                         ║  ‾‾‾‾‾                                                                                                                  ║
+                         ║  »  live:.cid.1e874b799054af86 [Michael Lol]                                                                            ║
+                         ║  »  live:.cid.fa8956d07ce00d38 [Mark, Cindy Groff]                                                                      ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[2x05 - AUTOMOBILE INFORMATION - FATHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║  » Automobiles:             - SATURN ION                                                                                ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: 2007                                                                           ║
+                         ║                                  │ VIN #: 1G8AJ55F77Z104741                                                             ║
+                         ║                                                                                                                         ║
+                         ║                             - GMC Sierra                                                                                ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: 2002                                                                           ║
+                         ║                                  │ VIN #: 2GTEC19T421356605                                                             ║
+                         ║                                                                                                                         ║
+                         ║                             - CHEVROLET Monte Carlo                                                                     ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: 1988                                                                           ║
+                         ║                                  │ VIN #: 1G1GZ11G1JP114516                                                             ║
+                         ║                                                                                                                         ║
+                         ║                             - GMC SIERRA 1500                                                                           ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: Not on file.                                                                   ║
+                         ║                                  │ VIN #: 2CTFLFEY5A6251807                                                             ║
+                         ║                                                                                                                         ║
+                         ║                             - TOYOTA COROLLA                                                                            ║
+                         ║                               └──│ Registeration Location: OWINGS                                                       ║
+                         ║                                  │ Year: 2014                                                                           ║
+                         ║                                  │ VIN #: 2T1BURHE3EC069277                                                             ║
+                         ║                                                                                                                         ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[2x06 - COURT RECORDS - FATHER]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║    │                                                                                                                    ║
+                         ║    │ Court Records :                                                                                                    ║
+                         ║    |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                                                                                    ║
+                         ║    │─ Case #: 0000000190HGL                                                                                             ║
+                         ║    │  └── ─ Case Type: CRIMINAL                                                                                         ║
+                         ║    │      ─ Filing Date: 06/03/2013                                                                                     ║
+                         ║    │      ─ Location: 01                                                                                                ║
+                         ║    │      ─ Title: Article:TASec:21Sub-Sec:801.1Para:Code:                                                              ║
+                         ║    │      ─ JudyRecord: https://www.judyrecords.com/record/03wiz3z6h5a18                                                ║
+                         ║    │                                                                                                                    ║
+                         ║    │─ Case #: 5E00187367                                                                                                ║
+                         ║    │  └── ─ Case Type: CRIMINAL                                                                                         ║
+                         ║    │      ─ Filing Date: 12/08/2019                                                                                     ║
+                         ║    │      ─ Location: MD Zip Code:20736 - 0000                                                                          ║
+                         ║    │      ─ Title: ASSAULT-SEC DEGREE                                                                                   ║
+                         ║    │      ─ JudyRecord: https://www.judyrecords.com/record/u9lp9fdy064e2                                                ║
+                         ║    │                                                                                                                    ║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║[3x00 - CREDITS]▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█[SCARE]║
+                         ╠═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+                         ║                                                                                                                         ║
+                         ║                                                                                                                         ║
+                         ║                                 Dead @ scare.sh                   Grade @ scare.sh                                      ║
+                         ║                                 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾                                      ║
+                         ║                                 Majority of the dox               Majority of the dox                                   ║
+                         ║                                                                                                                         ║
+                         ║                                                                                                                         ║
+                         ║  .          +       .      +         +        .          .         +    .         +       .       .         +        .  ║
+                         ║        +       .              .       .d8888b   .d8888b  8888b.  888d888 .d88b.       .   +            .        .       ║
+                         ║    .      .           +               88K      d88P"        "88b 888P"  d8P  Y8b    .          .       +  .        .    ║
+                         ║   .              .        .           "Y8888b. 888      .d888888 888    88888888 .       .    +      .         +  .     ║
+                         ║        +                    .              X88 Y88b.    888  888 888    Y8b.          .         +         .  .          ║
+                         ║     .         .                 +     888888P'  "Y8888P "Y888888 888     "Y88888             .         .          .     ║
+                         ║           .           +                          https://t.me/scaresh                   +           .               +   ║
+                         ║  .          +       .      +         +        .          .         +    .         +       .       .         +        .  ║
+                         ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
