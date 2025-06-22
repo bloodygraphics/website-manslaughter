@@ -54,6 +54,8 @@
       font-size: 24px;
       margin-bottom: 20px;
       font-weight: bold;
+      /* Add below to make it clickable but without hover effect */
+      cursor: default;
     }
 
     .filter-buttons {
@@ -212,10 +214,9 @@
   <a href="index.html" class="top-left-box">Back</a>
 
   <div class="archive-box" id="archive-box">
-    <div class="archive-title">Archives</div>
+    <div class="archive-title" onclick="showCategory('list-Dox')">Archives</div>
     <div class="filter-buttons">
       <div class="filter-button" onclick="showCategory('list-Drugs')">Drugs</div>
-      <div class="filter-button" onclick="showCategory('list-Dox')">764/KRN/SlitTown/Other</div>
       <div class="filter-button" onclick="showCategory('list-Explosives')">Explosives</div>
       <div class="filter-button" onclick="showCategory('list-other')">Other</div>
     </div>
@@ -233,14 +234,39 @@
       <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/morphine.txt')">Morphine</div>
     </div>
 
-    <div class="entry-list" id="list-Dox">
-    </div>
-
-    <div class="entry-list" id="list-Explosives">
+    <div class="entry-list" id="list-Weapons">
       <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/semtex.txt')">Semtex</div>
     </div>
 
-    <div class="entry-list" id="list-other">
+    <div class="entry-list" id="list-Dox">
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/thx_scare.txt')">Thx Scare</div>
+        <div class="entry-button" onclick="openModal('nothing')">✁✃764✁✃</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Cane764.txt')">Cane764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Confused764.txt')">Confused764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/DasEnde764.txt')">DasEnde764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Heal764.txt')">Heal764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Inactive764.txt')">Inactive764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Icon764.txt')">Icon764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Merc764.txt')">Merc764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Naro764.txt')">Naro764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Refusal764.txt')">Refusal764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Scream764.txt')">Scream764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Sinner764.txt')">Sinner764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Vore764.txt')">Vore764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Zaro764.txt')">Zaro764</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Zuu764.txt')">Zuu764</div>
+        <div class="entry-button" onclick="openModal('nothing')">૮ ˶ᵔ ᵕ ᵔ˶ ა</div>
+        <div class="entry-button" onclick="openModal('nothing')">✁✃KNR✁✃</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/BladeKNR.txt')">BladeKNR</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/BlixKNR.txt')">BlixKNR</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/KodachiKNR.txt')">KodachiKNR</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/PerkkKNR.txt')">PerkkKNR</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/ResinKNR.txt')">ResinKNR</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/JapanKNR.txt')">JapanKNR</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/SwatKNR.txt')">SwatKNR</div>
+        <div class="entry-button" onclick="openModal('nothing')">˃ 𖥦 ˂</div>
+        <div class="entry-button" onclick="openModal('nothing')">✁✃SlitTown✁✃</div>
+        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/CautiousST.txt')">CautiousST</div>
     </div>
   </div>
 
