@@ -1,332 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>suicide</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" type="image/x-icon" />
-    <style>
-        body {
-            margin: 0;
-            background: #0d0d0d;
-            color: white;
-            font-family: 'Courier New', monospace;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>suicide</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: white;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
 
-        video.background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: -1;
-        }
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-        .ip-display {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 14px;
-            color: #ccc;
-            background: rgba(38, 38, 38, 0.6);
-            padding: 8px 16px;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-        }
+    .ip-display {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #ccc;
+      background: rgba(38, 38, 38, 0.6);
+      padding: 8px 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+    }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(2, 200px);
-            gap: 40px;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
 
-        .card {
-            background: rgba(38, 38, 38, 0.6);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
+    .card {
+      background: rgba(38, 38, 38, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
 
-        .card:hover {
-            transform: scale(1.08);
-        }
+    .card:hover {
+      transform: scale(1.08);
+    }
 
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-        .icon {
-            margin-top: 10px;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-        }
+    .icon {
+      margin-top: 10px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
 
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: transparent;
-            z-index: 100;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
 
-        .popup-overlay.show {
-            display: flex;
-        }
+    .popup {
+      background: rgba(38, 38, 38, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+    }
 
-        .popup-overlay.visible {
-            opacity: 1;
-        }
+    .popup h2,
+    .popup p {
+      color: white;
+    }
 
-        .popup {
-            background: rgba(38, 38, 38, 0.6);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            color: white;
-        }
+    .popup-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
 
-        .popup h2 {
-            color: white;
-            margin-bottom: 10px;
-        }
+    .popup-btn:hover {
+      background-color: #e0e0e0;
+    }
 
-        .popup p {
-            font-style: italic;
-            color: white;
-        }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      background: rgba(38, 38, 38, 0.6);
+      padding: 8px 32px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+      font-size: 14px;
+      color: #ccc;
+    }
 
-        .popup-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background-color 0.3s;
-        }
+    .footer span {
+      min-width: 100px;
+      text-align: center;
+    }
 
-        .popup-btn:hover {
-            background-color: #e0e0e0;
-        }
+    .intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease;
+    }
 
-        .footer {
-            position: absolute;
-            bottom: 20px;
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            align-items: center;
-            background: rgba(38, 38, 38, 0.6);
-            padding: 8px 32px;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-            font-size: 14px;
-            color: #ccc;
-        }
+    .intro-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
 
-        .footer span {
-            min-width: 100px;
-            text-align: center;
-        }
+    .intro-footer {
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.6;
+      user-select: none;
+    }
 
-        .intro-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: black;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1s ease;
-        }
+    .top-right-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(38, 38, 38, 0.6);
+      color: white;
+      font-size: 20px;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
 
-        .intro-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
+    .top-right-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-        .intro-footer {
-            color: white;
-            font-size: 12px;
-            text-align: center;
-            line-height: 1.6;
-            user-select: none;
-        }
+    /* Fade utility classes */
+    .fade-in {
+      display: flex !important;
+      opacity: 1 !important;
+    }
 
-        .top-right-box {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(38, 38, 38, 0.6);
-            color: white;
-            font-size: 20px;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 10px;
-            backdrop-filter: blur(6px);
-            z-index: 10;
-            transition: background 0.3s ease;
-        }
-
-        .top-right-box:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    .fade-out {
+      opacity: 0 !important;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="intro-overlay" id="intro-overlay" onclick="startSite()">
-        <div class="intro-footer">
-            <div id="line1">✁✃✁✁✃✁✃✁✁✃✁✃✁</div>
-            <div id="line2">Click to enter...</div>
-            <div id="line3">✃✁✃✁✁✃✁✃✁✁✃✁✃</div>
-        </div>
+  <div class="intro-overlay" id="intro-overlay" onclick="startSite()">
+    <div class="intro-footer">
+      <div id="line1">✁✃✁✁✃✁✃✁✁✃✁✃✁</div>
+      <div id="line2">Click to enter...</div>
+      <div id="line3">✃✁✃✁✁✃✁✃✁✁✃✁✃</div>
     </div>
+  </div>
 
-    <audio id="background-audio" loop>
-        <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
-    </audio>
+  <audio id="background-audio" loop>
+    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
+  </audio>
 
-    <video class="background-video" autoplay muted loop playsinline id="bg-video">
-        <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
-    </video>
+  <video class="background-video" autoplay muted loop playsinline id="bg-video">
+    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
+  </video>
 
-    <a href="archive.html" class="top-right-box">Archive</a>
+  <a href="archive.html" class="top-right-box">Archive</a>
 
-    <div class="ip-display" id="ip-address">Fetching IP...</div>
+  <div class="ip-display" id="ip-address">Fetching IP...</div>
 
-    <div class="container" id="main-container">
-        <div class="card">
-            <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />
-            <h2>Discord</h2>
-            <p>✁✃✁✁✃✁✃✁✁✃</p>
-            <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Discord', 'Mostly active here.', 'https://discord.com/users/1255804249204592640', event)" />
-        </div>
-        <div class="card">
-            <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/telegram.png" alt="avatar" />
-            <h2>Telegram</h2>
-            <p>✁✃✁✁✃✁✃✁✁✃</p>
-            <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Telegram', 'You can find me.', 'https://t.me/mac_dle', event)" />
-        </div>
-        <div class="card">
-            <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/soundcloud.png" alt="avatar" />
-            <h2>Soundcloud</h2>
-            <p>✁✃✁✁✃✁✃✁✁✃</p>
-            <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Soundcloud', 'Always listening.', 'https://soundcloud.com/j6qc', event)" />
-        </div>
-        <div class="card">
-            <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" alt="avatar" />
-            <h2>Roblox</h2>
-            <p>✁✃✁✁✃✁✃✁✁✃</p>
-            <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Roblox', 'Never online', 'https://www.roblox.com/users/7573425183/profile', event)" />
-        </div>
+  <div class="container" id="main-container">
+    <!-- Cards -->
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />
+      <h2>Discord</h2>
+      <p>✁✃✁✁✃✁✃✁✁✃</p>
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Discord', 'Mostly active here.', 'https://discord.com/users/1255804249204592640', event)" />
     </div>
-
-    <div class="popup-overlay" id="popup-overlay" onclick="hidePopup()">
-        <div class="popup" id="popup" onclick="event.stopPropagation();">
-            <h2 id="popup-name">Name</h2>
-            <p id="popup-desc"><em>Description</em></p>
-            <a id="popup-link" href="#" target="_blank" class="popup-btn">Visit</a>
-        </div>
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/telegram.png" alt="avatar" />
+      <h2>Telegram</h2>
+      <p>✁✃✁✁✃✁✃✁✁✃</p>
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Telegram', 'You can find me.', 'https://t.me/mac_dle', event)" />
     </div>
-
-    <div class="footer">
-        <span>manslaughter@draugr.de</span>
-        <span>bloodygraphics@draugr.de</span>
-        <span>doomshop@draugr.de</span>
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/soundcloud.png" alt="avatar" />
+      <h2>Soundcloud</h2>
+      <p>✁✃✁✁✃✁✃✁✁✃</p>
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Soundcloud', 'Always listening.', 'https://soundcloud.com/j6qc', event)" />
     </div>
+    <div class="card">
+      <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" alt="avatar" />
+      <h2>Roblox</h2>
+      <p>✁✃✁✁✃✁✃✁✁✃</p>
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Roblox', 'Never online', 'https://www.roblox.com/users/7573425183/profile', event)" />
+    </div>
+  </div>
 
-    <script>
-        function showPopup(name, desc, link, event) {
-            event.stopPropagation();
-            const mainContainer = document.getElementById("main-container");
-            const overlay = document.getElementById("popup-overlay");
+  <div class="popup-overlay" id="popup-overlay" onclick="hidePopup()">
+    <div class="popup" id="popup" onclick="event.stopPropagation();">
+      <h2 id="popup-name">Name</h2>
+      <p id="popup-desc"><em>Description</em></p>
+      <a id="popup-link" href="#" target="_blank" class="popup-btn">Visit</a>
+    </div>
+  </div>
 
-            document.getElementById("popup-name").textContent = name;
-            document.getElementById("popup-desc").textContent = desc;
-            document.getElementById("popup-link").href = link;
+  <div class="footer">
+    <span>manslaughter@draugr.de</span>
+    <span>bloodygraphics@draugr.de</span>
+    <span>doomshop@draugr.de</span>
+  </div>
 
-            mainContainer.style.opacity = "0";
-            overlay.classList.add("show");
+  <script>
+    function showPopup(name, desc, link, event) {
+      event.stopPropagation();
+      const mainContainer = document.getElementById("main-container");
+      const overlay = document.getElementById("popup-overlay");
 
-            setTimeout(() => {
-                mainContainer.style.display = "none";
-                overlay.classList.add("visible");
-            }, 500);
-        }
+      document.getElementById("popup-name").textContent = name;
+      document.getElementById("popup-desc").textContent = desc;
+      document.getElementById("popup-link").href = link;
 
-        function hidePopup() {
-            const mainContainer = document.getElementById("main-container");
-            const overlay = document.getElementById("popup-overlay");
+      mainContainer.classList.add("fade-out");
+      setTimeout(() => {
+        mainContainer.style.display = "none";
+        overlay.classList.add("fade-in");
+      }, 500);
+    }
 
-            overlay.classList.remove("visible");
+    function hidePopup() {
+      const mainContainer = document.getElementById("main-container");
+      const overlay = document.getElementById("popup-overlay");
 
-            setTimeout(() => {
-                overlay.classList.remove("show");
-                mainContainer.style.display = "grid";
-                setTimeout(() => {
-                    mainContainer.style.opacity = "1";
-                }, 10);
-            }, 500);
-        }
+      overlay.classList.remove("fade-in");
+      overlay.classList.add("fade-out");
 
-        function startSite() {
-            const overlay = document.getElementById("intro-overlay");
-            const audio = document.getElementById("background-audio");
-            const video = document.getElementById("bg-video");
+      setTimeout(() => {
+        overlay.classList.remove("fade-out");
+        overlay.style.display = "none";
+        mainContainer.style.display = "grid";
+        setTimeout(() => {
+          mainContainer.classList.remove("fade-out");
+          mainContainer.style.opacity = "1";
+        }, 10);
+      }, 500);
+    }
 
-            overlay.classList.add("hidden");
+    function startSite() {
+      const overlay = document.getElementById("intro-overlay");
+      const audio = document.getElementById("background-audio");
+      const video = document.getElementById("bg-video");
 
-            audio.play().catch(() => {});
-            video.muted = true;
-            video.play().catch(() => {});
-        }
+      overlay.classList.add("hidden");
 
-        fetch('https://api.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('ip-address').textContent = `Your IP: ${data.ip}`;
-            })
-            .catch(() => {
-                document.getElementById('ip-address').textContent = 'IP unavailable';
-            });
-    </script>
+      audio.play().catch(() => {});
+      video.muted = true;
+      video.play().catch(() => {});
+    }
+
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('ip-address').textContent = `Your IP: ${data.ip}`;
+      })
+      .catch(() => {
+        document.getElementById('ip-address').textContent = 'IP unavailable';
+      });
+  </script>
 </body>
-
 </html>
