@@ -9,14 +9,12 @@
     body {
       margin: 0;
       background: #0d0d0d;
-      color: white;
       font-family: 'Courier New', monospace;
+      overflow: hidden;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
     }
 
     video.background-video {
@@ -41,26 +39,225 @@
       border-radius: 10px;
       backdrop-filter: blur(6px);
       z-index: 10;
-      transition: background 0.3s ease;
     }
 
-    .top-left-box:hover {
+    .button-container {
+      display: flex;
+      gap: 30px;
+      z-index: 5;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      font-size: 20px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .fade-out {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .popup {
+      position: absolute;
+      width: 300px;
+      max-height: 500px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      z-index: 10;
+    }
+
+    .popup.show {
+      display: flex;
+    }
+
+    .song-list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      margin-top: 10px;
+      max-height: 250px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    /* Custom scrollbar */
+    .song-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .song-list::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+
+    .song-list::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .song-button {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      padding: 12px;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      font-size: 16px;
+    }
+
+    .song-button:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .photo-button {
+      width: 30px;
+      height: 30px;
+      background-image: url('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .progress-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      background: #222;
+      border-radius: 10px;
+      height: 6px;
+      cursor: pointer;
+    }
+
+    /* WebKit (Chrome, Safari, Edge) */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background: #ffffff; /* white thumb */
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Firefox */
+    input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      background: #ffffff; /* white thumb */
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
     }
   </style>
 </head>
-
 <body>
 
   <video class="background-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
   </video>
 
-  <audio id="background-audio" autoplay loop>
-    <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3" type="audio/mpeg">
-  </audio>
-
   <a href="index.html" class="top-left-box">Back</a>
 
+  <div class="button-container" id="buttons">
+    <button class="btn">nothing</button>
+    <button class="btn" id="musicBtn">music archive</button>
+  </div>
+
+  <div class="popup" id="popup">
+    <h2>Music Player</h2>
+    <div class="progress-container">
+      <div class="photo-button" id="teddyToggle" title="Play/Pause"></div>
+      <input type="range" id="seekBar" value="0" />
+    </div>
+    <div class="song-list" id="songList"></div>
+    <audio id="audio" controls style="display: none;"></audio>
+  </div>
+
+  <script>
+    const musicBtn = document.getElementById('musicBtn');
+    const buttons = document.getElementById('buttons');
+    const popup = document.getElementById('popup');
+    const audio = document.getElementById('audio');
+    const seekBar = document.getElementById('seekBar');
+    const songList = document.getElementById('songList');
+    const teddy = document.getElementById('teddyToggle');
+
+    const songs = [
+      { title: 'cotton', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/cotton.mp3' },
+      { title: 'song 2', url: 'https://example.com/song2.mp3' },
+      { title: 'song 3', url: 'https://example.com/song3.mp3' },
+      { title: 'song 4', url: 'https://example.com/song4.mp3' },
+      { title: 'song 5', url: 'https://example.com/song5.mp3' },
+      { title: 'song 6', url: 'https://example.com/song6.mp3' },
+      { title: 'song 7', url: 'https://example.com/song7.mp3' },
+      { title: 'song 8', url: 'https://example.com/song8.mp3' },
+    ];
+
+    musicBtn.addEventListener('click', () => {
+      buttons.classList.add('fade-out');
+      setTimeout(() => {
+        buttons.style.display = 'none';
+        popup.classList.add('show');
+        loadSongs();
+      }, 500);
+    });
+
+    function loadSongs() {
+      songList.innerHTML = '';
+      songs.forEach((song) => {
+        const btn = document.createElement('div');
+        btn.className = 'song-button';
+        btn.innerText = song.title;
+        btn.onclick = () => {
+          audio.src = song.url;
+          audio.play();
+        };
+        songList.appendChild(btn);
+      });
+    }
+
+    teddy.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      seekBar.value = (audio.currentTime / audio.duration) * 100 || 0;
+    });
+
+    seekBar.addEventListener('input', () => {
+      const percent = seekBar.value;
+      audio.currentTime = (percent / 100) * audio.duration;
+    });
+  </script>
 </body>
 </html>
