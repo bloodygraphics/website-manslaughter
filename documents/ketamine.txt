@@ -1,0 +1,66 @@
+Ketamine
+
+# Step 1: Gather Precursors and Equipment
+> Precursors:
+  - Cyclopentanone (starting material)
+  - Methylamine (for imine formation)
+  - 2-Chlorobenzonitrile (for aryl component)
+  - Magnesium turnings (for Grignard reagent)
+  - Bromine (for bromination)
+  - Sodium hydroxide (for base reactions)
+  - Hydrochloric acid (for salting out)
+  - Organic solvents (e.g., diethyl ether, dichloromethane)
+> Equipment:
+  - Glassware (round-bottom flasks, condensers, separatory funnel)
+  - Magnetic stirrer with hot plate
+  - Fume hood (mandatory for ventilation)
+  - Vacuum distillation setup
+  - Filtration setup (Buchner funnel, filter paper)
+  - Rotary evaporator (for solvent removal)
+
+# Step 2: Synthesize 1-Hydroxycyclopentyl-(2-chlorophenyl)-ketone
+> Process:
+  - React cyclopentanone (10g) with bromine (12g) in dichloromethane at 0°C to form 2-bromocyclopentanone.
+  - Prepare Grignard reagent from 2-chlorobenzonitrile (15g) and magnesium (2.5g) in dry ether.
+  - Add 2-bromocyclopentanone to Grignard reagent, stir at room temperature for 4 hours.
+  - Hydrolyze with dilute HCl to form 1-hydroxycyclopentyl-(2-chlorophenyl)-ketone.
+  - Yield: ~65-75% after purification by vacuum distillation.
+
+# Step 3: Form Imine with Methylamine
+> Reaction Setup:
+  - Dissolve 1-hydroxycyclopentyl-(2-chlorophenyl)-ketone (10g) in methanol (50mL).
+  - Add methylamine (5g, 40% aqueous solution) and stir at 40°C for 6 hours.
+> Chemistry:
+  - Methylamine reacts with the ketone to form an imine intermediate.
+  - Reaction: C12H13ClO2 + CH3NH2 -> C13H16ClNO + H2O
+> Post-Reaction:
+  - Evaporate methanol under reduced pressure.
+  - Extract imine with dichloromethane, dry over sodium sulfate.
+  - Yield: ~80% after solvent removal.
+
+# Step 4: Thermal Rearrangement to Ketamine
+> Process:
+  - Heat imine (10g) in decalin (50mL) at 180-190°C for 3 hours under nitrogen.
+  - Rearrangement forms ketamine via a cyclization and dehydration mechanism.
+> Chemistry:
+  - Imine undergoes thermal rearrangement to form the arylcyclohexylamine structure.
+  - Reaction: C13H16ClNO -> C13H16ClNO (isomerized)
+> Post-Reaction:
+  - Cool mixture, dilute with ether, and extract with dilute HCl.
+  - Basify aqueous layer with sodium hydroxide (pH > 12) to liberate ketamine freebase.
+  - Extract freebase with dichloromethane, evaporate solvent.
+  - Convert to ketamine HCl by adding HCl in ether, filter crystals.
+  - Yield: ~60-70% after crystallization.
+
+# Step 5: Purification and Notes
+> Purification:
+  - Recrystallize ketamine HCl in ethanol/ether for high purity.
+  - Use column chromatography if impurities (e.g., unreacted imine) persist.
+> Notes:
+  - Ketamine HCl is the common powder form; freebase is oily.
+  - Common impurities: unreacted ketone, methylamine salts.
+  - Scale reactions proportionally for larger batches.
+> Safety:
+  - Bromine is highly corrosive; handle in fume hood.
+  - Grignard reagents are pyrophoric; use dry conditions.
+  - Solvents are flammable; avoid open flames.
