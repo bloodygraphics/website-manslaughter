@@ -1,0 +1,65 @@
+Oxycontin
+
+# Step 1: Gather Precursors and Equipment
+> Precursors:
+  - Thebaine (extracted from opium or semi-synthetic sources)
+  - Hydrogen peroxide (oxidizing agent)
+  - Formic acid (for reduction)
+  - Palladium on carbon (catalyst for hydrogenation)
+  - Methylamine (optional, for side reactions)
+  - Hydrochloric acid (for salting out)
+  - Organic solvents (e.g., methanol, chloroform)
+> Equipment:
+  - Glassware (round-bottom flasks, condensers, separatory funnel)
+  - Magnetic stirrer with hot plate
+  - Fume hood (mandatory for ventilation)
+  - Vacuum filtration setup (Buchner funnel, filter paper)
+  - Rotary evaporator (for solvent removal)
+  - pH meter or test strips
+
+# Step 2: Oxidize Thebaine to 14-Hydroxycodeinone
+> Process:
+  - Dissolve 10g of thebaine in 50mL of methanol in a round-bottom flask.
+  - Add 10mL of 30% hydrogen peroxide and 5mL of formic acid.
+  - Stir at 40-50°C for 4 hours under reflux.
+> Chemistry:
+  - Hydrogen peroxide oxidizes thebaine to 14-hydroxycodeinone, adding a hydroxyl group.
+  - Reaction: C19H21NO4 + H2O2 -> C19H21NO5
+> Post-Reaction:
+  - Cool mixture, neutralize with sodium bicarbonate (pH 7-8).
+  - Extract with chloroform, dry over sodium sulfate, evaporate solvent.
+  - Yield: ~75-85% of 14-hydroxycodeinone.
+
+# Step 3: Hydrogenate to Oxycodone
+> Reaction Setup:
+  - Dissolve 10g of 14-hydroxycodeinone in 100mL of methanol.
+  - Add 0.5g of palladium on carbon (5%) as catalyst.
+  - Hydrogenate under 40-50 psi H2 pressure at room temperature for 6 hours.
+> Chemistry:
+  - Palladium-catalyzed hydrogenation reduces the double bond, forming oxycodone.
+  - Reaction: C19H21NO5 + H2 -> C18H21NO4
+> Post-Reaction:
+  - Filter to remove palladium catalyst.
+  - Evaporate methanol to obtain oxycodone freebase.
+  - Yield: ~80-90% after filtration.
+
+# Step 4: Convert to Oxycodone Hydrochloride
+> Process:
+  - Dissolve oxycodone freebase in 50mL of ethanol.
+  - Add hydrochloric acid (diluted) dropwise until pH reaches 4-5.
+  - Evaporate ethanol to precipitate oxycodone hydrochloride.
+  - Filter and recrystallize in ethanol/ether for purity.
+  - Yield: ~85% of oxycodone HCl from freebase.
+
+# Step 5: Purification and Notes
+> Purification:
+  - Recrystallize oxycodone HCl in ethanol/ether to remove impurities.
+  - Use column chromatography with chloroform/methanol if necessary.
+> Notes:
+  - Oxycodone HCl is the form used in OxyContin; freebase is less common.
+  - Common impurities: unreacted 14-hydroxycodeinone, thebaine derivatives.
+  - Thebaine is highly regulated; sourcing is a limiting factor.
+> Safety:
+  - Hydrogen peroxide is oxidative; handle with care.
+  - Palladium on carbon is flammable; avoid sparks during filtration.
+  - Solvents are flammable; work in fume hood.
