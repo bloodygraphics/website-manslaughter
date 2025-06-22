@@ -1,0 +1,66 @@
+Fentanyl
+
+# Step 1: Gather Precursors and Equipment
+> Precursors:
+  - Phenylethylamine (starting material)
+  - N-Phenylethyl-4-piperidone (NPP, key intermediate)
+  - Aniline (for piperidone synthesis)
+  - Propionyl chloride (for acylation)
+  - Sodium borohydride (reducing agent)
+  - Benzyl chloride (for benzylation)
+  - Hydrochloric acid (for salting out)
+  - Organic solvents (e.g., dichloromethane, toluene)
+> Equipment:
+  - Glassware (round-bottom flasks, condensers, separatory funnel)
+  - Magnetic stirrer with hot plate
+  - Fume hood (mandatory for ventilation)
+  - Vacuum filtration setup (Buchner funnel, filter paper)
+  - Rotary evaporator (for solvent removal)
+  - pH meter or test strips
+
+# Step 2: Synthesize N-Phenylethyl-4-piperidone (NPP)
+> Process:
+  - React aniline (10g) with benzyl chloride (12g) in dichloromethane under reflux to form N-benzylaniline.
+  - Combine N-benzylaniline with ethyl acrylate and sodium ethoxide to form a piperidone precursor.
+  - Cyclize the precursor using sodium hydride in toluene at 80°C for 4 hours.
+  - Yield: ~60-70% after purification by recrystallization in ethanol.
+
+# Step 3: Reductive Amination to 4-ANPP
+> Reaction Setup:
+  - Dissolve NPP (10g) in methanol with phenylethylamine (6g).
+  - Add sodium borohydride (2g) slowly at 0°C under nitrogen atmosphere.
+  - Stir at room temperature for 12 hours.
+> Chemistry:
+  - Sodium borohydride reduces the ketone to form 4-anilino-N-phenylethylpiperidine (4-ANPP).
+  - Reaction: C19H22N2O + NaBH4 -> C19H24N2
+> Post-Reaction:
+  - Quench excess borohydride with dilute HCl.
+  - Extract 4-ANPP with dichloromethane, dry over sodium sulfate, and evaporate solvent.
+  - Yield: ~80% after purification.
+
+# Step 4: Acylation to Fentanyl
+> Process:
+  - Dissolve 4-ANPP (10g) in dichloromethane (100mL).
+  - Add propionyl chloride (4g) dropwise at 0°C with triethylamine (5g) as a base.
+  - Stir at room temperature for 2 hours.
+> Chemistry:
+  - Propionyl chloride acylates the secondary amine, forming fentanyl.
+  - Reaction: C19H24N2 + C3H5ClO -> C22H28N2O
+> Post-Reaction:
+  - Wash with water to remove triethylamine hydrochloride.
+  - Extract fentanyl freebase with dichloromethane.
+  - Convert to fentanyl HCl by adding HCl in ether, filter crystals.
+  - Yield: ~70-85% after crystallization.
+
+# Step 5: Purification and Notes
+> Purification:
+  - Recrystallize fentanyl HCl in ethanol/ether for high purity.
+  - Use column chromatography if impurities persist.
+> Notes:
+  - Fentanyl is extremely potent; microgram quantities are active.
+  - Common impurities: unreacted 4-ANPP, propionic acid derivatives.
+  - Scale reactions carefully to avoid excess reagent waste.
+> Safety:
+  - Use PPE (gloves, goggles, respirator) at all times.
+  - Propionyl chloride is corrosive; handle in fume hood.
+  - Solvents are flammable; avoid sparks or flames.
