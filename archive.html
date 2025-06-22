@@ -178,6 +178,25 @@
       scrollbar-width: thin;
       scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
     }
+
+    .top-left-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(38, 38, 38, 0.6);
+      color: white;
+      font-size: 20px;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .top-left-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -189,6 +208,8 @@
   <video class="background-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
   </video>
+
+  <a href="index.html" class="top-left-box">Back</a>
 
   <div class="archive-box" id="archive-box">
     <div class="archive-title">Archives</div>
