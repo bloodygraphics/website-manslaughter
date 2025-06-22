@@ -1,6 +1,6 @@
 Meth
 
-> Step 1: Gather Precursors and Equipment
+# Step 1: Gather Precursors and Equipment
 > Precursors:
   - Pseudoephedrine (from OTC cold medications, e.g., Sudafed)
   - Red phosphorus (from matchbook strikers or chemical suppliers)
@@ -16,7 +16,7 @@ Meth
   - pH meter or test strips
   - Filtration setup (Buchner funnel, filter paper)
 
-> Step 2: Extract Pseudoephedrine
+# Step 2: Extract Pseudoephedrine
 > Process:
   - Crush pseudoephedrine tablets into a fine powder.
   - Dissolve in methanol or ethanol, filter to remove binders.
@@ -35,7 +35,7 @@ Meth
   - Cool mixture, dilute with water, and filter out phosphorus residues.
   - Basify with sodium hydroxide (pH > 12) to convert methamphetamine to freebase.
 
-> Step 4: Purification
+# Step 4: Purification
 > Solvent Extraction:
   - Extract freebase methamphetamine with non-polar solvent (e.g., toluene).
   - Separate organic layer using a separatory funnel.
@@ -45,7 +45,7 @@ Meth
   - Add hydrochloric acid dropwise to form methamphetamine HCl (salt).
   - Filter and dry crystals. Yield: ~70-80% of theoretical max.
 
-> Step 5: Safety and Notes
+# Step 5: Safety and Notes
 > Safety:
   - Iodine and phosphorus are highly reactive; handle with care.
   - Solvents are flammable; avoid open flames.
