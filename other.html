@@ -45,6 +45,7 @@
       display: flex;
       gap: 30px;
       z-index: 5;
+      transition: opacity 0.5s ease;
     }
 
     .btn {
@@ -66,6 +67,12 @@
     .fade-out {
       opacity: 0;
       pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .fade-in {
+      opacity: 1;
+      pointer-events: auto;
       transition: opacity 0.5s ease;
     }
 
@@ -99,7 +106,6 @@
       padding-right: 5px;
     }
 
-    /* Custom scrollbar */
     .song-list::-webkit-scrollbar {
       width: 8px;
     }
@@ -154,22 +160,20 @@
       cursor: pointer;
     }
 
-    /* WebKit (Chrome, Safari, Edge) */
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
       width: 16px;
       height: 16px;
-      background: #ffffff; /* white thumb */
+      background: #ffffff;
       border-radius: 50%;
       cursor: pointer;
     }
 
-    /* Firefox */
     input[type="range"]::-moz-range-thumb {
       width: 16px;
       height: 16px;
-      background: #ffffff; /* white thumb */
+      background: #ffffff;
       border: none;
       border-radius: 50%;
       cursor: pointer;
@@ -184,13 +188,13 @@
 
   <a href="index.html" class="top-left-box">Back</a>
 
-  <div class="button-container" id="buttons">
+  <div class="button-container fade-in" id="buttons">
     <button class="btn">nothing</button>
     <button class="btn" id="musicBtn">music archive</button>
   </div>
 
   <div class="popup" id="popup">
-    <h2>Music Player</h2>
+    <h2>Music Files</h2>
     <div class="progress-container">
       <div class="photo-button" id="teddyToggle" title="Play/Pause"></div>
       <input type="range" id="seekBar" value="0" />
@@ -246,6 +250,7 @@
     ];
 
     musicBtn.addEventListener('click', () => {
+      buttons.classList.remove('fade-in');
       buttons.classList.add('fade-out');
       setTimeout(() => {
         buttons.style.display = 'none';
@@ -283,6 +288,17 @@
     seekBar.addEventListener('input', () => {
       const percent = seekBar.value;
       audio.currentTime = (percent / 100) * audio.duration;
+    });
+
+    document.addEventListener('click', (e) => {
+      if (popup.classList.contains('show') && !popup.contains(e.target) && e.target !== musicBtn) {
+        popup.classList.remove('show');
+        buttons.style.display = 'flex';
+        setTimeout(() => {
+          buttons.classList.remove('fade-out');
+          buttons.classList.add('fade-in');
+        }, 10);
+      }
     });
   </script>
 </body>
