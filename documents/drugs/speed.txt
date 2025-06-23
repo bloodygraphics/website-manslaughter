@@ -1,0 +1,65 @@
+# Hypothetical Synthesis of Amphetamine (Speed)
+
+## Overview
+Amphetamine (1-phenylpropan-2-amine), commonly known as "speed," is a synthetic stimulant synthesized via reductive amination of phenyl-2-propanone (P2P) with ammonia, typically using a reducing agent like aluminum amalgam or hydrogen gas with a catalyst. This document details a small-scale synthesis targeting amphetamine sulfate, using the aluminum amalgam method for reductive amination. All steps are extremely hazardous, involving toxic, flammable, and controlled substances, requiring meticulous handling in a controlled environment to prevent poisoning, fires, or explosions.
+
+## Materials
+- **Precursor Chemicals**:
+  - Phenyl-2-propanone (P2P): 0.5 g as starting material.
+  - Ammonia (aqueous, 25–30% solution or gas): 0.5 g for amination.
+  - Aluminum foil (heavy-duty): 0.1–0.2 g for amalgam preparation.
+  - Mercuric chloride (HgCl2): 0.01–0.02 g for aluminum activation.
+- **Other Chemicals**:
+  - Sodium hydroxide (NaOH): 0.2–0.5 g for pH adjustment and extraction.
+  - Sulfuric acid (H2SO4, concentrated, ~98%): 0.1–0.2 mL for sulfate salt formation.
+  - Dichloromethane (DCM): 50–100 mL for extraction.
+  - Acetone: 50–100 mL for washing and recrystallization.
+  - Methanol: 20–50 mL for reaction and recrystallization.
+  - Anhydrous magnesium sulfate (MgSO4): 5–10 g for drying organic layers.
+  - Activated charcoal (optional): 1–2 g for purification.
+- **Equipment**:
+  - Small glass reaction vessels (50–250 mL, acid-resistant).
+  - Reflux condenser and micro-distillation setup (for solvent recovery).
+  - Separatory funnel (100–250 mL) for liquid-liquid extraction.
+  - Rotary evaporator or vacuum aspirator (for solvent evaporation).
+  - Fume hood (explosion-proof, mandatory for toxic and volatile chemicals).
+  - Magnetic stirrer (non-sparking, with hot plate).
+  - pH meter or test strips (to monitor acidity/alkalinity, pH 2–12).
+  - Microscale heating mantle (for controlled heating, <100°C).
+  - Vacuum filtration system (with fine mesh or filter paper).
+  - Protective gear: Acid-resistant gloves, goggles, full-face respirator, non-static clothing.
+- **Optional**:
+  - High-performance liquid chromatography (HPLC) or thin-layer chromatography (TLC) for purity analysis.
+
+## Synthesis Process
+1. **Prepare Aluminum Amalgam**:
+   - In a 50 mL vessel under a fume hood, dissolve 0.01 g mercuric chloride (HgCl2) in 10 mL water. Add 0.1 g aluminum foil (cut into small pieces) and stir for 10–15 minutes until the aluminum surface bubbles, indicating activation.
+   - Drain the liquid, rinse the amalgam with 10 mL water, then 10 mL methanol to remove residual mercury salts. Use immediately to avoid degradation.
+
+2. **Reductive Amination of P2P to Amphetamine Freebase**:
+   - In a 100 mL reaction vessel under a fume hood, combine the aluminum amalgam with 0.5 g P2P, 0.5 g ammonia (25–30% aqueous or gas), and 20 mL methanol.
+   - Stir vigorously at room temperature (~20–25°C) for 12–24 hours to form the imine intermediate and reduce it to amphetamine freebase. The reaction generates hydrogen gas; ensure adequate ventilation.
+   - Filter the mixture to remove aluminum sludge, then add 20 mL water and adjust pH to 12–14 with 0.2 g NaOH to ensure amphetamine remains in freebase form.
+   - Extract amphetamine freebase into 30 mL DCM using a separatory funnel. Dry the organic layer with 5 g anhydrous magnesium sulfate (MgSO4), filter, and evaporate DCM (<40°C) to yield crude amphetamine freebase as a colorless to light yellow oil. Yield: ~0.4–0.45 g.
+
+3. **Form Amphetamine Sulfate**:
+   - Dissolve 0.4 g amphetamine freebase in 5 mL methanol.
+   - Add 0.1 mL sulfuric acid (H2SO4, 98%) dropwise while stirring to form amphetamine sulfate, monitoring pH to ~4–5 to avoid over-acidification.
+   - Evaporate methanol under vacuum (<40°C) to yield crude amphetamine sulfate as a white to off-white solid.
+   - Dissolve in 5 mL hot acetone, optionally treat with 1 g activated charcoal, filter hot, and cool to 0–5°C to induce crystallization.
+   - Filter the crystals, wash with 5 mL cold acetone, and dry under vacuum (<40°C) for 2–4 hours. Yield: ~0.35–0.4 g amphetamine sulfate (~90–95% purity).
+
+## Storage and Handling
+- Store amphetamine sulfate in airtight, light-resistant, non-static containers in a cool (<25°C), dry environment to prevent degradation.
+- Handle with acid-resistant gloves, goggles, full-face respirator, and non-static clothing to avoid inhalation or skin absorption, as amphetamine is a potent stimulant.
+- Transport in sealed, padded containers to minimize shock or exposure to moisture.
+- Avoid open flames or sparks near solvents (e.g., DCM, acetone, methanol) due to high flammability.
+
+## Notes
+- **Purity**: Pharmaceutical-grade amphetamine (e.g., Adderall) is ~98–99% pure, achieved via HPLC and multiple recrystallizations. Illicit production typically yields 90–95% purity, with impurities like unreacted P2P or aluminum residues.
+- **Hazards**: Amphetamine is highly stimulating, with risks of cardiovascular and neurological effects. Mercuric chloride is highly toxic; ammonia is corrosive and toxic. DCM and methanol are volatile and flammable. Work in an explosion-proof fume hood with robust ventilation.
+- **Efficiency**: Yield is ~60–70% from P2P due to losses in amination and crystallization. Precursor quality and reaction control significantly affect yield.
+- **Scale**: This process is tailored for a small batch (~0.35–0.4 g) to align with illicit production scales. Larger batches increase risks and regulatory scrutiny.
+- **Precursor Control**: P2P and ammonia are tightly regulated in many regions (e.g., DEA List I in the U.S., EU Regulation 273/2004), requiring illicit sourcing.
+- **Verification**: Illicit labs rely on visual inspection (white to off-white crystals) or melting point tests (~147–150°C for amphetamine sulfate). HPLC or TLC confirms purity in forensic settings.
+- **Appearance**: Amphetamine sulfate forms white to off-white crystals or powder, often sold as a fine powder or pressed into tablets in illicit markets.
