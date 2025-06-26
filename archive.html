@@ -54,7 +54,6 @@
       font-size: 24px;
       margin-bottom: 20px;
       font-weight: bold;
-      /* Add below to make it clickable but without hover effect */
       cursor: default;
     }
 
@@ -202,7 +201,6 @@
   </style>
 </head>
 <body>
-
   <audio id="background-audio" loop autoplay>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/Taxidermy.mp3" type="audio/mpeg">
   </audio>
@@ -213,167 +211,222 @@
 
   <a href="index.html" class="top-left-box">Back</a>
 
-  <div class="archive-box" id="archive-box">
-    <div class="archive-title" onclick="showCategory('list-Dox')">Archives</div>
+  <div class="archive-box" id="archiveBox">
+    <div class="archive-title" data-category="list-Dox">Archives</div>
     <div class="filter-buttons">
-      <div class="filter-button" onclick="showCategory('list-Drugs')">Drugs</div>
-      <div class="filter-button" onclick="showCategory('list-Weapons')">Weapons</div>
-      <div class="filter-button" onclick="showCategory('list-other')">Other</div>
+      <div class="filter-button" data-category="list-Drugs">Drugs</div>
+      <div class="filter-button" data-category="list-Weapons">Weapons</div>
+      <div class="filter-button" data-category="list-Dox">Other</div>
     </div>
 
-    <div class="entry-list active" id="list-Drugs">
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/2cb.txt')">2C-B</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/3mmc.txt')">3-MMC</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/4mmc.txt')">4-MMC</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/benadryl.txt')">Benadryl</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/cobra120.txt')">Cobra 120</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/cocaine.txt')">Cocaine</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/codeine.txt')">Codeine</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/colomix.txt')">Colo Mix</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/colopure.txt')">Colo Pure</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/crack.txt')">Crack</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/crystalmeth.txt')">Crystal Meth</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/diazepam.txt')">Diazepam</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/dmt.txt')">DMT</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/fentanyl.txt')">Fentanyl</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/fentanylpressed.txt')">Fentanyl Pressed Pills</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ghb.txt')">GHB</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/heroin.txt')">Heroin</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/kamagra.txt')">Kamagra</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ketamineliquid.txt')">Ketamine Liquid</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ketaminepowder.txt')">Ketamine Powder</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/krokodile.txt')">Krokodile</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/morphine.txt')">Morphine</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/oxazepam.txt')">Oxazepam</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/oxycodone.txt')">Oxycodone</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/perupure.txt')">Peru Pure</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/pinkcocaine.txt')">Pink Cocaine</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/promethazine.txt')">Promethazine</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ritalin.txt')">Ritalin</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/shroomdrops.txt')">Magic Mushroom Drops</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/speed.txt')">Speed</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/temazepam.txt')">Temazepam</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/xanax.txt')">Xanax</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/xtc.txt')">Xtc</div>
-    </div>
-
-    <div class="entry-list" id="list-Weapons">
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/3dPrintedGlock.txt')">3D Printed Glock</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/3dPrintedM4A1.txt')">3D Printed M4A1</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/3dPrintedM14.txt')">3D Printed M14</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/C4.txt')">C4</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/FragGrenade.txt')">Fragmentation Grenade</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/PipeBomb.txt')">Pipe Bomb</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/Semtex.txt')">Semtex</div>
-      <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/Warhead.txt')">Warhead</div>
-    </div>
-
-    <div class="entry-list" id="list-Dox">
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/thx_scare.txt')">Thx Scare</div>
-        <div class="entry-button" onclick="openModal('nothing')">✁✃764✁✃</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Cane764.txt')">Cane764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Confused764.txt')">Confused764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/DasEnde764.txt')">DasEnde764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Heal764.txt')">Heal764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Inactive764.txt')">Inactive764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Icon764.txt')">Icon764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Merc764.txt')">Merc764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Naro764.txt')">Naro764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Refusal764.txt')">Refusal764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Scream764.txt')">Scream764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Sinner764.txt')">Sinner764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Vore764.txt')">Vore764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Zaro764.txt')">Zaro764</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Zuu764.txt')">Zuu764</div>
-        <div class="entry-button" onclick="openModal('nothing')">૮ ˶ᵔ ᵕ ᵔ˶ ა</div>
-        <div class="entry-button" onclick="openModal('nothing')">✁✃KNR✁✃</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/BladeKNR.txt')">BladeKNR</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/BlixKNR.txt')">BlixKNR</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/KodachiKNR.txt')">KodachiKNR</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/PerkkKNR.txt')">PerkkKNR</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/ResinKNR.txt')">ResinKNR</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/JapanKNR.txt')">JapanKNR</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/SwatKNR.txt')">SwatKNR</div>
-        <div class="entry-button" onclick="openModal('nothing')">˃ 𖥦 ˂</div>
-        <div class="entry-button" onclick="openModal('nothing')">✁✃SlitTown✁✃</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/CautiousST.txt')">CautiousSt</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/ChaxST.txt')">ChaxST</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/GrumeST.txt')">GrumeST</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/InfoST.txt')">InfoST</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/MakeshiftST.txt')">MakeshiftST</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/SempST.txt')">SempST</div>
-        <div class="entry-button" onclick="openModal('nothing')">ᡣ • . • 𐭩 ♡</div>
-        <div class="entry-button" onclick="openModal('nothing')">✁✃Other✁✃</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/BrewVileBin.txt')">BrewVileBin</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/Fain802.txt')">Fain802</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/Fear646.txt')">Fear646</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/ResidenceLTH.txt')">ResidenceLTH</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/Sune.txt')">Sune</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/WebNLM.txt')">WebNLM</div>
-        <div class="entry-button" onclick="openModal('https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/WendigoHN.txt')">WendigoHN</div>
-    </div>
+    <div class="entry-list active" id="list-Drugs"></div>
+    <div class="entry-list" id="list-Weapons"></div>
+    <div class="entry-list" id="list-Dox"></div>
   </div>
 
-  <div class="popup-overlay" id="popup-overlay" onclick="closePopup()">
-    <div class="popup" onclick="event.stopPropagation();">
-      <pre id="popup-content"></pre>
-      <div class="copy-button" onclick="copyPopupText()">Copy All</div>
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <pre id="popupContent"></pre>
+      <div class="copy-button">Copy All</div>
     </div>
   </div>
 
   <script>
-    function showCategory(id) {
-      const lists = document.querySelectorAll(".entry-list");
-      lists.forEach(list => list.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
+    class ArchiveManager {
+      constructor() {
+        this.entries = {
+          'list-Drugs': [
+            { title: '2C-B', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/2cb.txt' },
+            { title: '3-MMC', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/3mmc.txt' },
+            { title: '4-MMC', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/4mmc.txt' },
+            { title: 'Benadryl', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/benadryl.txt' },
+            { title: 'Cobra 120', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/cobra120.txt' },
+            { title: 'Cocaine', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/cocaine.txt' },
+            { title: 'Codeine', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/codeine.txt' },
+            { title: 'Colo Mix', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/colomix.txt' },
+            { title: 'Colo Pure', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/colopure.txt' },
+            { title: 'Crack', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/crack.txt' },
+            { title: 'Crystal Meth', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/crystalmeth.txt' },
+            { title: 'Diazepam', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/diazepam.txt' },
+            { title: 'DMT', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/dmt.txt' },
+            { title: 'Fentanyl', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/fentanyl.txt' },
+            { title: 'Fentanyl Pressed Pills', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/fentanylpressed.txt' },
+            { title: 'GHB', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ghb.txt' },
+            { title: 'Heroin', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/heroin.txt' },
+            { title: 'Kamagra', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/kamagra.txt' },
+            { title: 'Ketamine Liquid', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ketamineliquid.txt' },
+            { title: 'Ketamine Powder', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ketaminepowder.txt' },
+            { title: 'Krokodile', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/krokodile.txt' },
+            { title: 'Magic Mushroom Drops', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/shroomdrops.txt' },
+            { title: 'Morphine', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/morphine.txt' },
+            { title: 'Oxazepam', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/oxazepam.txt' },
+            { title: 'Oxycodone', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/oxycodone.txt' },
+            { title: 'Peru Pure', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/perupure.txt' },
+            { title: 'Pink Cocaine', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/pinkcocaine.txt' },
+            { title: 'Promethazine', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/promethazine.txt' },
+            { title: 'Ritalin', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/ritalin.txt' },
+            { title: 'Speed', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/speed.txt' },
+            { title: 'Temazepam', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/temazepam.txt' },
+            { title: 'Xanax', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/xanax.txt' },
+            { title: 'Xtc', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/drugs/xtc.txt' }
+          ],
+          'list-Weapons': [
+            { title: '3D Printed Glock', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/3dPrintedGlock.txt' },
+            { title: '3D Printed M14', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/3dPrintedM14.txt' },
+            { title: '3D Printed M4A1', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/3dPrintedM4A1.txt' },
+            { title: 'C4', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/C4.txt' },
+            { title: 'Fragmentation Grenade', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/FragGrenade.txt' },
+            { title: 'Pipe Bomb', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/PipeBomb.txt' },
+            { title: 'Semtex', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/Semtex.txt' },
+            { title: 'Warhead', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/Weapons/Warhead.txt' }
+          ],
+          'list-Dox': [
+            { title: 'Thx Scare', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/thx_scare.txt' },
+            { title: '✁✃764✁✃', url: 'nothing' },
+            { title: 'Cane764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Cane764.txt' },
+            { title: 'Confused764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Confused764.txt' },
+            { title: 'DasEnde764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/DasEnde764.txt' },
+            { title: 'Heal764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Heal764.txt' },
+            { title: 'Inactive764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Inactive764.txt' },
+            { title: 'Icon764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Icon764.txt' },
+            { title: 'Merc764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Merc764.txt' },
+            { title: 'Naro764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Naro764.txt' },
+            { title: 'Refusal764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Refusal764.txt' },
+            { title: 'Scream764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Scream764.txt' },
+            { title: 'Sinner764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Sinner764.txt' },
+            { title: 'Vore764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Vore764.txt' },
+            { title: 'Zaro764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Zaro764.txt' },
+            { title: 'Zuu764', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/764/Zuu764.txt' },
+            { title: '૮ ˶ᵔ ᵕ ᵔ˶ ა', url: 'nothing' },
+            { title: '✁✃KNR✁✃', url: 'nothing' },
+            { title: 'BladeKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/BladeKNR.txt' },
+            { title: 'BlixKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/BlixKNR.txt' },
+            { title: 'KodachiKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/KodachiKNR.txt' },
+            { title: 'PerkkKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/PerkkKNR.txt' },
+            { title: 'ResinKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/ResinKNR.txt' },
+            { title: 'JapanKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/KNR/JapanKNR.txt' },
+            { title: 'SwatKNR', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents ALT/dox/KNR/SwatKNR.txt' },
+            { title: '˃ 𖥦 ˂', url: 'nothing' },
+            { title: '✁✃SlitTown✁✃', url: 'nothing' },
+            { title: 'CautiousST', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/CautiousST.txt' },
+            { title: 'ChaxST', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/ChaxST.txt' },
+            { title: 'GrumeST', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/GrumeST.txt' },
+            { title: 'InfoST', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/InfoST.txt' },
+            { title: 'MakeshiftST', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/MakeshiftST.txt' },
+            { title: 'SempST', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/SlitTown/SempST.txt' },
+            { title: 'ᡣ • . • 𐭩 ♡', url: 'nothing' },
+            { title: '✁✃Other✁✃', url: 'nothing' },
+            { title: 'BrewVileBin', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/BrewVileBin.txt' },
+            { title: 'Fain802', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/Fain802.txt' },
+            { title: 'Fear646', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/Fear646.txt' },
+            { title: 'ResidenceLTH', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/ResidenceLTH.txt' },
+            { title: 'Sune', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/Sune.txt' },
+            { title: 'WebNLM', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/WebNLM.txt' },
+            { title: 'WendigoHN', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/documents/dox/Other/WendigoHN.txt' }
+          ]
+        };
 
-    function openModal(url) {
-      const archiveBox = document.getElementById("archive-box");
-      const overlay = document.getElementById("popup-overlay");
-      const popupContent = document.getElementById("popup-content");
+        this.elements = {
+          archiveBox: document.getElementById('archiveBox'),
+          popupOverlay: document.getElementById('popupOverlay'),
+          popupContent: document.getElementById('popupContent'),
+          copyButton: document.querySelector('.copy-button'),
+          archiveTitle: document.querySelector('.archive-title'),
+          filterButtons: document.querySelectorAll('.filter-button'),
+          entryLists: document.querySelectorAll('.entry-list')
+        };
 
-      fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error("Failed to load document.");
-          return response.text();
-        })
-        .then(text => {
-          popupContent.textContent = text;
-          archiveBox.style.opacity = "0";
-          overlay.classList.add("show");
-          setTimeout(() => {
-            archiveBox.style.display = "none";
-            overlay.classList.add("visible");
-          }, 500);
-        })
-        .catch(error => {
-          popupContent.textContent = "Error loading file.";
-          console.error(error);
+        this.initialize();
+      }
+
+      initialize() {
+        this.bindEventListeners();
+        this.populateEntryLists();
+        this.showCategory('list-Drugs');
+      }
+
+      bindEventListeners() {
+        this.elements.archiveTitle.addEventListener('click', () => this.showCategory(this.elements.archiveTitle.dataset.category));
+        this.elements.filterButtons.forEach(button => 
+          button.addEventListener('click', () => this.showCategory(button.dataset.category))
+        );
+        this.elements.popupOverlay.addEventListener('click', (e) => this.handleOverlayClick(e));
+        this.elements.copyButton.addEventListener('click', () => this.copyPopupText());
+      }
+
+      populateEntryLists() {
+        Object.keys(this.entries).forEach(category => {
+          const list = document.getElementById(category);
+          this.entries[category].forEach(entry => {
+            const button = document.createElement('div');
+            button.className = 'entry-button';
+            button.textContent = entry.title;
+            button.dataset.url = entry.url;
+            button.addEventListener('click', () => this.openModal(entry.url));
+            list.appendChild(button);
+          });
         });
-    }
+      }
 
-    function closePopup() {
-      const archiveBox = document.getElementById("archive-box");
-      const overlay = document.getElementById("popup-overlay");
+      showCategory(categoryId) {
+        this.elements.entryLists.forEach(list => list.classList.remove('active'));
+        document.getElementById(categoryId).classList.add('active');
+      }
 
-      overlay.classList.remove("visible");
+      async openModal(url) {
+        if (url === 'nothing') {
+          this.elements.popupContent.textContent = 'No content available.';
+          this.showPopup();
+          return;
+        }
 
-      setTimeout(() => {
-        overlay.classList.remove("show");
-        archiveBox.style.display = "block";
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error('Failed to load document.');
+          const text = await response.text();
+          this.elements.popupContent.textContent = text;
+          this.showPopup();
+        } catch (error) {
+          this.elements.popupContent.textContent = 'Error loading file.';
+          console.error(error);
+          this.showPopup();
+        }
+      }
+
+      showPopup() {
+        this.elements.archiveBox.style.opacity = '0';
+        this.elements.popupOverlay.classList.add('show');
         setTimeout(() => {
-          archiveBox.style.opacity = "1";
-        }, 10);
-      }, 500);
+          this.elements.archiveBox.style.display = 'none';
+          this.elements.popupOverlay.classList.add('visible');
+        }, 500);
+      }
+
+      closePopup() {
+        this.elements.popupOverlay.classList.remove('visible');
+        setTimeout(() => {
+          this.elements.popupOverlay.classList.remove('show');
+          this.elements.archiveBox.style.display = 'block';
+          setTimeout(() => {
+            this.elements.archiveBox.style.opacity = '1';
+          }, 10);
+        }, 500);
+      }
+
+      handleOverlayClick(event) {
+        if (event.target === this.elements.popupOverlay) {
+          this.closePopup();
+        }
+      }
+
+      copyPopupText() {
+        navigator.clipboard.writeText(this.elements.popupContent.textContent)
+          .then(() => console.log('Copied to clipboard.'))
+          .catch(err => console.error('Failed to copy:', err));
+      }
     }
 
-    function copyPopupText() {
-      const text = document.getElementById("popup-content").textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        console.log("Copied to clipboard.");
-      });
-    }
+    new ArchiveManager();
   </script>
 </body>
 </html>
