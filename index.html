@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">	
-
 <head>	
   <meta charset="UTF-8" />	
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />	
@@ -210,61 +209,58 @@
 </head>	
 
 <body>	
-
-  <div class="intro-overlay" id="intro-overlay" onclick="startSite()">	
+  <div class="intro-overlay" id="introOverlay">	
     <div class="intro-footer">	
-      <div id="line1">✁✃✁✁✃✁✃✁✁✃✁✃✁</div>	
+      <div id="line1">✁✃✁✁✃✁✃✁✁✃✁✃</div>	
       <div id="line2">Click to enter...</div>	
       <div id="line3">✃✁✃✁✁✃✁✃✁✁✃✁✃</div>	
     </div>	
   </div>	
 
-  <audio id="background-audio" loop>	
+  <audio id="backgroundAudio" loop>	
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/Slaughter_House_audio.mp3" type="audio/mpeg">	
   </audio>	
 
-  <video class="background-video" autoplay muted loop playsinline id="bg-video">	
+  <video class="background-video" autoplay muted loop playsinline id="bgVideo">	
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">	
   </video>	
 
-<a href="archive.html" class="top-right-box" style="position: absolute; top: 20px; right: 20px;">Archive</a>	
-<a href="other.html" class="top-right-box" style="position: absolute; top: 70px; right: 20px;">Other</a>	
+  <a href="archive.html" class="top-right-box" style="position: absolute; top: 20px; right: 20px;">Archive</a>	
+  <a href="other.html" class="top-right-box" style="position: absolute; top: 70px; right: 20px;">Other</a>	
 
+  <div class="ip-display" id="ipAddress">Fetching IP...</div>	
 
-  <div class="ip-display" id="ip-address">Fetching IP...</div>	
-
-  <div class="container" id="main-container">	
+  <div class="container" id="mainContainer">	
     <div class="card">	
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/discord.png" alt="avatar" />	
       <h2>Discord</h2>	
       <p>✁✃✁✁✃✁✃✁✁✃</p>	
-      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Discord', 'Mostly active here.', 'https://discord.com/users/1255804249204592640', event)" />	
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" data-name="Discord" data-desc="Mostly active here." data-link="https://discord.com/users/1255804249204592640" />	
     </div>	
     <div class="card">	
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/telegram.png" alt="avatar" />	
       <h2>Telegram</h2>	
       <p>✁✃✁✁✃✁✃✁✁✃</p>	
-      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Telegram', 'You can find me.', 'https://t.me/mac_dle', event)" />	
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" data-name="Telegram" data-desc="You can find me." data-link="https://t.me/mac_dle" />	
     </div>	
     <div class="card">	
       <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/soundcloud.png" alt="avatar" />	
       <h2>Soundcloud</h2>	
       <p>✁✃✁✁✃✁✃✁✁✃</p>	
-      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Soundcloud', 'Always listening.', 'https://soundcloud.com/j6qc', event)" />	
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" data-name="Soundcloud" data-desc="Always listening." data-link="https://soundcloud.com/j6qc" />	
     </div>	
     <div class="card">	
-      <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" alt="avatar" />	
-      <h2>Roblox</h2>	
+      <img class="avatar" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/roblox.png" alt="avatar" /> <h2>Roblox</h2>	
       <p>✁✃✁✁✃✁✃✁✁✃</p>	
-      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" onclick="showPopup('Roblox', 'Never online', 'https://www.roblox.com/users/7573425183/profile', event)" />	
+      <img class="icon" src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/teddy1.png" alt="icon" data-name="Roblox" data-desc="Never online" data-link="https://www.roblox.com/users/7573425183/profile" />	
     </div>	
   </div>	
 
-  <div class="popup-overlay" id="popup-overlay" onclick="hidePopup()">	
-    <div class="popup" id="popup" onclick="event.stopPropagation();">	
-      <h2 id="popup-name">Name</h2>	
-      <p id="popup-desc"><em>Description</em></p>	
-      <a id="popup-link" href="#" target="_blank" class="popup-btn">Visit</a>	
+  <div class="popup-overlay" id="popupOverlay">	
+    <div class="popup" id="popup">	
+      <h2 id="popupName">Name</h2>	
+      <p id="popupDesc"><em>Description</em></p>	
+      <a id="popupLink" href="#" target="_blank" class="popup-btn">Visit</a>	
     </div>	
   </div>	
 
@@ -275,65 +271,90 @@
   </div>	
 
   <script>	
-    function showPopup(name, desc, link, event) {	
-      event.stopPropagation();	
-      const mainContainer = document.getElementById("main-container");	
-      const overlay = document.getElementById("popup-overlay");	
-      const audio = document.getElementById("background-audio");	
+    class SiteManager {	
+      constructor() {	
+        this.elements = {	
+          introOverlay: document.getElementById('introOverlay'),	
+          backgroundAudio: document.getElementById('backgroundAudio'),	
+          bgVideo: document.getElementById('bgVideo'),	
+          ipAddress: document.getElementById('ipAddress'),	
+          mainContainer: document.getElementById('mainContainer'),	
+          popupOverlay: document.getElementById('popupOverlay'),	
+          popupName: document.getElementById('popupName'),	
+          popupDesc: document.getElementById('popupDesc'),	
+          popupLink: document.getElementById('popupLink'),	
+          icons: document.querySelectorAll('.icon')	
+        };	
 
-      document.getElementById("popup-name").textContent = name;	
-      document.getElementById("popup-desc").textContent = desc;	
-      document.getElementById("popup-link").href = link;	
+        this.initialize();	
+      }	
 
-      mainContainer.style.opacity = "0";	
-      overlay.classList.add("show");	
+      initialize() {	
+        this.bindEventListeners();	
+        this.fetchIPAddress();	
+      }	
 
-      audio.play().catch(() => {});	
+      bindEventListeners() {	
+        this.elements.introOverlay.addEventListener('click', () => this.startSite());	
+        this.elements.popupOverlay.addEventListener('click', (e) => this.handleOverlayClick(e));	
+        this.elements.icons.forEach(icon => {	
+          icon.addEventListener('click', () => this.showPopup(	
+            icon.dataset.name,	
+            icon.dataset.desc,	
+            icon.dataset.link	
+          ));	
+        });	
+      }	
 
-      setTimeout(() => {	
-        mainContainer.style.display = "none";	
-        overlay.classList.add("visible");	
-      }, 500);	
-    }	
+      async fetchIPAddress() {	
+        try {	
+          const response = await fetch('https://api.ipify.org?format=json');	
+          const data = await response.json();	
+          this.elements.ipAddress.textContent = `Your IP: ${data.ip}`;	
+        } catch (err) {	
+          console.error('IP fetch failed:', err);	
+          this.elements.ipAddress.textContent = 'IP unavailable';	
+        }	
+      }	
 
-    function hidePopup() {	
-      const mainContainer = document.getElementById("main-container");	
-      const overlay = document.getElementById("popup-overlay");	
+      startSite() {	
+        this.elements.introOverlay.classList.add('hidden');	
+        this.elements.backgroundAudio.play().catch(() => {});	
+        this.elements.bgVideo.muted = true;	
+        this.elements.bgVideo.play().catch(() => {});	
+      }	
 
-      overlay.classList.remove("visible");	
-
-      setTimeout(() => {	
-        overlay.classList.remove("show");	
-        mainContainer.style.display = "grid";	
+      showPopup(name, desc, link) {	
+        this.elements.popupName.textContent = name;	
+        this.elements.popupDesc.textContent = desc;	
+        this.elements.popupLink.href = link;	
+        this.elements.mainContainer.style.opacity = '0';	
+        this.elements.popupOverlay.classList.add('show');	
         setTimeout(() => {	
-          mainContainer.style.opacity = "1";	
-        }, 10);	
-      }, 500);	
+          this.elements.mainContainer.style.display = 'none';	
+          this.elements.popupOverlay.classList.add('visible');	
+        }, 500);	
+      }	
+
+      handleOverlayClick(event) {	
+        if (event.target === this.elements.popupOverlay) {	
+          this.hidePopup();	
+        }	
+      }	
+
+      hidePopup() {	
+        this.elements.popupOverlay.classList.remove('visible');	
+        setTimeout(() => {	
+          this.elements.popupOverlay.classList.remove('show');	
+          this.elements.mainContainer.style.display = 'grid';	
+          setTimeout(() => {	
+            this.elements.mainContainer.style.opacity = '1';	
+          }, 10);	
+        }, 500);	
+      }	
     }	
 
-    function startSite() {	
-      const overlay = document.getElementById("intro-overlay");	
-      const audio = document.getElementById("background-audio");	
-      const video = document.getElementById("bg-video");	
-
-      overlay.classList.add("hidden");	
-
-      audio.play().catch(() => {});	
-      video.muted = true;	
-      video.play().catch(() => {});	
-    }	
-
-    fetch('https://api.ipify.org?format=json')	
-      .then(response => response.json())	
-      .then(data => {	
-        document.getElementById('ip-address').textContent = `Your IP: ${data.ip}`;	
-      })	
-      .catch((err) => {	
-        console.error("IP fetch failed:", err);	
-        document.getElementById('ip-address').textContent = 'IP unavailable';	
-      });	
+    new SiteManager();	
   </script>	
 </body>	
-
-</html>	
-Footer
+</html>
