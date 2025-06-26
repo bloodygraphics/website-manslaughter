@@ -181,37 +181,28 @@
   </style>
 </head>
 <body>
-
   <video class="background-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/video/background2.mp4" type="video/mp4">
   </video>
 
   <a href="index.html" class="top-left-box">Back</a>
 
-  <div class="button-container fade-in" id="buttons">
+  <div class="button-container fade-in" id="buttonContainer">
     <button class="btn">nothing</button>
-    <button class="btn" id="musicBtn">music archive</button>
+    <button class="btn" id="musicButton">music archive</button>
   </div>
 
-  <div class="popup" id="popup">
+  <div class="popup" id="musicPopup">
     <h2>Music Files</h2>
     <div class="progress-container">
-      <div class="photo-button" id="teddyToggle" title="Play/Pause"></div>
-      <input type="range" id="seekBar" value="0" />
+      <div class="photo-button" id="playPauseButton" title="Play/Pause"></div>
+      <input type="range" id="seekBar" value="0" min="0" max="100" />
     </div>
     <div class="song-list" id="songList"></div>
-    <audio id="audio" controls style="display: none;"></audio>
+    <audio id="audioPlayer" style="display: none;"></audio>
   </div>
 
   <script>
-    const musicBtn = document.getElementById('musicBtn');
-    const buttons = document.getElementById('buttons');
-    const popup = document.getElementById('popup');
-    const audio = document.getElementById('audio');
-    const seekBar = document.getElementById('seekBar');
-    const songList = document.getElementById('songList');
-    const teddy = document.getElementById('teddyToggle');
-
     const songs = [
       { title: '##2k17', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/2k17.mp3' },
       { title: '9SICC 1', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/9SICC_1.mp3' },
@@ -255,7 +246,7 @@
       { title: 'PPGAF', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/PPDGAF.mp3' },
       { title: 'Products Of Da Underground', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/products_of_da_underground.mp3' },
       { title: 'Robbery', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/ROBBERY.mp3' },
-      { title: 'Sacrificial Thoughts (AIM)', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio  /SACRIFICIALTHOUGHTS_(AIM).mp3' },
+      { title: 'Sacrificial Thoughts (AIM)', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/SACRIFICIALTHOUGHTS_(AIM).mp3' },
       { title: 'Shank Ya', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/Shank_ya.mp3' },
       { title: 'Side A Intro', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/side_a_intro.mp3' },
       { title: 'Slaughter house', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/SLAUGHTERHOUSE.mp3' },
@@ -267,57 +258,97 @@
       { title: 'Wowro', url: 'https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/audio/wowro.mp3' }
     ];
 
-    musicBtn.addEventListener('click', () => {
-      buttons.classList.remove('fade-in');
-      buttons.classList.add('fade-out');
-      setTimeout(() => {
-        buttons.style.display = 'none';
-        popup.classList.add('show');
-        loadSongs();
-      }, 500);
-    });
-
-    function loadSongs() {
-      songList.innerHTML = '';
-      songs.forEach((song) => {
-        const btn = document.createElement('div');
-        btn.className = 'song-button';
-        btn.innerText = song.title;
-        btn.onclick = () => {
-          audio.src = song.url;
-          audio.play();
+    class MusicPlayer {
+      constructor() {
+        this.elements = {
+          musicButton: document.getElementById('musicButton'),
+          buttonContainer: document.getElementById('buttonContainer'),
+          musicPopup: document.getElementById('musicPopup'),
+          audioPlayer: document.getElementById('audioPlayer'),
+          seekBar: document.getElementById('seekBar'),
+          songList: document.getElementById('songList'),
+          playPauseButton: document.getElementById('playPauseButton')
         };
-        songList.appendChild(btn);
-      });
+
+        this.bindEventListeners();
+        this.initializeSeekBar();
+      }
+
+      bindEventListeners() {
+        this.elements.musicButton.addEventListener('click', () => this.togglePopup());
+        this.elements.playPauseButton.addEventListener('click', () => this.togglePlayPause());
+        this.elements.audioPlayer.addEventListener('timeupdate', () => this.updateSeekBar());
+        this.elements.seekBar.addEventListener('input', () => this.seekAudio());
+        document.addEventListener('click', (e) => this.handleOutsideClick(e));
+      }
+
+      initializeSeekBar() {
+        this.elements.seekBar.value = 0;
+        this.elements.seekBar.min = 0;
+        this.elements.seekBar.max = 100;
+      }
+
+      togglePopup() {
+        const { buttonContainer, musicPopup } = this.elements;
+        buttonContainer.classList.remove('fade-in');
+        buttonContainer.classList.add('fade-out');
+        
+        setTimeout(() => {
+          buttonContainer.style.display = 'none';
+          musicPopup.classList.add('show');
+          this.loadSongList();
+        }, 500);
+      }
+
+      loadSongList() {
+        this.elements.songList.innerHTML = '';
+        songs.forEach(song => {
+          const button = document.createElement('div');
+          button.className = 'song-button';
+          button.textContent = song.title;
+          button.addEventListener('click', () => this.playSong(song.url));
+          this.elements.songList.appendChild(button);
+        });
+      }
+
+      playSong(url) {
+        this.elements.audioPlayer.src = url;
+        this.elements.audioPlayer.play();
+      }
+
+      togglePlayPause() {
+        const { audioPlayer } = this.elements;
+        audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+      }
+
+      updateSeekBar() {
+        const { audioPlayer, seekBar } = this.elements;
+        seekBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100 || 0;
+      }
+
+      seekAudio() {
+        const { audioPlayer, seekBar } = this.elements;
+        audioPlayer.currentTime = (seekBar.value / 100) * audioPlayer.duration;
+      }
+
+      handleOutsideClick(event) {
+        const { musicPopup, musicButton, buttonContainer } = this.elements;
+        if (
+          musicPopup.classList.contains('show') &&
+          !musicPopup.contains(event.target) &&
+          event.target !== musicButton
+        ) {
+          musicPopup.classList.remove('show');
+          buttonContainer.style.display = 'flex';
+          setTimeout(() => {
+            buttonContainer.classList.remove('fade-out');
+            buttonContainer.classList.add('fade-in');
+          }, 10);
+        }
+      }
     }
 
-    teddy.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    });
-
-    audio.addEventListener('timeupdate', () => {
-      seekBar.value = (audio.currentTime / audio.duration) * 100 || 0;
-    });
-
-    seekBar.addEventListener('input', () => {
-      const percent = seekBar.value;
-      audio.currentTime = (percent / 100) * audio.duration;
-    });
-
-    document.addEventListener('click', (e) => {
-      if (popup.classList.contains('show') && !popup.contains(e.target) && e.target !== musicBtn) {
-        popup.classList.remove('show');
-        buttons.style.display = 'flex';
-        setTimeout(() => {
-          buttons.classList.remove('fade-out');
-          buttons.classList.add('fade-in');
-        }, 10);
-      }
-    });
+    new MusicPlayer();
   </script>
 </body>
 </html>
