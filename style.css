@@ -1,0 +1,699 @@
+/*
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠴⠖⠓⠓⠓⠓⠓⠲⠶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣞⣋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠀⠀⠈⠉⠻⠾⠶⢦⠤⣄⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢉⣻⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⢀⡤⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠶⠾⠶⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣱⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠟⠷⢾⣶⣦⣄⣄⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣗⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠋⠋⠛⠛⠲⠶⠶⠦⠦⡦⡦⢦⡤⣤⣤⣤⣄⡀
+⢷⠀⠀⠀⠨⡀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠈⠈⠉⠓⠒⠒⠲⠤⠄⠄⢠⢀⢀⢀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇
+⠘⣆⠀⠀⠀⠐⣵⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠀
+⠀⠹⣆⠀⠀⠀⠘⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠁⠀
+⠀⠀⠹⣷⡀⠀⠀⠈⢣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠀⠀⠀
+⠀⠀⠀⠘⠳⣄⠀⠀⠀⠘⠠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠉⠷⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣎⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⡟⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣴⣴⡀⠀⠀⠀⠀⠰⣶⡀⠀⠀⢠⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢽⡘⡇⠀⢀⣴⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡾⠟⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢶⣀⣀⣀⡀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠹⢶⣤⣾⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⣧⣿⠞⠋⠀⠀⠀⠀⠀⠀⠀⣼⣟⣿⣾⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⡿⣯⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠈⠉⠙⢶⣤⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⢀⡽⢻⡟⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠉⠉⢽⠘⣇⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣙⣀⠶⢶⣶⣶⣦⣤⣤⣶⣿⢻⣿⣿⣶⣽⣗⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡞⣷⣶⣲⠖⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⢠⡞⠀⢸⡇⠀⡄⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡯⠀⢺⡄⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡍⣿⣿⣿⣾⣿⣿⣿⣿⡧⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡗⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁⠀⠀⣠⡟⠀⠀⠰⣇⢐⡇⠀⠀⠀⢘⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠃⠀⠀⢹⡄⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⡿⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⣿⣿⣿⣿⣿⣿⣦⣴⣿⣿⣿⣯⣿⣿⡉⠀⠀⠀⠀⠀⣰⠋⠀⠀⠀⠀⢻⡐⡇⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⠀⠀⠀⠀⠹⣄⠀⠀⠀⠀⠀⠘⠻⣿⣿⣿⣯⣿⣿⣦⡿⢿⡿⢿⣷⣯⣿⣿⣿⣿⣿⣿⠇⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⠆⠙⣿⣿⣿⣯⢻⣿⣿⣿⡀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠁⡇⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀⠀⢤⡀⠀⠙⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣿⣿⣿⣿⣿⣼⣿⣿⣿⣿⠿⣿⣿⣿⣽⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣝⣿⡿⠏⠀⠀⣻⣿⣿⣿⡀⠹⢿⣿⠂⠀⣠⠞⠀⠀⠀⠀⠀⣀⣀⡤⠄⢧⠀⠀⠀⢸⠄⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⣾⠁⠀⠀⠈⠹⣷⣤⣀⠙⢦⣀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⡟⢻⣿⣿⣿⣿⣷⡀⢈⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⠉⠁⠀⠀⠀⠀⢸⣿⣿⡟⡇⠀⠀⠁⢀⡴⠋⢀⣤⣶⣶⣿⠿⠋⣉⣠⡄⢹⡄⠀⠀⢘⡇⠀⠀⠀⠀⠀⣿⣿⡁⠀⢨⠃⣀⣠⣠⡻⣷⣮⣿⣿⣳⣦⣝⠲⣀⠀⠀⠀⠀⠀⠐⣿⣿⣿⣿⣯⠨⣿⢿⣿⣿⣿⣿⡄⣯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠏⠀⠀⠀⠀⠀⠀⠀⠸⠿⠟⠋⠀⠀⠀⣀⣞⣥⣾⣿⣿⣿⣿⣶⣾⣿⣿⣟⣩⡀⢳⡀⠀⢘⢿⡀⠀⠀⠀⢀⡏⣿⠄⢠⡟⠀⢨⣿⣷⣯⣙⣻⣿⣿⣿⣶⣭⣛⡻⢧⣤⣀⠀⠀⢨⣿⣿⣿⣿⣿⠀⠘⣯⠻⣿⣿⣿⠽⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⡎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣾⣿⣿⡯⣾⣟⣿⣿⣷⣯⣵⣾⣿⠟⠋⠀⠈⢳⡀⢸⠨⣧⠀⠀⠀⣸⢑⣿⢴⠏⠀⠀⠀⠉⠢⣝⢻⣿⣾⣿⣷⣿⣿⣻⣿⣶⣿⣮⢿⠷⠐⣿⣿⣿⡿⡏⠀⠀⠈⠻⠛⠉⠁⠀⠀⣳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢤⠶⠟⢛⣻⡿⠟⣻⣿⢽⣿⣻⣿⣯⣿⣻⢺⡇⠀⠀⠀⠀⢱⣮⡆⢻⡂⠀⠀⡾⠰⢿⠃⠀⠀⠀⠀⠀⠀⣺⢺⡑⣿⣻⡟⣿⣿⣿⣟⢟⢿⢭⣛⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠑⠙⢉⣴⢛⣫⣾⡾⣿⣶⣿⡧⣿⡯⢸⡧⠀⠀⠀⠀⠀⠹⠇⠀⢳⠀⣼⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢺⡞⣯⣺⣾⡌⣿⠻⣽⣿⢿⠿⣿⣻⣯⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣻⣦⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠐⢴⣶⢿⣭⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣷⠟⢛⣿⡷⡟⢷⡿⣿⣿⣿⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠘⠷⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⠸⣿⡿⣷⡇⠄⣿⣟⠳⣄⠀⠀⠀⠉⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠛⠿⣇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣽⣫⣩⡶⠚⠋⠿⣿⣏⠸⣿⣿⡿⠸⣪⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢙⣤⢻⢫⢿⡇⢨⡜⣿⠀⠈⠓⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡟⣿⠀⠀⠈⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠉⠁⠀⢹⡄⠀⠚⣿⣷⡜⣷⢹⣿⠀⣻⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⣦⣤⣿⣠⣠⣘⣃⣈⢰⠹⡁⠀⠀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠂⢀⡟⢰⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠨⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⡀⠀⡘⢛⠷⡀⡘⣟⣠⣩⡴⠖⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠹⣿⣿⣿⣿⣿⣿⡋⠋⠛⠀⢀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠃⢠⡏⠀⢼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠹⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⡀⠀⠀⠀⠀⠈⠳⡟⠿⢿⣿⣿⣿⣿⣽⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⣿⣿⡿⡿⠿⢤⡀⣀⣴⠟⠁⣴⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠏⣠⠏⠀⢀⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⠀⣽⠀⠀⠀⢠⣶⡀⠀⠙⡝⣄⢾⣿⣿⣿⣿⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠓⠦⣤⣤⡶⠞⠋⠀⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⡴⢣⡦⢀⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢽⠀⠀⢀⡀⠀⠀⠀⠀⡿⠀⠀⠀⡼⢯⠻⣆⡀⠈⢚⢦⠀⠀⠈⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣄⣄⣤⡶⣳⢛⣋⡬⠞⣯⠀⢀⣾⡿⡆⠀⠀⠀⠀⠀⠀⠀⠀⢀⡿⠋⢠⢟⣧⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢤⣸⣠⣦⡿⣇⠀⠀⠀⣼⠅⠀⠀⣴⠃⠈⣧⡚⡿⣦⣄⣊⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢖⡿⠯⠿⠽⢟⢦⡀⠀⠀⠀⠀⠀⠀⠘⠙⠙⠉⠉⠁⠀⣠⢾⣧⡏⣵⡇⢻⣆⠀⠀⠀⠀⠀⠀⢀⡾⢀⣴⠏⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣾⡇⢻⣿⡄⠀⣰⠏⠀⢀⣰⠃⠀⠀⠹⡶⣿⡙⣦⡀⠉⠙⠛⠶⠄⠀⠀⠀⠀⠀⠀⠀⢰⠟⠀⠀⠀⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⠀⠀⠀⠀⡀⣀⣤⣞⢅⢬⣿⣠⣿⢀⠀⠹⣆⠀⠀⠀⠀⢀⣾⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠸⠟⠁⠈⠁⠀⠹⣿⣸⣏⣄⡴⠛⠁⣀⣤⣴⠖⢷⢻⡛⠛⠛⠛⠋⠛⠛⠛⠖⠖⠤⣤⣀⡀⠀⣽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣗⠀⠀⣀⣤⠴⠚⠛⠛⠋⠁⠀⠀⠀⢹⣆⡏⠉⠛⠲⢭⣷⣤⣀⣠⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⡓⣲⡶⠟⠁⠀⠀⠀⢹⣼⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠲⢿⣧⣄⠀⠀⠀⠀⠀⠀⠀⣀⡿⠚⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠃⠀⠀⠀⠀⠉⢳⣝⠻⣿⣾⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢉⡿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⡄⠀⠀⠀⠀⣠⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣸⡏⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣷⣤⣤⣼⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⣤⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠿⠛⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡑⠁⠁⢽⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣳⡀⠀⣽⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠹⣽⡄⠉⣾⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣶⡛⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⣄⠀⠀⠀⠀⠀⠀⠀⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⡗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣺⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡇⠀⠀⠀⠀⠀⣴⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⣠⣴⣻⢻⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣰⡇⠐⠛⠛⠻⢤⣸⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣤⠀⠀⠀⠀⠀⠀⠀⠘⢧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⢿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣳⣤⣀⡀⣀⢀⡀⣀⣀⣀⣶⠟⠋⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠺⠻⣶⣄⣀⣀⣀⣀⣀⡀⠹⢶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠟⠁⠘⠧⣄⣀⣀⣀⣀⣠⡤⠀⠀⠈⢳⣄⣀⠀⠀⠀⠀⠀⠀⢀⣀⣠⡤⠾⠛⠈⠈⠙⠛⠛⣏⠉⠉⣻⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣎⠈⢩⡽⠉⠁⠁⠀⠀⢩⡛⠲⣤⣄⣀⣀⣀⣀⣀⣤⠾⠉⠀⠀⠀⠀⠈⢩⡍⠉⢩⡏⠁⠀⠀⠀⠀⠉⠛⠛⠓⠖⠚⡚⠟⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢦⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢶⠿⠀⠀⠀⠀⠀⠀⢸⡆⠀⣰⠿⠛⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢦⠾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡀⢠⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+*/
+
+
+
+
+
+@charset "utf-8";
+
+@font-face {
+  font-family: "ModernRegular";
+  src: url(assets/font.woff2) format('woff2');
+}
+
+.active {
+  height: auto;
+}
+
+.widget-wrapper {
+  padding-top: 44px;
+}
+
+#banner {
+  pointer-events: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/image/body_bag1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#hubert {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(header_3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#sk-island {
+  background-image: url(assets/webp/sk_island.webp);
+}
+
+#sk-island-s {
+  background-image: url(assets/webp/sk_island.webp);
+  background-size: 100%;
+}
+
+#garments-1 {
+  background-image: url(assets/webp/garments_1.webp);
+  background-size: 100%;
+}
+
+#garments-2 {
+  background-image: url(assets/webp/garments_2.webp);
+  background-size: 100%;
+}
+
+#music-1 {
+  background-image: url(assets/webp/music_1.webp);
+  background-size: 100%;
+}
+
+#music-2 {
+  background-image: url(assets/webp/music_2.webp);
+  background-size: 100%;
+}
+
+#soundcloud-1 {
+  background-image: url(assets/webp/soundcloud_2.webp);
+  background-size: 100%;
+}
+
+#soundcloud-2 {
+  background-image: url(assets/webp/soundcloud_2.webp);
+  background-size: 100%;
+}
+
+#apple-music-1 {
+  background-image: url(assets/webp/apple_music_1.webp);
+  background-size: 100%;
+}
+
+#apple-music-2 {
+  background-image: url(assets/webp/apple_music_2.webp);
+  background-size: 100%;
+}
+
+#spotify-1 {
+  background-image: url(assets/webp/spotify_1.webp);
+  background-size: 100%;
+}
+
+#spotify-2 {
+  background-image: url(assets/webp/spotify_2.webp);
+  background-size: 100%;
+}
+
+#photography-1 {
+  background-image: url(assets/webp/photography_1.webp);
+}
+
+#photography-2 {
+  background-image: url(assets/webp/photography_2.webp);
+}
+
+#paintings-1 {
+  background-image: url(assets/webp/paintings_1.webp);
+}
+
+#paintings-2 {
+  background-image: url(assets/webp/paintings_2.webp);
+}
+
+#furniture-1 {
+  background-image: url(assets/webp/furniture_1.webp);
+}
+
+#furniture-2 {
+  background-image: url(assets/webp/furniture_2.webp);
+  background-size: 100%;
+}
+
+#videography-1 {
+  background-image: url(assets/webp/videography_1.webp);
+}
+
+#videography-2 {
+  background-image: url(assets/webp/videography_2.webp);
+}
+
+#instagram-1 {
+  background-image: url(assets/webp/instagram_1.webp);
+}
+
+#instagram-2 {
+  background-image: url(assets/webp/instagram_2.webp);
+}
+
+#twitter-1 {
+  background-image: url(assets/webp/twitter_1.webp);
+}
+
+#twitter-2 {
+  background-image: url(assets/webp/twitter_2.webp);
+}
+
+#youtube-1 {
+  background-image: url(assets/webp/youtube_1.webp);
+}
+
+#youtube-2 {
+  background-image: url(assets/webp/youtube_2.webp);
+}
+
+#discord-1 {
+  background-image: url(assets/webp/discord_1.webp);
+  background-size: 100%;
+}
+
+#discord-2 {
+  background-image: url(assets/webp/discord_2.webp);
+  background-size: 100%;
+}
+
+#merch-1 {
+  background-image: url(assets/header.png);
+  background-size: 100%;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.Section-avatars {
+  position: sticky;
+  padding: 0;
+  height: auto;
+}
+
+.avatars-scroll-container, .avatars-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.avatars {
+  --avatar-w-large: 100px;
+  --avatar-w-mid: calc(100vw / 4);
+  --avatar-w-mobile: calc((70vw) * 8 / 8);
+  --avatar-m-t: 0ms;
+  display: flex;
+  width: 100%;
+  position: relative;
+  backface-visibility: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.avatars-row {
+  --avatar-w-large: 100px;
+  --avatar-w-mid: calc(100vw / 4);
+  --avatar-w-mobile: calc((70vw) * 8 / 8);
+  --avatar-m-t: 0ms;
+  display: flex;
+  width: 100%;
+  position: relative;
+  backface-visibility: hidden;
+}
+
+@media screen and (min-width: 1100px) {
+  .avatars {
+    --avatar-w-mobile: calc(100vw / 4);
+  }
+}
+
+.avatar-wrap {
+  height: var(--avatar-w-large);
+  width: var(--avatar-w-large);
+  transition: width 1s, height 1s;
+}
+
+.avatar-wrap-small {
+  height: var(--avatar-w-mid);
+  width: var(--avatar-w-mid);
+  transition: width 1s, height 1s;
+  padding-bottom: 25vh;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+}
+
+.avatars.not-focus .avatar {
+  transform: scale(0.75);
+  transition: transform 0.3s ease;
+}
+
+.avatar-swap {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s;
+}
+
+.banner-swap {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s;
+  transform: translateY(-100%);
+}
+
+.avatar-default {
+  transform: translateY(-100%);
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s;
+}
+
+.avatar-default, .avatar-wrap:hover .avatar-swap {
+  opacity: 1;
+}
+
+.avatar-wrap:hover .avatar-default, .avatar-swap {
+  opacity: 0;
+}
+
+.avatar-text {
+  width: 100%;
+  font-weight: normal;
+  font-family: 'ModernRegular', serif;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.2;
+  text-shadow: #c0c0c0 1px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-wrap:hover .avatar-text {
+  opacity: 1;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+  .avatar {
+    width: var(--avatar-w-mid);
+    height: var(--avatar-w-mid);
+    transition: width 0.1s, height 0.1s;
+  }
+
+  .avatar-wrap {
+    width: var(--avatar-w-mid);
+    height: calc(var(--avatar-w-mid) + 20px);
+    transition: width 0.1s, height 0.1s;
+  }
+
+  .avatar-text {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+#avatars-scroll {
+  height: 100vh;
+  overflow-y: scroll;
+  perspective-origin: 50% 50%;
+  perspective: 25vh;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+
+.avatars-scroll-container {
+  display: block;
+  position: relative;
+  padding: 0;
+}
+
+.small-visible .avatars:last-of-type {
+  margin-bottom: 220px;
+}
+
+.large-visible, .mid-visible {
+  display: none;
+}
+
+.small-visible .avatars:nth-of-type(odd) {
+  justify-content: flex-end;
+}
+
+.avatar-wrap {
+  width: var(--avatar-w-mobile);
+  height: var(--avatar-w-mobile);
+  transition: width var(--avatar-m-t), height var(--avatar-m-t);
+}
+
+.avatar {
+  width: var(--avatar-w-mobile);
+  height: var(--avatar-w-mobile);
+  transition: width var(--avatar-m-t), height var(--avatar-m-t);
+}
+
+.avatar-focus .avatar-swap {
+  opacity: 1;
+}
+
+.avatar-focus .avatar-default {
+  opacity: 0;
+}
+
+.avatar-text {
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-text h5 {
+  font-size: 36px;
+  letter-spacing: .2em;
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 0 4px 2px #ffffffcc;
+}
+
+.avatar-text p {
+  font-size: 1.2em;
+  letter-spacing: 0.15em;
+  color: var(--text-color);
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  text-size-adjust: 100%;
+  --background: rgb(0, 0, 0);
+  --base-text-font-size: 14px;
+  --text-font-family: "Montserrat", sans-serif;
+  --text-font-weight: 500;
+  --text-font-style: normal;
+  --text-color: #454545;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  vertical-align: top;
+}
+
+pre {
+  overflow: auto;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 6px 10px 12px;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+.js .no-js, .no-js .hide-no-js {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+body:not(.is-tabbing) [tabindex]:focus,
+body:not(.is-tabbing) button:focus,
+body:not(.is-tabbing) input:focus,
+body:not(.is-tabbing) select:focus,
+body:not(.is-tabbing) textarea:focus {
+  outline: none;
+}
+
+[data-scrollable] {
+  overflow: auto;
+}
+
+html {
+  font-size: var(--base-text-font-size);
+}
+
+body {
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+  color: var(--text-color);
+  background: var(--background);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.portal-wrapper {
+  background-color: transparent !important;
+  overflow: initial !important;
+}
+
+.Image--fadeIn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.AspectRatio {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AspectRatio::before {
+  content: "";
+  display: block;
+}
+
+.AspectRatio > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.AspectRatio--withFallback > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@supports (--css: variables) {
+  .AspectRatio--withFallback {
+    padding-bottom: 0 !important;
+  }
+
+  .AspectRatio::before {
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+  .AspectRatio > img,
+  .no-js .AspectRatio > noscript img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.AspectRatio--square::before {
+  padding-bottom: 100%;
+}
+
+.AspectRatio--short::before {
+  padding-bottom: 75%;
+}
+
+.AspectRatio--tall::before {
+  padding-bottom: 150%;
+}
+
+.AspectRatio--square > img,
+.AspectRatio--short > img,
+.AspectRatio--tall > img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+}
+
+@supports ((-o-object-fit: contain) or (object-fit: contain)) {
+  .AspectRatio--square > img,
+  .AspectRatio--short > img,
+  .AspectRatio--tall > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.Image--lazyLoad[data-sizes=auto] {
+  width: 100%;
+}
+
+.PageContent {
+  max-width: 1000px;
+  margin: 35px auto;
+}
+
+.PageContent--fitScreen {
+  display: flex;
+  min-height: calc(100vh - 120px);
+  align-items: center;
+}
+
+.Section--spacingNormal {
+  margin: 50px 0;
+}
+
+.Section--spacingLarge,
+.Section--spacingExtraLarge {
+  margin: 90px 0;
+}
+
+.SectionHeader:not(:only-child) {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1008px) {
+  .Section--spacingNormal {
+    margin: 80px 0;
+  }
+
+  .Section--spacingLarge {
+    margin: 120px 0;
+  }
+
+  .Section--spacingExtraLarge {
+    margin: 145px 0;
+  }
+
+  .shopify-section--bordered > .Section--spacingNormal {
+    padding: 80px 0;
+  }
+
+  .shopify-section--bordered > .Section--spacingLarge {
+    padding: 120px 0;
+  }
+
+  .shopify-section--bordered > .Section--spacingExtraLarge {
+    padding: 145px 0;
+  }
+
+  .SectionHeader:not(:only-child) {
+    margin-bottom: 40px;
+  }
+}
