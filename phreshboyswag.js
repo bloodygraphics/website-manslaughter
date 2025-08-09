@@ -1,0 +1,18 @@
+const encodedUrls = {
+  font: 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jsb29keWdyYXBoaWNzL3dlYnNpdGUtbWFuc2xhdWdodGVyL21haW4vZm9udC9Nb2Rlcm5SZWd1bGFyLnR0Zg==',
+  banner: 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jsb29keWdyYXBoaWNzL3dlYnNpdGUtbWFuc2xhdWdodGVyL21haW4vaW1hZ2UvYm9keV9iYWcxLnBuZw=='
+};
+
+function decodeUrl(encoded) {
+  return atob(encoded);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const fontFaceRule = document.styleSheets[0].cssRules[0];
+  fontFaceRule.style.src = `url(${decodeUrl(encodedUrls.font)}) format('truetype')`;
+  
+  const banner = document.querySelector('#banner');
+  if (banner) {
+    banner.style.backgroundImage = `url(${decodeUrl(encodedUrls.banner)})`;
+  }
+});
