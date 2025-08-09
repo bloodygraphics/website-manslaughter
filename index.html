@@ -380,8 +380,16 @@
       }, 5000);
     });
 
-    document.getElementById('entry-overlay').addEventListener('click', () => {
-      document.getElementById('entry-overlay').classList.add('hidden');
+    document.getElementById('entry-overlay').addEventListener('click', function () {
+      const element = document.documentElement;
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+      this.classList.add('hidden');
       playRandomVideo();
     });
   </script>
