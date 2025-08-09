@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "ModernRegular";
-  src: url(https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/font/ModernRegular.ttf) format('woff2');
+  src: url(https://raw.githubusercontent.com/bloodygraphics/website-manslaughter/main/font/ModernRegular.ttf) format('truetype');
 }
 
 .active {
