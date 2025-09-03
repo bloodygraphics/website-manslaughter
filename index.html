@@ -1,1 +1,204 @@
-remaking this shit later
+<!--
+                                                                   .--,-``-.     
+,-.----.       ,----..      ,----..    .--.--.                    /   /     '.   
+\    /  \     /   /   \    /   /   \  /  /    '.             ,--./ ../        ;  
+;   :    \   /   .     :  |   :     :|  :  /`. /            /  /|\ ``\  .`-    ' 
+|   | .\ :  .   /   ;.  \ .   |  ;. /;  |  |--`            '  / ' \___\/   \   : 
+.   : |: | .   ;   /  ` ; .   ; /--` |  :  ;_             /  / /       \   :   | 
+|   |  \ : ;   |  ; \ ; | ;   | ;     \  \    `.         /  / ,        /  /   /  
+|   : .  / |   :  | ; | ' |   : |      `----.   \        \ '\ \        \  \   \  
+;   | |  \ .   |  ' ' ' : .   | '___   __ \  \  |         \  \ '   ___ /   :   | 
+|   | ;\  \'   ;  \; /  | '   ; : .'| /  /`--'  /          \  . | /   /\   /   : 
+:   ' | \.' \   \  ',  . \'   | '/  :'--'.     /            \__\./ ,,/  ',-    . 
+:   : :-'    ;   :      ; |   :    /   `--'---'                  \ ''\        ;  
+|   |.'       \   \ .'`--" \   \ .'                               \   \     .'   
+`---'          `---`        `---`                                  `--`-,,-'     
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Section with Music</title>
+  <style>
+    html, body {
+      margin: 0;
+      background: #000;
+      overflow: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      font-family: sans-serif;
+      color: white;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.5s ease;
+      z-index: 10;
+    }
+    #overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      min-height: 25vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .icon {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .icon img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+    .icon:hover img {
+      transform: scale(1.2);
+    }
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.2s ease;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .icon:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- video -->
+  <div class="video-section">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="https://files.catbox.moe/3m9dwu.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- music -->
+  <audio id="bg-music" loop>
+    <source src="https://files.catbox.moe/lg9uzi.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="overlay">click to enter...</div>
+
+  <!-- icon  -->
+  <div class="content">
+    <div class="icon-row">
+      <a class="icon" href="https://discord.com/users/392543250973589504" target="_blank">
+        <img src="https://files.catbox.moe/hrox8m.png" alt="Discord">
+        <span class="tooltip">click to open</span>
+      </a>
+      <a class="icon" href="https://t.me/mcspade" target="_blank">
+        <img src="https://files.catbox.moe/2aaf3g.png" alt="Telegram">
+        <span class="tooltip">click to open</span>
+      </a>
+      <a class="icon" href="https://soundcloud.com/j6qc" target="_blank">
+        <img src="https://files.catbox.moe/ogvz6x.png" alt="SoundCloud">
+        <span class="tooltip">click to open</span>
+      </a>
+      <a class="icon" href="https://www.roblox.com/users/7573425183/profile" target="_blank">
+        <img src="https://files.catbox.moe/3z8ofr.png" alt="Roblox">
+        <span class="tooltip">click to open</span>
+      </a>
+
+      <div class="icon" data-copy="bc1q5vh6zfycpyaaphdc9mwvgspd36jdxtevpg08r3">
+        <img src="https://files.catbox.moe/z3k16k.png" alt="Bitcoin">
+        <span class="tooltip">click to copy</span>
+      </div>
+      <div class="icon" data-copy="0xB45710783262A5112E30C5ad46b9Cfa7e89442cD">
+        <img src="https://files.catbox.moe/avxm59.png" alt="Ethereum">
+        <span class="tooltip">click to copy</span>
+      </div>
+      <div class="icon" data-copy="LiWErv32WhQRKbMKUvCpBJR7sdXbH8YtQs">
+        <img src="https://files.catbox.moe/oxvj6e.png" alt="Litecoin">
+        <span class="tooltip">click to copy</span>
+      </div>
+      <div class="icon" data-copy="87WL9RXgKhFUmrq8TQNkkL1bXZo94tziRYcb9AD7TX8A6DHdpRGbXrcUzUgwECDceHcMsdSvtTPLXJnBWUZEJW3Y1dXthun">
+        <img src="https://files.catbox.moe/lbwqf2.png" alt="Monero">
+        <span class="tooltip">click to copy</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById("overlay");
+    const audio = document.getElementById("bg-music");
+
+    overlay.addEventListener("click", async () => {
+      if (document.documentElement.requestFullscreen) {
+        try {
+          await document.documentElement.requestFullscreen();
+        } catch {}
+      }
+      try {
+        await audio.play();
+      } catch (err) {
+        console.log("Autoplay blocked:", err);
+      }
+      overlay.classList.add("hidden");
+      setTimeout(() => overlay.remove(), 500);
+    });
+    
+    document.querySelectorAll(".icon[data-copy]").forEach(icon => {
+      icon.addEventListener("click", async () => {
+        const text = icon.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(text);
+          alert("Copied: " + text);
+        } catch (err) {
+          console.error("Failed to copy:", err);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
