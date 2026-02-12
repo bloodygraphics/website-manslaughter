@@ -15,8 +15,9 @@
       font-family: sans-serif;
       color: white;
     }
-    body::-webkit-scrollbar { display: none; }
-
+    body::-webkit-scrollbar {
+      display: none;
+    }
     .video-section {
       position: relative;
       width: 100%;
@@ -30,7 +31,6 @@
       object-position: center;
       display: block;
     }
-
     #overlay {
       position: fixed;
       inset: 0;
@@ -48,7 +48,6 @@
       opacity: 0;
       pointer-events: none;
     }
-
     .content {
       position: relative;
       z-index: 2;
@@ -75,8 +74,9 @@
       object-fit: contain;
       transition: transform 0.2s ease;
     }
-    .icon:hover img { transform: scale(1.2); }
-
+    .icon:hover img {
+      transform: scale(1.2);
+    }
     .tooltip {
       visibility: hidden;
       opacity: 0;
@@ -97,30 +97,6 @@
       visibility: visible;
       opacity: 1;
     }
-
-    /* Counter styles */
-    #view-counter {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 1.4rem;
-      font-family: sans-serif;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: 15;
-      pointer-events: none;
-    }
-    #view-counter.visible { opacity: 1; }
-
-    #view-counter img {
-      width: 1.6em;
-      height: 1.6em;
-      object-fit: contain;
-    }
-    #counter-text { color: #ffffff; }
   </style>
 </head>
 <body>
@@ -138,7 +114,7 @@
 
   <div id="overlay">click to enter...</div>
 
-  <!-- icon row -->
+  <!-- icon  -->
   <div class="content">
     <div class="icon-row">
       <a class="icon" href="https://discord.com/users/392543250973589504" target="_blank">
@@ -177,86 +153,34 @@
     </div>
   </div>
 
-  <!-- view counter -->
-  <div id="view-counter">
-    <img id="counter-icon" src="https://files.catbox.moe/your-icon.png" alt="counter icon">
-    <span id="counter-text">0</span>
-  </div>
-
-  <!-- Supabase + JS -->
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-    const SUPABASE_URL = 'https://xmhrlabgazzjhxdernwv.supabase.co';
-    const SUPABASE_ANON_KEY = 'sb_publishable_XpxtJlAqH_4JVuCQvSiR9g_0HHgL4Kt';
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
+  <script>
     const overlay = document.getElementById("overlay");
     const audio = document.getElementById("bg-music");
-    const counterEl = document.getElementById("view-counter");
-    const counterText = document.getElementById("counter-text");
-
-    // Fetch current views
-    async function fetchCounter() {
-      try {
-        const { data, error } = await supabase
-          .from('site_counter')
-          .select('*')
-          .eq('id', 1)
-          .single();
-        if (error) throw error;
-        return data.views || 0;
-      } catch (err) {
-        console.error('Error fetching counter:', err);
-        return 0;
-      }
-    }
-
-    // Increment counter
-    async function incrementCounter() {
-      try {
-        let currentViews = await fetchCounter();
-        currentViews = currentViews || 0;
-
-        // If row doesn't exist, insert it
-        if (currentViews === 0) {
-          await supabase.from('site_counter').upsert({ id: 1, views: 1 });
-          counterText.textContent = '1';
-        } else {
-          const newViews = currentViews + 1;
-          await supabase.from('site_counter').update({ views: newViews }).eq('id', 1);
-          counterText.textContent = newViews;
-        }
-      } catch (err) {
-        console.error('Error incrementing counter:', err);
-      }
-    }
-
-    // Show counter immediately on page load
-    (async () => {
-      const currentViews = await fetchCounter();
-      counterText.textContent = currentViews;
-      counterEl.classList.add('visible');
-    })();
 
     overlay.addEventListener("click", async () => {
       if (document.documentElement.requestFullscreen) {
-        try { await document.documentElement.requestFullscreen(); } catch {}
+        try {
+          await document.documentElement.requestFullscreen();
+        } catch {}
       }
-      try { await audio.play(); } catch (err) { console.log("Autoplay blocked:", err); }
-
+      try {
+        await audio.play();
+      } catch (err) {
+        console.log("Autoplay blocked:", err);
+      }
       overlay.classList.add("hidden");
       setTimeout(() => overlay.remove(), 500);
-
-      await incrementCounter(); // increment on click
     });
-
-    // Clipboard copy for icons
+    
     document.querySelectorAll(".icon[data-copy]").forEach(icon => {
       icon.addEventListener("click", async () => {
         const text = icon.dataset.copy;
-        try { await navigator.clipboard.writeText(text); alert("Copied: " + text); }
-        catch (err) { console.error("Failed to copy:", err); }
+        try {
+          await navigator.clipboard.writeText(text);
+          alert("Copied: " + text);
+        } catch (err) {
+          console.error("Failed to copy:", err);
+        }
       });
     });
   </script>
